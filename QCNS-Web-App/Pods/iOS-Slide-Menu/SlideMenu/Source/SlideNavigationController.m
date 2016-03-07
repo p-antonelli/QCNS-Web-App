@@ -34,15 +34,21 @@ typedef enum {
 } PopType;
 
 @interface SlideNavigationController() <UIGestureRecognizerDelegate>
+
 @property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
 @property (nonatomic, strong) UIPanGestureRecognizer *panRecognizer;
 @property (nonatomic, assign) CGPoint draggingPoint;
 @property (nonatomic, assign) Menu lastRevealedMenu;
 @property (nonatomic, assign) BOOL menuNeedsLayout;
+
+@property (nonatomic, readwrite) NSArray<UIButton *> *leftItemButtons;
+@property (nonatomic, readwrite) NSArray<UIButton *> *rightItemButtons;
+
 @end
 
 @implementation SlideNavigationController
 
+NSString * const SlideNavigationControllerWillOpen = @"SlideNavigationControllerWillOpen";
 NSString * const SlideNavigationControllerDidOpen = @"SlideNavigationControllerDidOpen";
 NSString * const SlideNavigationControllerDidClose = @"SlideNavigationControllerDidClose";
 NSString  *const SlideNavigationControllerDidReveal = @"SlideNavigationControllerDidReveal";
@@ -176,6 +182,7 @@ static SlideNavigationController *singletonInstance;
 
 - (void)bounceMenu:(Menu)menu withCompletion:(void (^)())completion
 {
+    [self postNotificationWithName:SlideNavigationControllerWillOpen forMenu:menu];
 	[self prepareMenuForReveal:menu];
 	NSInteger movementDirection = (menu == MenuLeft) ? 1 : -1;
 	
@@ -439,14 +446,24 @@ static SlideNavigationController *singletonInstance;
 	
 	if (customButton)
 	{
-		customButton.action = selector;
-		customButton.target = self;
+        // BI
+//		customButton.action = selector;
+//		customButton.target = self;
 		return customButton;
 	}
 	else
 	{
-		UIImage *image = [UIImage imageNamed:MENU_IMAGE];
-        return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:selector];
+        
+        // Bibi modified
+		UIImage *image = [[UIImage imageNamed:MENU_IMAGE] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:selector];
+        item.tintColor = [UIColor whiteColor];
+        return item;
+        
+        // original
+//        UIImage *image = [UIImage imageNamed:MENU_IMAGE];
+//        return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:selector];
+
 	}
 }
 
@@ -475,7 +492,8 @@ static SlideNavigationController *singletonInstance;
 - (void)openMenu:(Menu)menu withDuration:(float)duration andCompletion:(void (^)())completion
 {
 	[self enableTapGestureToCloseMenu:YES];
-
+    
+    [self postNotificationWithName:SlideNavigationControllerWillOpen forMenu:menu];
 	[self prepareMenuForReveal:menu];
 	
 	[UIView animateWithDuration:duration
@@ -590,6 +608,8 @@ static SlideNavigationController *singletonInstance;
 
 - (void)prepareMenuForReveal:(Menu)menu
 {
+//    [self postNotificationWithName:SlideNavigationControllerWillOpen forMenu:menu];    
+    
 	// Only prepare menu if it has changed (ex: from MenuLeft to MenuRight or vice versa)
     if (self.lastRevealedMenu && menu == self.lastRevealedMenu)
         return;
@@ -605,6 +625,8 @@ static SlideNavigationController *singletonInstance;
 	[self updateMenuFrameAndTransformAccordingToOrientation];
 	
 	[self.menuRevealAnimator prepareMenuForAnimation:menu];
+    
+
 }
 
 - (CGFloat)horizontalLocation
@@ -659,8 +681,14 @@ static SlideNavigationController *singletonInstance;
 {
     NSString *menuString = (menu == MenuLeft) ? NOTIFICATION_USER_INFO_MENU_LEFT : NOTIFICATION_USER_INFO_MENU_RIGHT;
     NSDictionary *userInfo = @{ NOTIFICATION_USER_INFO_MENU : menuString };
-    [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil userInfo:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:name object:@(menu) userInfo:userInfo];
 }
+
+//#pragma mark - UIGestureRecognizerDelegate Methods -
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+//{
+//    return YES;
+//}
 
 #pragma mark - UINavigationControllerDelegate Methods -
 
@@ -673,6 +701,11 @@ static SlideNavigationController *singletonInstance;
 	
 	if ([self shouldDisplayMenu:MenuRight forViewController:viewController])
 		viewController.navigationItem.rightBarButtonItem = [self barButtonItemForMenu:MenuRight];
+    
+    if ([_slideDelegate respondsToSelector:@selector(slideNavigationController:willShowViewController:animated:)])
+    {
+        [_slideDelegate slideNavigationController:self willShowViewController:viewController animated:animated];
+    }
 }
 
 - (CGFloat)slideOffset
@@ -680,6 +713,14 @@ static SlideNavigationController *singletonInstance;
 	return (UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation))
 		? self.landscapeSlideOffset
 		: self.portraitSlideOffset;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if ([_slideDelegate respondsToSelector:@selector(slideNavigationController:didShowViewController:animated:)])
+    {
+        [_slideDelegate slideNavigationController:self didShowViewController:viewController animated:animated];
+    }
 }
 
 #pragma mark - IBActions -
@@ -737,7 +778,8 @@ static SlideNavigationController *singletonInstance;
     
     if (![self shouldDisplayMenu:currentMenu forViewController:self.topViewController])
         return;
-    
+
+    [self postNotificationWithName:SlideNavigationControllerWillOpen forMenu:currentMenu];
     [self prepareMenuForReveal:currentMenu];
     
     if (aPanRecognizer.state == UIGestureRecognizerStateBegan)
@@ -881,5 +923,163 @@ static SlideNavigationController *singletonInstance;
     
     _rightMenu = rightMenu;
 }
+
+// Bibi added
+- (void)setLeftBarButtonItem:(UIBarButtonItem *)leftBarButtonItem
+{
+    _leftBarButtonItem = leftBarButtonItem;
+    if (!_leftBarButtonItem)
+    {
+        // reset to default if nil        
+        _leftBarButtonItem = [self barButtonItemForMenu:MenuLeft];
+    }
+    self.visibleViewController.navigationItem.leftBarButtonItem = _leftBarButtonItem;
+}
+
+- (void)setRightBarButtonItem:(UIBarButtonItem *)rightBarButtonItem
+{
+    _rightBarButtonItem = rightBarButtonItem;
+    if (!_rightBarButtonItem)
+    {
+        // reset to default if nil
+        _rightBarButtonItem = [self barButtonItemForMenu:MenuRight];
+    }
+    self.visibleViewController.navigationItem.rightBarButtonItem = _rightBarButtonItem;
+}
+
+#define kButtonW    30
+
+- (void)setLeftBarButtonItems:(NSArray<UIBarButtonItem *> *)leftBarButtonItems addDefaultItem:(BOOL)addDefautItem
+{
+    NSInteger count = [leftBarButtonItems count];
+    
+    CGRect rect = CGRectMake(0, 0, (count + ((addDefautItem) ? 1 : 0)) * kButtonW, 40);
+    UIView *buttonsView = [[UIView alloc] initWithFrame:rect];
+    NSMutableArray *mutArr = [NSMutableArray arrayWithCapacity:0];
+    UIButton *button = nil;
+    NSInteger index = 0;
+    for (UIBarButtonItem *item in leftBarButtonItems)
+    {
+        button = [self buttonFromBarButtonItem:item];
+        rect = button.frame;
+        rect.origin.x = index * rect.size.width;
+        button.frame = rect;
+        [buttonsView addSubview:button];
+        [mutArr addObject:button];
+        index++;
+    }
+    
+    if (addDefautItem)
+    {
+        button = [self buttonFromBarButtonItem:[self defaultMenuItemForMenu:MenuLeft]];
+        rect = button.frame;
+        rect.origin.x = index * rect.size.width;
+        button.frame = rect;
+        [buttonsView addSubview:button];
+        [mutArr insertObject:button atIndex:0];
+    }
+    
+    _leftItemButtons = [NSArray arrayWithArray:mutArr];
+    
+    _leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonsView];
+    self.visibleViewController.navigationItem.leftBarButtonItem = _leftBarButtonItem;
+}
+
+- (void)setRightBarButtonItems:(NSArray<UIBarButtonItem *> *)rightBarButtonItems addDefaultItem:(BOOL)addDefautItem;
+{
+    NSInteger count = [rightBarButtonItems count];
+    
+    CGRect rect = CGRectMake(0, 0, (count + ((addDefautItem) ? 1 : 0)) * kButtonW, 40);
+    UIView *buttonsView = [[UIView alloc] initWithFrame:rect];
+    NSMutableArray *mutArr = [NSMutableArray arrayWithCapacity:0];
+    UIButton *button = nil;
+    NSInteger index = 0;
+    for (UIBarButtonItem *item in rightBarButtonItems)
+    {
+        button = [self buttonFromBarButtonItem:item];
+        rect = button.frame;
+        rect.origin.x = index * rect.size.width;
+        button.frame = rect;
+        [buttonsView addSubview:button];
+        [mutArr addObject:button];
+        index++;
+    }
+    
+    if (addDefautItem)
+    {
+        button = [self buttonFromBarButtonItem:[self defaultMenuItemForMenu:MenuRight]];
+        rect = button.frame;
+        rect.origin.x = index * rect.size.width;
+        button.frame = rect;
+        [buttonsView addSubview:button];
+        [mutArr addObject:button];
+    }
+    
+    _rightItemButtons = [NSArray arrayWithArray:mutArr];
+    
+    _rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonsView];
+    self.visibleViewController.navigationItem.rightBarButtonItem = _rightBarButtonItem;
+}
+
+- (UIButton *)buttonFromBarButtonItem:(UIBarButtonItem *)item
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, kButtonW, 40);
+
+    if (item.image)
+    {
+        [button setImage:item.image forState:UIControlStateNormal];
+        button.tintColor = [UIColor whiteColor];
+    }
+    
+    else if ([item.title length] > 0)
+    {
+        [button setTitle:item.title forState:UIControlStateNormal];
+        button.tintColor = [[UIBarButtonItem appearance] tintColor];
+    }
+    
+    else if (item.customView)
+    {
+        if ([item.customView isKindOfClass:[UIButton class]])
+        {
+            button = item.customView;
+        }
+        else if ([item.customView isKindOfClass:[UILabel class]])
+        {
+            UILabel *label = item.customView;
+            button.titleLabel.font = label.font;
+            button.titleLabel.textColor = label.textColor;
+            [button setTitle:label.text forState:UIControlStateNormal];
+        }
+    }
+    
+    if (item.target && item.action)
+    {
+        [button addTarget:item.target action:item.action forControlEvents:UIControlEventTouchUpInside];
+    }
+
+    return button;
+}
+
+- (UIBarButtonItem *)defaultMenuItemForMenu:(Menu)menu
+{
+    SEL selector = (menu == MenuLeft) ? @selector(leftMenuSelected:) : @selector(righttMenuSelected:);
+    UIImage *image = [[UIImage imageNamed:MENU_IMAGE] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:selector];
+    item.tintColor = [UIColor whiteColor];
+    return item;
+}
+
+
+- (BOOL)isLeftMenuOpen
+{
+    return (self.horizontalLocation > 0);
+}
+
+- (BOOL)isRightMenuOpen
+{
+    return (self.horizontalLocation < 0);
+}
+
 
 @end

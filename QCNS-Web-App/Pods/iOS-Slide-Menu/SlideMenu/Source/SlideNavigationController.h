@@ -28,12 +28,15 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @protocol SlideNavigationControllerDelegate <NSObject>
 @optional
 - (BOOL)slideNavigationControllerShouldDisplayRightMenu;
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu;
+- (void)slideNavigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated;
+- (void)slideNavigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated;
 @end
 
 typedef  enum{
@@ -44,6 +47,7 @@ typedef  enum{
 @protocol SlideNavigationContorllerAnimator;
 @interface SlideNavigationController : UINavigationController <UINavigationControllerDelegate>
 
+extern NSString * const SlideNavigationControllerWillOpen;
 extern NSString * const SlideNavigationControllerDidOpen;
 extern NSString  *const SlideNavigationControllerDidClose;
 extern NSString  *const SlideNavigationControllerDidReveal;
@@ -61,6 +65,7 @@ extern NSString  *const SlideNavigationControllerDidReveal;
 @property (nonatomic, assign) CGFloat menuRevealAnimationDuration;
 @property (nonatomic, assign) UIViewAnimationOptions menuRevealAnimationOption;
 @property (nonatomic, strong) id <SlideNavigationContorllerAnimator> menuRevealAnimator;
+@property (weak, nonatomic, readwrite) id<SlideNavigationControllerDelegate> slideDelegate;
 
 + (SlideNavigationController *)sharedInstance;
 - (void)switchToViewController:(UIViewController *)viewController withCompletion:(void (^)())completion __deprecated;
@@ -74,5 +79,19 @@ extern NSString  *const SlideNavigationControllerDidReveal;
 - (void)toggleLeftMenu;
 - (void)toggleRightMenu;
 - (BOOL)isMenuOpen;
+
+
+- (void)prepareMenuForReveal:(Menu)menu;
+
+- (void)setRightBarButtonItems:(NSArray<UIBarButtonItem *> *)rightBarButtonItems addDefaultItem:(BOOL)addDefautItem;
+- (void)setLeftBarButtonItems:(NSArray<UIBarButtonItem *> *)leftBarButtonItems addDefaultItem:(BOOL)addDefautItem;
+
+@property (nonatomic, readonly) NSArray<UIButton *> *leftItemButtons;
+@property (nonatomic, readonly) NSArray<UIButton *> *rightItemButtons;
+
+- (BOOL)isLeftMenuOpen;
+- (BOOL)isRightMenuOpen;
+
+- (UIBarButtonItem *)defaultMenuItemForMenu:(Menu)menu;
 
 @end

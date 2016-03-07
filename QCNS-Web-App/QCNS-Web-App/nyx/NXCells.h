@@ -12,7 +12,10 @@
 
 @required
 
+// Configure cell with item, value, and eventually setup a delegate
 - (void)setItem:(id)item value:(id)value delegate:(id)delegate;
+
+// Returns cell height for cell with given item
 + (CGFloat)cellHeightWithItem:(id)item value:(id)value;
 
 @end
