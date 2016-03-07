@@ -1,0 +1,85 @@
+# Uncoamment this line to define a global platform for your project
+
+platform :ios, '7.0'
+
+
+# Uncomment this line if you're using Swift
+# use_frameworks!
+
+target 'QCNS-Web-App' do
+
+# log
+pod 'CocoaLumberjack', '~> 1.9'
+
+# http request
+pod 'AFNetworking', '~> 2.6'
+
+# image http fectch & cache
+pod 'SDWebImage', '~> 3.7.5'
+
+# keychain
+pod 'FXKeychain', '~> 1.5'
+
+# loading indicator
+# pod 'KVNProgress'
+pod 'MRProgress', '~> 0.8.3'
+
+# keyboard manager for forms
+pod 'IQKeyboardManager', '~> 3.3.7'
+
+# customizable UIPageControl
+# pod 'FXPageControl', '~> 1.4'
+
+# FAYE Messaging client
+# pod 'MZFayeClient'
+
+# google maps (for place autocomplete API)
+# pod 'GoogleMaps'
+
+# (reverse) geocoder using google & apple services
+# pod 'LMGeocoder'
+
+# reachabilityt
+# pod 'Reachability'
+
+# textView + placeHolder
+# pod 'UITextView+Placeholder'
+
+# side menu
+pod 'iOS-Slide-Menu'
+
+# fb sdks
+# pod 'FBSDKCoreKit'
+# pod 'FBSDKLoginKit'
+# pod 'FBSDKShareKit'
+
+# range slider
+# pod 'NMRangeSlider'
+
+# 
+# pod 'TLLayoutTransitioning'
+
+# customizable chat view controller
+# pod 'JSQMessagesViewController'
+
+
+# collectionView with drag & drop support
+# pod 'HTKDragAndDropCollectionViewLayout'
+
+#
+# pod 'UITextView+Placeholder', '~> 1.1.1'
+
+
+# instagram image picker
+# pod 'InstagramImagePicker'
+# pod 'FacebookImagePicker', '~> 2.0.8'
+
+# badges in UIView*
+# pod 'WZLBadge'
+
+
+# pod 'NimbusKit-AttributedLabel', '~> 1.0'
+
+
+
+end
