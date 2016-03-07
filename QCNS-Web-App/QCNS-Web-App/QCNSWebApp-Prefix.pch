@@ -1,0 +1,37 @@
+//
+//  QCNSWebApp-Prefix.pch
+//  QCNS-Web-App
+//
+//  Created by Paul Antonelli on 07/03/2016.
+//  Copyright © 2016 Paul Antonelli | NYX INFO. All rights reserved.
+//
+
+#ifndef QCNSWebApp_Prefix_pch
+#define QCNSWebApp_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AppPrefs.h"
+#import "Keys.h"
+#import "Types.h"
+
+#import "Common.h"
+#import "AppStyle.h"
+
+#import "NXAlertViewFactory.h"
+#import "NXLogger.h"
+#import "NXDevice.h"
+
+#import "UIImage+ImageNamedNoCache.h"
+
+#import "NXLocalizer.h"
+
+#import "NSString+FontAwesome.h"
+
+#import "UIColor+NavigationBar.h"
+#import "UIApplication+HideKeyboard.h"
+
+#import "NSString+NXContainsString.h"
+
+#endif /* QCNSWebApp_Prefix_pch */
