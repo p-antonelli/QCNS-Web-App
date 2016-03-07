@@ -37,5 +37,6 @@
 - (void)enableIQKeyboardAutoToolbar;
 - (void)disableIQKeyboardAutoToolbar;
 
+- (void)callButtonPressed:(id)sender;
 
 @end

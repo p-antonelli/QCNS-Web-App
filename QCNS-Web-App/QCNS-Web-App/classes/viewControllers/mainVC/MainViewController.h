@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  QCNS-Web-App
 //
 //  Created by Paul Antonelli on 07/03/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewController : UIViewController
 
 @end
-

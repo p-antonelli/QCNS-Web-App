@@ -10,6 +10,13 @@
 
 @interface UIBarButtonItem (Helpers)
 
++ (UIButton *)buttonForBarItemWithTitle:(NSString *)title
+                                   font:(UIFont *)font
+                                  color:(UIColor *)color
+                                 target:(id)target
+                                 action:(SEL)action;
+
+
 + (UIBarButtonItem *)barButtonItemWithTitle:(NSString *)title
                                        font:(UIFont *)font
                                       color:(UIColor *)color

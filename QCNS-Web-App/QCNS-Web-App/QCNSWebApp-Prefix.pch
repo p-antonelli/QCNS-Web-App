@@ -33,5 +33,6 @@
 #import "UIApplication+HideKeyboard.h"
 
 #import "NSString+NXContainsString.h"
+#import "NXDispatcherHelper.h"
 
 #endif /* QCNSWebApp_Prefix_pch */

@@ -10,5 +10,7 @@
 
 @interface LeftMenuViewController : UIViewController
 
+- (void)disableButtons;
+- (void)enableButtons;
 
 @end

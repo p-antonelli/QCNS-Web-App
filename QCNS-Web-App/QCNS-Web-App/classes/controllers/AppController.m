@@ -118,7 +118,7 @@
     }
     
     _splashImageIsShowing = NO;
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:0.5f
                           delay:0.0
                         options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionOverrideInheritedDuration
                      animations:^{
@@ -218,12 +218,10 @@
     [[IQKeyboardManager sharedManager] setEnableAutoToolbar:NO];
 }
 
-//- (void)updateMenuBarButtonItem:(UIBarButtonItem *)menuItem
-//{
-//    menuItem.badgeCenterOffset = CGPointMake(-12, 2);
-//    [menuItem showBadgeWithStyle:WBadgeStyleNumber value:[[AppModel sharedInstance] badgeValue] animationType:WBadgeAnimTypeNone];
-//}
-
+- (void)callButtonPressed:(id)sender
+{
+    DDLogDebug(@"");
+}
 
 #pragma mark - Private
 
@@ -322,36 +320,32 @@
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImg];
     
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:FEEZLY_BLUE_BAR_COLOR];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                           NSFontAttributeName: BOLD_FONT(19.0f)
-                                                           }];
+//    [[UINavigationBar appearance] setBarTintColor:COSTA_BLUE_COLOR];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{
+//                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                                           NSFontAttributeName: BOLD_FONT(19.0f)
+//                                                           }];
     
-    [[UINavigationBar appearanceWhenContainedIn:[MFMailComposeViewController class], nil] setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
+//    [[UINavigationBar appearanceWhenContainedIn:[MFMailComposeViewController class], nil] setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
     
 //    [[FZNavigationBar appearance] setTitleVerticalPositionAdjustment:15 forBarMetrics:UIBarMetricsDefault];
 
     
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
-                                                           NSForegroundColorAttributeName: [UIColor whiteColor]
-                                                           }
-                                                forState:UIControlStateNormal];
-    
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
-                                                           NSForegroundColorAttributeName: GRAY_TEXT_COLOR
-                                                           }
-                                                forState:UIControlStateDisabled];
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+//                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
+//                                                           NSForegroundColorAttributeName: [UIColor whiteColor]
+//                                                           }
+//                                                forState:UIControlStateNormal];
+//    
+//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+//                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
+//                                                           NSForegroundColorAttributeName: GRAY_TEXT_COLOR
+//                                                           }
+//                                                forState:UIControlStateDisabled];
 
 
-//    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor redColor]];
-    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"Annuler"];
+//    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"Annuler"];
     
-//    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor darkGrayColor]];
-    
-    // Navigation bar
 }
 
 - (void)dealloc

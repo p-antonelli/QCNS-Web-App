@@ -34,6 +34,7 @@
 @interface LeftMenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
 
 @property (nonatomic, readwrite) NSArray *tableArray;
 
@@ -103,12 +104,15 @@
 {
     _tableArray = [[AppModel sharedInstance] menuItems];
     
+    self.view.backgroundColor = COSTA_BLUE_COLOR;
+    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
+    
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"Header"];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MenuCell class]) bundle:MAIN_BUNDLE] forCellReuseIdentifier:NSStringFromClass([MenuCell class])];
     
 }
 
-- (void)disableAllButtons
+- (void)disableButtons
 {
     self.tableView.allowsSelection = NO;
 }

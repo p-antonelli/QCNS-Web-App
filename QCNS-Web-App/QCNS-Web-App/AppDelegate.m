@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "AppModel.h"
+#import "AppController.h"
+#import "SlideNavigationController.h"
+
+#import "SplashViewController.h"
+#import "LeftMenuViewController.h"
+#import "QCNavigationBar.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +22,60 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    // Setup Log
+    [[AppController sharedInstance] setupLog];
+    [AppModel sharedInstance];
+    
+    // Customize UI
+    [application setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:nil bundle:nil];
+    
+    SplashViewController *splashVC = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
+    SlideNavigationController *navVC = [[SlideNavigationController alloc] initWithNavigationBarClass:[QCNavigationBar class] toolbarClass:nil];
+    navVC.avoidSwitchingToSameClassViewController = NO;
+    navVC.enableShadow = NO;
+    
+    navVC.viewControllers = @[splashVC];
+    navVC.navigationBarHidden = YES;
+    
+    navVC.leftMenu = leftMenuVC;
+    
+    // nb px where pan gestion is active
+    navVC.panGestureSideOffset = 20;
+    
+    // nb px of view remaining on screen when menu is shown
+    navVC.portraitSlideOffset = 120;
+    if ([NXDevice has3dot5InchScreen] || [NXDevice has4InchScreen])
+    {
+        navVC.portraitSlideOffset = 80;
+    }
+    else if ([NXDevice has5dot5InchScreen])
+    {
+        navVC.portraitSlideOffset = 150;
+    }
+    
+    
+//    SlideNavigationContorllerAnimatorSlide *alideAndFadeAnimator = [[SlideNavigationContorllerAnimatorSlide alloc] initWithSlideMovement:100];
+//    [SlideNavigationController sharedInstance].menuRevealAnimator = alideAndFadeAnimator;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = navVC;
+    [self.window makeKeyAndVisible];
+
+    
+    DDLogDebug(@"navVC : %@", navVC);
+    DDLogDebug(@"navVC.vc : %@", navVC.viewControllers);
+    DDLogDebug(@"navVC.leftMenu : %@", navVC.leftMenu);
+    DDLogDebug(@"splashVC : %@", splashVC);
+    DDLogDebug(@"leftMenuVC : %@", leftMenuVC);
+    DDLogDebug(@"window : %@", self.window);
+    DDLogDebug(@"window.root : %@", self.window.rootViewController);
+    
     return YES;
 }
 
