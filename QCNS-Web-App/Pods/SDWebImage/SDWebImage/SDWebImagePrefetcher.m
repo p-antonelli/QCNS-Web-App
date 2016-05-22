@@ -57,19 +57,23 @@
 - (void)startPrefetchingAtIndex:(NSUInteger)index {
     if (index >= self.prefetchURLs.count) return;
     self.requestedCount++;
+    //    NSLog(@"###### URL : %@ %@", [self.prefetchURLs[index] class], self.prefetchURLs[index]);
     [self.manager downloadImageWithURL:self.prefetchURLs[index] options:self.options progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
         if (!finished) return;
         self.finishedCount++;
-
+        
         if (image) {
             if (self.progressBlock) {
-                self.progressBlock(self.finishedCount,[self.prefetchURLs count]);
+                self.progressBlock(self.finishedCount,[self.prefetchURLs count], self.prefetchURLs[index], YES);
             }
+            NSLog(@"Prefetched %@ out of %@", @(self.finishedCount), @(self.prefetchURLs.count));
         }
         else {
             if (self.progressBlock) {
-                self.progressBlock(self.finishedCount,[self.prefetchURLs count]);
+                self.progressBlock(self.finishedCount,[self.prefetchURLs count], self.prefetchURLs[index], NO);
             }
+            NSLog(@"Prefetched %@ out of %@ (Failed), error : %@, imageURL : %@", @(self.finishedCount), @(self.prefetchURLs.count), error, imageURL);
+            
             // Add last failed
             self.skippedCount++;
         }
@@ -84,13 +88,13 @@
             dispatch_async(self.prefetcherQueue, ^{
                 [self startPrefetchingAtIndex:self.requestedCount];
             });
-        } else if (self.finishedCount == self.requestedCount) {
+        }
+        else if (self.finishedCount == self.requestedCount) {
             [self reportStatus];
             if (self.completionBlock) {
                 self.completionBlock(self.finishedCount, self.skippedCount);
                 self.completionBlock = nil;
             }
-            self.progressBlock = nil;
         }
     }];
 }
