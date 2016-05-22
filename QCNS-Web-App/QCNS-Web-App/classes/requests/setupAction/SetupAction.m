@@ -51,7 +51,6 @@ static NSString *const kActionPath = @"/json_appli";
 
 - (void)handleDownloadedData:(id)data
 {
-    //    DDLogDebug(@"##### DATA : %@", data);
     [super handleDownloadedData:data];
     
     _response = [[SetupResponse alloc] initWithDict:data error:nil];

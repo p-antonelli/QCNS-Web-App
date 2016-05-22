@@ -17,18 +17,8 @@
         "picture" : "photo",
         "video" : "vidéo",
         "camera_unavailable" : "Aucun appareil photo disponible sur ce téléphone",
+        "request_error_message" : "Une erreur est survenue. Veuillez verifier votre connexion internet et réessayer ultèrieurement",
         
-        "email_contact":
-        {
-            "subject" : "Contact Service Client",
-            "content_body": "Un problème ? une question ? demandez conseil à notre support client :\n\n",
-            "content_body_params": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClient email : %@\nCroisièreNet.com iOS v%@",
-            "is_html" : "0",
-            "email_address" : "contact@croisierenet.com",
-            "email_success_sent_message" : "Votre email à bien été transmis au service client.",
-            "email_fail_sent_message" : "Un erreur est survenu durant l'envoi de votre mail au support client : %@"
-        },
-
     },
     "view":
     {
@@ -37,21 +27,6 @@
         },
         "right_menu":
         {
-        },
-        "about":
-        {
-            "title" : "A Propos",
-            
-        },
-        "cgu":
-        {
-            "title" : "CGU",
-            "content_url" : "http://www.feezly.com/CGU-FEEZLY-2015.pdf",
-        },
-        "cgv":
-        {
-            "title" : "CGV",
-            "content_url" : "http://www.feezly.com/CGV-FEEZLY-2015.pdf",
         },
     },
     

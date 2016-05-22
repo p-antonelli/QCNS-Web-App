@@ -223,6 +223,55 @@
     DDLogDebug(@"");
 }
 
+- (void)processFetchAllImageWithDelegate:(id<AppImageDelegate>)delegate
+{
+    AppModel *model = [AppModel sharedInstance];
+    SDWebImagePrefetcher *fetcher = [SDWebImagePrefetcher sharedImagePrefetcher];
+    fetcher.options = SDWebImageLowPriority | SDWebImageAllowInvalidSSLCertificates;
+    
+    
+    __block NSArray *urlArray = [NSArray arrayWithArray:model.imageURLs];
+    
+    NSLog(@"image urls : %@", model.imageURLs);
+    __block NSMutableArray *failedURLArr = [NSMutableArray arrayWithCapacity:0];
+    
+    DDLogDebug(@"url to fetch : %@", urlArray);
+    
+    [fetcher prefetchURLs:urlArray
+                 progress:^(NSUInteger noOfFinishedUrls, NSUInteger noOfSkippedUrls, NSString *url, BOOL success) {
+                     
+                     DDLogDebug(@"processing image : %@", url);
+                     if (!success)
+                     {
+                         [failedURLArr addObject:url];
+                     }
+                     
+                 }
+                completed:^(NSUInteger noOfFinishedUrls, NSUInteger noOfSkippedUrls) {
+                    
+                    if (noOfSkippedUrls == 0)
+                    {
+                        if ([delegate respondsToSelector:@selector(applicationImagesDidFetchAtURLs:)])
+                        {
+                            [delegate applicationImagesDidFetchAtURLs:urlArray];
+                        }
+                    }
+                    else
+                    {
+                        if ([delegate respondsToSelector:@selector(applicationImagesDidFailFetching:)]) {
+                            
+                            NSString *msg = [NSString stringWithFormat:@"Error prefetching image at URL : %@", failedURLArr];
+                            
+                            NSError *error = [NSError errorWithDomain:QCNSErrorDomain
+                                                                 code:QCNSPrefetchImagesErrorCode
+                                                             userInfo:@{ NSLocalizedDescriptionKey : msg}];
+                            
+                            [delegate applicationImagesDidFailFetching:error];
+                        }
+                    }
+                }];
+}
+
 #pragma mark - Private
 
 - (id)initInternal

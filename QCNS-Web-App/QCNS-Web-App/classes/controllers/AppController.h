@@ -11,6 +11,13 @@
 #import "IQKeyboardManager.h"
 
 
+static NSString * const QCNSErrorDomain = @"QCNSErrorDomain";
+typedef NS_ENUM(NSInteger, QCNSErrorCode) {
+    QCNSPrefetchImagesErrorCode,
+};
+
+@protocol AppImageDelegate;
+
 
 @interface AppController : NSObject
 
@@ -38,5 +45,18 @@
 - (void)disableIQKeyboardAutoToolbar;
 
 - (void)callButtonPressed:(id)sender;
+
+- (void)processFetchAllImageWithDelegate:(id<AppImageDelegate>)delegate;
+
+@end
+
+
+
+@protocol AppImageDelegate <NSObject>
+
+@required
+
+- (void)applicationImagesDidFetchAtURLs:(NSArray *)imageURLs;
+- (void)applicationImagesDidFailFetching:(NSError *)error;
 
 @end

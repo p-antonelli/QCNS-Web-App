@@ -8,23 +8,30 @@
 
 #import <Foundation/Foundation.h>
 
+#import "MenuSection.h"
 #import "MenuItem.h"
 
 #import "SetupAction.h"
 
 @interface AppModel : NSObject
 
-
-//@property (nonatomic, readonly) NSString *locale;
-//@property (nonatomic, readonly) NSString *language;
-//
-// App data
-//@property (nonatomic, readonly) BOOL askPush;
-//@property (nonatomic, readonly) BOOL askRating;
-
-@property (nonatomic, readonly) NSArray<MenuItem *> *menuItems;
-
 @property (nonatomic, readonly) QCNSBrandType currentBrand;
+
+@property (nonatomic, readonly) NSString *locale;
+@property (nonatomic, readonly) NSString *language;
+
+@property (nonatomic, readonly) NSString *baseURL;
+@property (nonatomic, readonly) NSString *backgroundImageURL;
+@property (nonatomic, readonly) BOOL shouldCallDirectly;
+
+@property (nonatomic, readonly) NSString *phoningTitle;
+@property (nonatomic, readonly) NSString *phoningNumber;
+@property (nonatomic, readonly) NSString *phoningHours;
+
+@property (nonatomic, readonly) NSArray<MenuSection *> *menuSections;
+
+@property (nonatomic, readonly) NSArray<NSString *> *imageURLs;
+
 
 
 + (instancetype)sharedInstance;

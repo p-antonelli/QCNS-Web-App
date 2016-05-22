@@ -20,13 +20,20 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 @interface AppModel ()
 
-//@property (nonatomic, readwrite) BOOL askPush;
-//@property (nonatomic, readwrite) BOOL askRating;
+@property (nonatomic, readwrite) NSString *locale;
+@property (nonatomic, readwrite) NSString *language;
 
-//@property (nonatomic, readwrite) NSString *locale;
-//@property (nonatomic, readwrite) NSString *language;
+@property (nonatomic, readwrite) NSString *baseURL;
+@property (nonatomic, readwrite) NSString *backgroundImageURL;
+@property (nonatomic, readwrite) BOOL shouldCallDirectly;
 
-@property (nonatomic, readwrite) NSArray<MenuItem *> *menuItems;
+@property (nonatomic, readwrite) NSString *phoningTitle;
+@property (nonatomic, readwrite) NSString *phoningNumber;
+@property (nonatomic, readwrite) NSString *phoningHours;
+
+@property (nonatomic, readwrite) NSArray<MenuSection *> *menuSections;
+
+@property (nonatomic, readwrite) NSArray<NSString *> *imageURLs;
 
 @end
 
@@ -45,9 +52,42 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 - (void)updateWithSetupAction:(SetupAction *)action
 {
-    DDLogInfo(@"");
-        
-//    [[NXLocalizer sharedInstance] loadLocalizationData:action.response.jsonDict forLocale:self.locale];
+    DDLogInfo(@"setup response : %@", action.response);
+    
+    _baseURL = [action.response.baseURL copy];
+    _backgroundImageURL = [action.response.backgroundImageURL copy];
+    _shouldCallDirectly = action.response.shouldCallDirectly;
+    
+    _phoningTitle = [action.response.phoningTitle copy];
+    _phoningNumber = [action.response.phoningNumber copy];
+    _phoningHours = [action.response.phoningHours copy];
+    
+    _menuSections = [action.response.menuSections copy];
+    
+    NSMutableSet *mutSet = [NSMutableSet new];
+    
+    if ([_backgroundImageURL length] > 0)
+    {
+        [mutSet addObject:[_baseURL stringByAppendingString:_backgroundImageURL]];
+    }
+    
+    DDLogError(@"back img url : %@", [_baseURL stringByAppendingString:_backgroundImageURL]);
+    DDLogError(@"back img url : %@ | %@", _baseURL, _backgroundImageURL);
+    DDLogError(@"");
+    
+    for (MenuSection *section in _menuSections)
+    {
+        for (MenuItem *item in section.items)
+        {
+            if ([item.imageURL length] > 0)
+            {
+                [mutSet addObject:[_baseURL stringByAppendingString:item.imageURL]];
+            }
+        }
+    }
+    
+    _imageURLs = [NSArray arrayWithArray:[mutSet allObjects]];
+    DDLogWarn(@"image urls : %@", _imageURLs);
 }
 
 
@@ -60,48 +100,26 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     self = [super init];
     if (self)
     {
-//        _locale = kDefaultLocale;
-//        _language = kDefaultLanguage;
+        _locale = kDefaultLocale;
+        _language = kDefaultLanguage;
         
         [self setupCurrentBrand];
         
-        [self setupMenuItems];
+//        [self setupMenuItems];
         
-//        [self loadLocalFile];
-        [self loadDataFromDisk];
+        [self loadLocalFile];
 
     }
     return self;
-}
-
-- (BOOL)saveDataOnDisk
-{
-    DDLogInfo(@"");
-    
-//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.user];
-//    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"fz-user-data"];
-//    [[NSUserDefaults standardUserDefaults] setBool:self.userIsLogged forKey:@"fz-user-login"];
-//    BOOL res = [[NSUserDefaults standardUserDefaults] synchronize];
-////    DDLogInfo(@"Saved user : %d %@", res, self.user);
-//    
-//    return res;
-    return NO;
-}
-- (void)loadDataFromDisk
-{
-    DDLogInfo(@"");
-//    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"fz-user-data"];
-//    _user = data ? [NSKeyedUnarchiver unarchiveObjectWithData:data] : [[FZUser alloc] init];
-//
-//    DDLogInfo(@"Loaded user : %@", self.user);
 }
 
 - (void)setupCurrentBrand
 {
     _currentBrand = QCNSBrandTypeCosta;
 }
-- (void)setupMenuItems
-{
+
+//- (void)setupMenuItems
+//{
 //    MenuItem *home = [[MenuItem alloc] initWithTitle:@"Accueil" imageName:@"menu-home"];
 //    home.pictoText = [NSString stringForFontAwesomeIcon:FAHome];
 //    MenuItem *promo = [[MenuItem alloc] initWithTitle:@"Promotions" imageName:@"menu-promo"];
@@ -114,16 +132,16 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 //    ships.pictoText = [NSString stringForFontAwesomeIcon:FALifeBouy];
 //    
 //    _menuItems = @[home, promo, dest, harbor, ships];
-}
-
-
-#pragma mark - Locale (Fake - DEV ONLY)
-
-//- (void)loadLocalFile
-//{
-//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:@"fr_FR.json"];
-//    DDLogInfo(@"Locale : %@ %@", self.locale, dict);
-//    [[NXLocalizer sharedInstance] loadLocalizationData:dict forLocale:self.locale];
 //}
+
+
+#pragma mark - Locale
+
+- (void)loadLocalFile
+{
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:@"fr_FR.json"];
+    DDLogInfo(@"Locale : %@ %@", self.locale, dict);
+    [[NXLocalizer sharedInstance] loadLocalizationData:dict forLocale:self.locale];
+}
 
 @end

@@ -62,11 +62,12 @@
         NilCheck(menuDict);
         if (menuDict)
         {
+//            DDLogWarn(@"menu dict : %@", menuDict);
             NSMutableArray *mutArr = [NSMutableArray new];
             MenuSection *section = nil;
-            for (NSDictionary *dictTMP in menuDict)
+            for (NSString *key in menuDict)
             {
-                section = [[MenuSection alloc] initWithDict:dictTMP];
+                section = [[MenuSection alloc] initWithTitle:key contentDict:[menuDict objectForKey:key]];
                 [mutArr addObject:section];
             }
             _menuSections = [NSArray arrayWithArray:mutArr];
@@ -75,5 +76,25 @@
     
     return self;
 }
+
+#pragma mark - Private
+
+- (NSDictionary *)dictionaryRepresentation
+{
+    NSDictionary *dict = @{@"baseURL" : _baseURL ?: @"",
+                           @"backgroundImageURL" : _backgroundImageURL ?: @"",
+                           @"shouldCallDirectly;" : @(_shouldCallDirectly),
+                           @"phoningTitle" : _phoningTitle ?: @"",
+                           @"phoningNumber" : _phoningNumber ?: @"",
+                           @"phoningHours" : _phoningHours ?: @"",
+                           @"menuSections" : _menuSections};
+    return dict;
+}
+
+- (NSString *)description
+{
+    return [[super description] stringByAppendingFormat:@" %@", [self dictionaryRepresentation]];
+}
+
 
 @end

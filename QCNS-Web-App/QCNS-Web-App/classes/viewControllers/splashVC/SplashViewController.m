@@ -21,7 +21,7 @@
 #import "RequestController.h"
 
 
-@interface SplashViewController ()
+@interface SplashViewController () <AppImageDelegate>
 
 @end
 
@@ -143,23 +143,59 @@
 - (void)setupActionDidSucceed:(NSNotification *)notification
 {
     DDLogDebug(@"notif : %@", notification);
+    [[AppController sharedInstance] processFetchAllImageWithDelegate:self];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self pushHomeVC];
-    });
 }
 - (void)setupActionDidFail:(NSNotification *)notification
 {
     DDLogError(@"notif : %@", notification);
     
-    SetupAction *action = [notification object];
-    [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.error") message:action.response.reqError.message
-                            yesCaption:NX_LOCALIZED_STRING(@"common.retry") noCaption:nil yesBlock:^{
-                                
-                                [[RequestController sharedInstance] processSetupAction];
-                                
-                            }noBlock:nil];
+//    SetupAction *action = [notification object];
     
+    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
+        
+        [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.error")
+                                   message:NX_LOCALIZED_STRING(@"common.request_error_message")
+                                yesCaption:NX_LOCALIZED_STRING(@"common.retry")
+                                 noCaption:nil
+                                  yesBlock:^{
+                                      
+                                      [[RequestController sharedInstance] processSetupAction];
+                                      
+                                  } noBlock:nil];
+    }];
 }
+
+#pragma mark - AppImageDelegate
+
+- (void)applicationImagesDidFetchAtURLs:(NSArray *)imageURLs
+{
+    DDLogInfo(@"");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self pushHomeVC];
+    });
+}
+- (void)applicationImagesDidFailFetching:(NSError *)error
+{
+    DDLogError(@"error : %@", error);
+    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
+        
+        [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.error")
+                                   message:NX_LOCALIZED_STRING(@"common.request_error_message")
+                                yesCaption:NX_LOCALIZED_STRING(@"common.retry")
+                                 noCaption:nil
+                                  yesBlock:^{
+                                      
+                                      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                          
+                                          [[AppController sharedInstance] showWaitingView];
+                                          [[AppController sharedInstance] processFetchAllImageWithDelegate:self];
+                                      });
+                                      
+                                  }noBlock:nil];
+        
+    }];
+}
+
 
 @end
