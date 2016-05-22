@@ -10,4 +10,6 @@
 
 @interface MainViewController : UIViewController
 
+@property (nonatomic, readwrite) NSURL *urlToLoad;
+
 @end

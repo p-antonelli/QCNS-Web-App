@@ -11,7 +11,7 @@
 #import "AppModel.h"
 #import "RequestModel.h"
 
-static NSString *const kActionPath = @"sessions/init";
+static NSString *const kActionPath = @"/json_appli";
 
 @interface SetupAction ()
 
@@ -44,8 +44,9 @@ static NSString *const kActionPath = @"sessions/init";
                              @"version" : [NXDevice bundleVersion],
                              @"screen_size" : [NSString stringWithFormat:@"%ldx%ld", (long)MAIN_SCREEN_WIDTH, (long)MAIN_SCREEN_HEIGHT]};
     
-    
-    return [RequestModel urlWithPath:kActionPath params:params];
+
+    NSString *path = [NSString stringWithFormat:@"%@/%ld.json", kActionPath, [[AppModel sharedInstance] currentBrand]];
+    return [RequestModel urlWithPath:path params:params];
 }
 
 - (void)handleDownloadedData:(id)data

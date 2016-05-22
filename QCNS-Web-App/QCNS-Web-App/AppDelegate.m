@@ -10,6 +10,7 @@
 #import "AppModel.h"
 #import "AppController.h"
 #import "SlideNavigationController.h"
+#import "SlideNavigationContorllerAnimatorSlide.h"
 
 #import "SplashViewController.h"
 #import "LeftMenuViewController.h"
@@ -59,13 +60,33 @@
     }
     
     
-//    SlideNavigationContorllerAnimatorSlide *alideAndFadeAnimator = [[SlideNavigationContorllerAnimatorSlide alloc] initWithSlideMovement:100];
-//    [SlideNavigationController sharedInstance].menuRevealAnimator = alideAndFadeAnimator;
+    SlideNavigationContorllerAnimatorSlide *alideAndFadeAnimator = [[SlideNavigationContorllerAnimatorSlide alloc] initWithSlideMovement:MAIN_SCREEN_WIDTH - navVC.portraitSlideOffset];
+    [SlideNavigationController sharedInstance].menuRevealAnimator = alideAndFadeAnimator;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    self.window.backgroundColor = [UIColor redColor];
     self.window.rootViewController = navVC;
+    
+    
     [self.window makeKeyAndVisible];
+    
+    
+    [navVC prepareMenuForReveal:MenuLeft];
+    
+    
+    UIImage *img = [UIImage imageNamed:@"main-bg"];
+    UIImageView *bg = [[UIImageView alloc] initWithImage:img];
+//    bg.alpha = 0.2;
+    CGRect rect = bg.frame;
+    rect.size.width = img.size.width;
+    rect.size.height = MAIN_SCREEN_HEIGHT - kDefaultNavigationBarHeight - 20;
+    rect.origin.y = MAIN_SCREEN_HEIGHT - rect.size.height;
+    rect.origin.x = (MAIN_SCREEN_WIDTH - rect.size.width) / 2;
+    bg.frame = CGRectIntegral(rect);
+    [self.window insertSubview:bg atIndex:0];
+    
 
     
     DDLogDebug(@"navVC : %@", navVC);

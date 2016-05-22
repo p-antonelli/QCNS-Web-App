@@ -35,6 +35,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTrailingConstraint;
 
 @property (nonatomic, readwrite) NSArray *tableArray;
 
@@ -58,11 +59,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
+    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
 }
 
 - (void)viewWillLayoutSubviews
@@ -104,12 +108,22 @@
 {
     _tableArray = [[AppModel sharedInstance] menuItems];
     
-    self.view.backgroundColor = COSTA_BLUE_COLOR;
     self.tableView.backgroundColor = COSTA_BLUE_COLOR;
+    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [UIColor whiteColor];
+    self.tableView.separatorInset = UIEdgeInsetsMake(5, 20, 0, 20);
+    self.tableViewTrailingConstraint.constant = [[SlideNavigationController sharedInstance] portraitSlideOffset];
+    
+    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);
+    
+    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
+    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
     
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"Header"];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MenuCell class]) bundle:MAIN_BUNDLE] forCellReuseIdentifier:NSStringFromClass([MenuCell class])];
     
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)disableButtons
@@ -135,40 +149,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SlideNavigationControllerWillOpen object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SlideNavigationControllerDidOpen object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SlideNavigationControllerDidClose object:nil];
-}
-
-
-- (void)pushChatVCWithCandidateID:(NSString *)candidateID
-{
-    DDLogDebug(@"");
-    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
-    }];
-    
-    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
-        
-//            ChatViewController *chatVC = [[ChatViewController alloc] initWithNibName:nil bundle:nil];
-//            UIViewController *visibleVC = [[SlideNavigationController sharedInstance] visibleViewController];
-//            [visibleVC.navigationController pushViewController:chatVC animated:YES];
-        
-    }];
-}
-
-- (void)pushFeezVCWithCandidateID:(NSString *)candidateID
-{
-    DDLogDebug(@"");
-    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
-    }];
-    
-    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
-        
-//            FeezViewController *feezVC = [[FeezViewController alloc] initWithNibName:nil bundle:nil];
-//            UIViewController *visibleVC = [[SlideNavigationController sharedInstance] visibleViewController];
-//            feezVC.candidate = [candi copy];
-//            [visibleVC presentViewController:feezVC animated:YES completion:^{
-//                
-//            }];
-
-    }];
 }
 
 
@@ -237,10 +217,22 @@
 
 #pragma mark - UITableViewDelegate
 
+- (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *index = [tableView indexPathForSelectedRow];
+    if (index)
+    {
+        [tableView deselectRowAtIndexPath:index animated:NO];
+    }
+    return indexPath;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DDLogInfo(@"");
     MenuItem *item = [self.tableArray objectAtIndex:indexPath.row];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
 }
 
 

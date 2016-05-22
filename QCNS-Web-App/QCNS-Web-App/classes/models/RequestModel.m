@@ -139,20 +139,20 @@ static NSDictionary *errorDict;
 }
 
 
-+ (WSErrorCode)wsErrorFromHTTPErrorCode:(HTTPErrorCode)httpErrorCode
-{
-    if (httpErrorCode == HTTPAuthAPIErrorCode)
-    {
-        return WSAuthGenericErrorCode;
-    }
-    
-    return [[[errorDict allKeysForObject:@(httpErrorCode)] objectAtIndex:0] integerValue];
-}
-
-+ (HTTPErrorCode)httpErrorFromWSErrorCode:(WSErrorCode)wsErrorCode
-{
-    return [[errorDict objectForKey:@(wsErrorCode)] integerValue];
-}
+//+ (WSErrorCode)wsErrorFromHTTPErrorCode:(HTTPErrorCode)httpErrorCode
+//{
+//    if (httpErrorCode == HTTPAuthAPIErrorCode)
+//    {
+//        return WSAuthGenericErrorCode;
+//    }
+//    
+//    return [[[errorDict allKeysForObject:@(httpErrorCode)] objectAtIndex:0] integerValue];
+//}
+//
+//+ (HTTPErrorCode)httpErrorFromWSErrorCode:(WSErrorCode)wsErrorCode
+//{
+//    return [[errorDict objectForKey:@(wsErrorCode)] integerValue];
+//}
 
 
 @end

@@ -1,18 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MenuCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="MenuCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v67-0Z-fph">
+                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNg-9M-1rv">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="46" id="2nh-S5-sl4"/>
+                            <constraint firstAttribute="height" constant="46" id="Sha-gG-ge6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2nh-S5-sl4"/>
+                                <exclude reference="Sha-gG-ge6"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="2nh-S5-sl4"/>
+                                <include reference="Sha-gG-ge6"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlP-Qe-oL5">
+                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v67-0Z-fph" firstAttribute="top" secondItem="BNg-9M-1rv" secondAttribute="top" id="7eu-Gp-sPK"/>
+                    <constraint firstItem="MlP-Qe-oL5" firstAttribute="centerY" secondItem="BNg-9M-1rv" secondAttribute="centerY" id="Opw-ig-vRv"/>
+                    <constraint firstItem="v67-0Z-fph" firstAttribute="bottom" secondItem="BNg-9M-1rv" secondAttribute="bottom" id="Sob-5Q-d13"/>
+                    <constraint firstItem="MlP-Qe-oL5" firstAttribute="leading" secondItem="BNg-9M-1rv" secondAttribute="trailing" constant="8" id="VjV-7U-1s2"/>
+                    <constraint firstItem="BNg-9M-1rv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZJu-Vn-Ok2"/>
+                    <constraint firstItem="BNg-9M-1rv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="b5Y-t5-spe"/>
+                    <constraint firstItem="v67-0Z-fph" firstAttribute="trailing" secondItem="BNg-9M-1rv" secondAttribute="trailing" id="vmN-O5-5Iq"/>
+                    <constraint firstItem="v67-0Z-fph" firstAttribute="leading" secondItem="BNg-9M-1rv" secondAttribute="leading" id="yON-WF-zWR"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="v67-0Z-fph"/>
+                        <exclude reference="BNg-9M-1rv"/>
+                        <exclude reference="MlP-Qe-oL5"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="Opw-ig-vRv"/>
+                        <exclude reference="VjV-7U-1s2"/>
+                        <exclude reference="7eu-Gp-sPK"/>
+                        <exclude reference="Sob-5Q-d13"/>
+                        <exclude reference="vmN-O5-5Iq"/>
+                        <exclude reference="yON-WF-zWR"/>
+                        <exclude reference="ZJu-Vn-Ok2"/>
+                        <exclude reference="b5Y-t5-spe"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="v67-0Z-fph"/>
+                        <include reference="BNg-9M-1rv"/>
+                        <include reference="MlP-Qe-oL5"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="Opw-ig-vRv"/>
+                        <include reference="VjV-7U-1s2"/>
+                        <include reference="7eu-Gp-sPK"/>
+                        <include reference="Sob-5Q-d13"/>
+                        <include reference="vmN-O5-5Iq"/>
+                        <include reference="yON-WF-zWR"/>
+                        <include reference="ZJu-Vn-Ok2"/>
+                        <include reference="b5Y-t5-spe"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imageView" destination="BNg-9M-1rv" id="Dxn-jO-eq0"/>
+                <outlet property="pictoImageView" destination="BNg-9M-1rv" id="qc2-If-TMw"/>
+                <outlet property="pictoLabel" destination="v67-0Z-fph" id="9up-6k-DFR"/>
+                <outlet property="titleLabel" destination="MlP-Qe-oL5" id="8op-Wb-y18"/>
+            </connections>
+            <point key="canvasLocation" x="554" y="334"/>
         </tableViewCell>
     </objects>
 </document>

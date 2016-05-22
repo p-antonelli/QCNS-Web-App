@@ -9,7 +9,7 @@
 #import "AppModel.h"
 #import "NSDictionary+JSONFile.h"
 #import "AppController.h"
-
+#import "NSString+FontAwesome.h"
 
 
 static NSString * const kDefaultLanguage    = @"fr";
@@ -20,12 +20,11 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 @interface AppModel ()
 
-@property (nonatomic, readwrite) BOOL askPush;
-@property (nonatomic, readwrite) BOOL askRating;
+//@property (nonatomic, readwrite) BOOL askPush;
+//@property (nonatomic, readwrite) BOOL askRating;
 
-
-@property (nonatomic, readwrite) NSString *locale;
-@property (nonatomic, readwrite) NSString *language;
+//@property (nonatomic, readwrite) NSString *locale;
+//@property (nonatomic, readwrite) NSString *language;
 
 @property (nonatomic, readwrite) NSArray<MenuItem *> *menuItems;
 
@@ -47,12 +46,7 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 - (void)updateWithSetupAction:(SetupAction *)action
 {
     DDLogInfo(@"");
-    
-    _askPush = action.response.askPush;
-    _askRating = action.response.askRating;
-    
-    NSLog(@"json dict: %@", action.response.jsonDict);
-    
+        
 //    [[NXLocalizer sharedInstance] loadLocalizationData:action.response.jsonDict forLocale:self.locale];
 }
 
@@ -66,10 +60,14 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     self = [super init];
     if (self)
     {
-        _locale = kDefaultLocale;
-        _language = kDefaultLanguage;
+//        _locale = kDefaultLocale;
+//        _language = kDefaultLanguage;
         
-        [self loadLocalFile];
+        [self setupCurrentBrand];
+        
+        [self setupMenuItems];
+        
+//        [self loadLocalFile];
         [self loadDataFromDisk];
 
     }
@@ -98,14 +96,34 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 //    DDLogInfo(@"Loaded user : %@", self.user);
 }
 
+- (void)setupCurrentBrand
+{
+    _currentBrand = QCNSBrandTypeCosta;
+}
+- (void)setupMenuItems
+{
+//    MenuItem *home = [[MenuItem alloc] initWithTitle:@"Accueil" imageName:@"menu-home"];
+//    home.pictoText = [NSString stringForFontAwesomeIcon:FAHome];
+//    MenuItem *promo = [[MenuItem alloc] initWithTitle:@"Promotions" imageName:@"menu-promo"];
+//    promo.pictoText = [NSString stringForFontAwesomeIcon:FAGift];
+//    MenuItem *dest = [[MenuItem alloc] initWithTitle:@"Destinations" imageName:@"menu-destinations"];
+//    dest.pictoText = [NSString stringForFontAwesomeIcon:FAMapMarker];
+//    MenuItem *harbor = [[MenuItem alloc] initWithTitle:@"Ports de départ" imageName:@"menu-harbors"];
+//    harbor.pictoText = [NSString stringForFontAwesomeIcon:FAAnchor];
+//    MenuItem *ships = [[MenuItem alloc] initWithTitle:@"Navires" imageName:@"menu-ships"];
+//    ships.pictoText = [NSString stringForFontAwesomeIcon:FALifeBouy];
+//    
+//    _menuItems = @[home, promo, dest, harbor, ships];
+}
+
 
 #pragma mark - Locale (Fake - DEV ONLY)
 
-- (void)loadLocalFile
-{
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:@"fr_FR.json"];
+//- (void)loadLocalFile
+//{
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:@"fr_FR.json"];
 //    DDLogInfo(@"Locale : %@ %@", self.locale, dict);
-    [[NXLocalizer sharedInstance] loadLocalizationData:dict forLocale:self.locale];
-}
+//    [[NXLocalizer sharedInstance] loadLocalizationData:dict forLocale:self.locale];
+//}
 
 @end

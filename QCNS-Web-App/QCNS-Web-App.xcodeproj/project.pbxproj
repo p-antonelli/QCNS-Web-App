@@ -106,6 +106,8 @@
 		E54C219E1C8E0C420047F291 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
 		E54C219F1C8E0C420047F291 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
 		E54C21A01C8E0C420047F291 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -295,6 +297,9 @@
 		E54C21941C8E0C420047F291 /* icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@3x.png"; sourceTree = "<group>"; };
 		E54C21951C8E0C420047F291 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		E54C21961C8E0C420047F291 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
+		E54C21A11C8E107F0047F291 /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg@2x.png"; sourceTree = "<group>"; };
+		E58CF9F61CEFCD9A0091B676 /* MenuSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSection.h; sourceTree = "<group>"; };
+		E58CF9F71CEFCD9A0091B676 /* MenuSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,6 +695,8 @@
 				E54C21621C8DBB780047F291 /* LeftMenuViewController.h */,
 				E54C21631C8DBB780047F291 /* LeftMenuViewController.m */,
 				E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */,
+				E58CF9F61CEFCD9A0091B676 /* MenuSection.h */,
+				E58CF9F71CEFCD9A0091B676 /* MenuSection.m */,
 			);
 			path = leftMenuVC;
 			sourceTree = "<group>";
@@ -708,6 +715,7 @@
 			children = (
 				E54C218C1C8E0C350047F291 /* icons */,
 				E54C21801C8DDAB30047F291 /* Default@2x.png */,
+				E54C21A11C8E107F0047F291 /* main-bg@2x.png */,
 				E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */,
 			);
 			path = images;
@@ -821,6 +829,7 @@
 			files = (
 				E54C219B1C8E0C420047F291 /* icon-40@3x.png in Resources */,
 				E54C21711C8DBE700047F291 /* MenuCell.xib in Resources */,
+				E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */,
 				E54C20591C8D9C2D0047F291 /* LaunchScreen.storyboard in Resources */,
 				E54C21811C8DDAB30047F291 /* Default@2x.png in Resources */,
 				E54C21781C8DCFC20047F291 /* costa-navbar@2x.png in Resources */,
@@ -949,6 +958,7 @@
 				E54C21101C8DACF10047F291 /* NSString+URLEncode.m in Sources */,
 				E54C21751C8DCE6B0047F291 /* QCNavigationBar.m in Sources */,
 				E54C211A1C8DACF10047F291 /* UIImage+Color.m in Sources */,
+				E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */,
 				E54C21361C8DACF10047F291 /* NotificationPermissionHandler.m in Sources */,
 				E54C211E1C8DACF10047F291 /* UIImage+tintColor.m in Sources */,
 				E54C204B1C8D9C2D0047F291 /* main.m in Sources */,

@@ -17,13 +17,13 @@
 
 // fbID PoloBBStudio : 100004858780676
 
-NSString * const kDefaultBaseUrl                    = @"http://www.croisierenet.com";
+NSString * const kDefaultBaseUrl                    = @"http://app.croisierenet.com/";
 const NSInteger kRequestTimeoutDuration             = 40;
 
 
 #elif (APP_RECETTE)
 
-NSString * const kDefaultBaseUrl                    = @"http://www.croisierenet.com";
+NSString * const kDefaultBaseUrl                    = @"http://mobile.croisierenet.com/";
 const NSInteger kRequestTimeoutDuration             = 40;
 
 #elif (APP_PROD)

@@ -56,11 +56,11 @@
 {
     [super viewDidAppear:animated];
     DDLogDebug(@"");
-//    [[RequestController sharedInstance] processSetupAction];
-    dispatch_after_delay_on_main_queue(3.0f, ^{
-        
-        [self pushHomeVC];
-    });
+    [[RequestController sharedInstance] processSetupAction];
+//    dispatch_after_delay_on_main_queue(3.0f, ^{
+//        
+//        [self pushHomeVC];
+//    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -124,9 +124,9 @@
             [mutArr addObjectsFromArray:self.navigationController.viewControllers];
             [mutArr removeObjectAtIndex:0];
             [self.navigationController setViewControllers:mutArr];
-
+            
+            mainVC.urlToLoad = [NSURL URLWithString:kDefaultBaseUrl];
         }
-
 
         dispatch_after_delay_on_main_queue(1.0, ^{
             [[AppController sharedInstance] hideSplashImage];

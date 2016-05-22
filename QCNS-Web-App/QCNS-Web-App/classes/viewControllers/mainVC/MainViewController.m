@@ -68,6 +68,15 @@
     DDLogWarn(@"");
 }
 
+#pragma mark - Public
+
+- (void)setUrlToLoad:(NSURL *)urlToLoad
+{
+    _urlToLoad = [urlToLoad copy];
+    
+    [self startLoadingWebview];
+}
+
 #pragma mark - Private
 
 - (void)buildUIElements
@@ -77,6 +86,8 @@
     QCNavigationBar *navBar = (QCNavigationBar *)self.navigationController.navigationBar;
     [[SlideNavigationController sharedInstance] setLeftBarButtonItem:navBar.menuItem];
     [[SlideNavigationController sharedInstance] setRightBarButtonItem:navBar.callItem];
+    
+//    self.webView.alpha = 0.3;
 }
 
 - (void)addMenuNotificationObervers
@@ -95,6 +106,16 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:SlideNavigationControllerDidClose object:nil];
 }
 
+- (void)startLoadingWebview
+{
+    if (_urlToLoad)
+    {
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:_urlToLoad
+                                                                    cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                                timeoutInterval:kRequestTimeoutDuration];
+        [_webView loadRequest:request];
+    }
+}
 
 #pragma mark - SlideNavigationControllerDelegate
 
@@ -143,6 +164,27 @@
     if (menu == MenuLeft)
     {
     }
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    DDLogWarn(@"###### SHOULD LOAD REQUEST WITH URL : %@ %ld", [request.URL absoluteString], (long)navigationType);
+    return YES;
+}
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    DDLogWarn(@"###### DID START LOADING URL : %@", [self.webView.request.URL absoluteString]);
+}
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    DDLogWarn(@"###### DID FINISH LOADING URL : %@", [self.webView.request.URL absoluteString]);
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
+{
+    DDLogError(@"###### DID FAIL LOADING URL : %@ | error : %@", [self.webView.request.URL absoluteString], error);
 }
 
 

@@ -12,9 +12,6 @@
 #import "UIImage+Color.h"
 #import "AppController.h"
 
-#define kDefaultNavigationBarHeight 90
-
-#define kButtonW        44
 
 @interface QCNavigationBar ()
 
@@ -101,7 +98,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:image forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageFromColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
-    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 2, 1)];
+    [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 1, 0.5f)];
     button.clipsToBounds = YES;
     button.tintColor = [UIColor whiteColor];
     

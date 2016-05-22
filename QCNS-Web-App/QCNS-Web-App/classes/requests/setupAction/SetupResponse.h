@@ -7,12 +7,19 @@
 //
 
 #import "RequestResponse.h"
-
+#import "MenuSection.h"
 
 @interface SetupResponse : RequestResponse
 
-@property (nonatomic, readonly) NSDictionary *jsonDict;
-@property (nonatomic, readonly) BOOL askRating;
-@property (nonatomic, readonly) BOOL askPush;
+@property (nonatomic, readonly) NSString *baseURL;
+@property (nonatomic, readonly) NSString *backgroundImageURL;
+@property (nonatomic, readonly) BOOL shouldCallDirectly;
+
+@property (nonatomic, readonly) NSString *phoningTitle;
+@property (nonatomic, readonly) NSString *phoningNumber;
+@property (nonatomic, readonly) NSString *phoningHours;
+
+@property (nonatomic, readonly) NSArray<MenuSection *> *menuSections;
+
 
 @end

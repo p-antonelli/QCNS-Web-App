@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MenuItem : NSObject
+@interface MenuItem : NSObject <NSCopying>
+
+@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) NSString *contentURL;
+@property (nonatomic, readonly) NSString *imageURL;
+@property (nonatomic, readonly) NSString *backgroundColor;
+@property (nonatomic, readonly) NSString *price;
+
+
+- (instancetype)initWithDict:(NSDictionary *)dict;
 
 @end

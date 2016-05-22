@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kDefaultNavigationBarHeight 90
+#define kButtonW        44
+
 @interface QCNavigationBar : UINavigationBar
 
 // Properties

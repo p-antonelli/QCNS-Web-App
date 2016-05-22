@@ -11,15 +11,15 @@
 
 @interface RequestResponse : NSObject
 
-@property (nonatomic, readonly) NSDictionary *data;
-@property (nonatomic, readonly) NSDictionary *meta;
-
-@property (nonatomic, readonly) NSString *message;
-
-@property (nonatomic, readonly) NSError *httpError;
-@property (nonatomic, readonly) RequestError *reqError;
-
-@property (nonatomic, readonly) BOOL shouldLogout;
+//@property (nonatomic, readonly) NSDictionary *data;
+//@property (nonatomic, readonly) NSDictionary *meta;
+//
+//@property (nonatomic, readonly) NSString *message;
+//
+//@property (nonatomic, readonly) NSError *httpError;
+//@property (nonatomic, readonly) RequestError *reqError;
+//
+//@property (nonatomic, readonly) BOOL shouldLogout;
 
 - (instancetype)initWithDict:(NSDictionary *)dict error:(NSError *)error;
 

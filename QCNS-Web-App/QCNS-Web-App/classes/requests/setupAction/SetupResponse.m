@@ -10,9 +10,19 @@
 
 @interface SetupResponse ()
 
-@property (nonatomic, readwrite) NSDictionary *jsonDict;
-@property (nonatomic, readwrite) BOOL askRating;
-@property (nonatomic, readwrite) BOOL askPush;
+//@property (nonatomic, readwrite) NSDictionary *jsonDict;
+//@property (nonatomic, readwrite) BOOL askRating;
+//@property (nonatomic, readwrite) BOOL askPush;
+
+@property (nonatomic, readwrite) NSString *baseURL;
+@property (nonatomic, readwrite) NSString *backgroundImageURL;
+@property (nonatomic, readwrite) BOOL shouldCallDirectly;
+
+@property (nonatomic, readwrite) NSString *phoningTitle;
+@property (nonatomic, readwrite) NSString *phoningNumber;
+@property (nonatomic, readwrite) NSString *phoningHours;
+
+@property (nonatomic, readwrite) NSArray<MenuSection *> *menuSections;
 
 @end
 
@@ -23,20 +33,44 @@
     self = [super initWithDict:dict error:error];
     if (self)
     {
+        NSString *strTMP = [dict objectForKey:@"base_url"];
+        NilCheck(strTMP);
+        _baseURL = [strTMP copy];
         
-        NSNumber *numTMP = [self.data objectForKey:kAskPuskKey];
+        strTMP = [dict objectForKey:@"background_img_url"];
+        NilCheck(strTMP);
+        _backgroundImageURL = [strTMP copy];
+        
+        NSNumber *numTMP = [dict objectForKey:@"appel_direct"];
         NilCheck(numTMP);
-        _askPush = [numTMP boolValue];
-        
-        numTMP = [self.data objectForKey:kAskRatingsKey];
-        NilCheck(numTMP);
-        _askRating = [numTMP boolValue];
-        
-        
-        NSDictionary *dictTMP = [self.data objectForKey:kTextsKey];
-        NilCheck(dictTMP);
-        _jsonDict = [dictTMP copy];
+        _shouldCallDirectly = [numTMP boolValue];
 
+        strTMP = [dict objectForKey:@"titre_tel"];
+        NilCheck(strTMP);
+        _phoningTitle = [strTMP copy];
+
+        strTMP = [dict objectForKey:@"numero_tel"];
+        NilCheck(strTMP);
+        _phoningNumber = [strTMP copy];
+        
+        strTMP = [dict objectForKey:@"horaire_tel"];
+        NilCheck(strTMP);
+        _phoningHours = [strTMP copy];
+
+        
+        NSDictionary *menuDict = [dict objectForKey:@"menu"];
+        NilCheck(menuDict);
+        if (menuDict)
+        {
+            NSMutableArray *mutArr = [NSMutableArray new];
+            MenuSection *section = nil;
+            for (NSDictionary *dictTMP in menuDict)
+            {
+                section = [[MenuSection alloc] initWithDict:dictTMP];
+                [mutArr addObject:section];
+            }
+            _menuSections = [NSArray arrayWithArray:mutArr];
+        }
     }
     
     return self;
