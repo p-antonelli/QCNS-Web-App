@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NXCells.h"
+#import "MenuItem.h"
 
 @interface MenuCell : UITableViewCell <NXCells>
+
+@property (weak, nonatomic, readonly) MenuItem *item;
 
 @end

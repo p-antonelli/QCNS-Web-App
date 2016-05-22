@@ -20,7 +20,7 @@
 + (NSURL *)urlWithPath:(NSString *)path params:(NSDictionary *)params cacheKiller:(BOOL)useCacheKiller;
 //+ (NSURL *)urlWithPath:(NSString *)path params:(NSDictionary *)params cacheKiller:(BOOL)useCacheKiller hash:(BOOL)useHash;
 
-+ (WSErrorCode)wsErrorFromHTTPErrorCode:(HTTPErrorCode)httpErrorCode;
-+ (HTTPErrorCode)httpErrorFromWSErrorCode:(WSErrorCode)wsErrorCode;
+//+ (WSErrorCode)wsErrorFromHTTPErrorCode:(HTTPErrorCode)httpErrorCode;
+//+ (HTTPErrorCode)httpErrorFromWSErrorCode:(WSErrorCode)wsErrorCode;
 
 @end

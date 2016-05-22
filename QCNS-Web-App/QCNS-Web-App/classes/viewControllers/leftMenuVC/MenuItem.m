@@ -48,6 +48,8 @@
     return self;
 }
 
+#pragma mark - NSCopying
+
 - (instancetype)copyWithZone:(NSZone *)zone
 {
     MenuItem *item = [[self class] allocWithZone:zone];
@@ -60,5 +62,23 @@
     
     return item;
 }
+
+#pragma mark - Private
+
+- (NSDictionary *)dictionaryRepresentation
+{
+    NSDictionary *dict = @{@"title" : _title ?: @"",
+                           @"contentURL" : _contentURL ?: @"",
+                           @"imageURL" : _imageURL ?: @"",
+                           @"backgroundColor" : _backgroundColor ?: @"",
+                           @"price" : _price ?: @""};
+    return dict;
+}
+
+- (NSString *)description
+{
+    return [[super description] stringByAppendingFormat:@" %@", [self dictionaryRepresentation]];
+}
+
 
 @end

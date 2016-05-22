@@ -27,6 +27,11 @@
 #import "UILabel+AwesomeFont.h"
 #import "UILabel+Insets.h"
 
+#import "MenuSection.h"
+#import "MenuItem.h"
+
+#import "MainViewController.h"
+
 
 #define kDefaultTextColor       [UIColor lightGrayColor]
 #define kEnabledTextColor       FEEZLY_BLUE_COLOR
@@ -37,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTrailingConstraint;
 
-@property (nonatomic, readwrite) NSArray *tableArray;
+@property (nonatomic, readwrite) NSArray *menuSections;
 
 @end
 
@@ -65,8 +70,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
-    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
+//    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
+//    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
 }
 
 - (void)viewWillLayoutSubviews
@@ -106,7 +111,7 @@
 
 - (void)buildUIElements
 {
-    _tableArray = [[AppModel sharedInstance] menuItems];
+    _menuSections = [[AppModel sharedInstance] menuSections];
     
     self.tableView.backgroundColor = COSTA_BLUE_COLOR;
     self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
@@ -115,10 +120,10 @@
     self.tableView.separatorInset = UIEdgeInsetsMake(5, 20, 0, 20);
     self.tableViewTrailingConstraint.constant = [[SlideNavigationController sharedInstance] portraitSlideOffset];
     
-    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);
+    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);
     
-    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
-    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_tableArray count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
+//    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
+//    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
     
     [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"Header"];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MenuCell class]) bundle:MAIN_BUNDLE] forCellReuseIdentifier:NSStringFromClass([MenuCell class])];
@@ -189,9 +194,15 @@
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.menuSections count];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.tableArray count];
+    MenuSection *menuSection = [self.menuSections objectAtIndex:section];
+    return [menuSection.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -202,7 +213,8 @@
         cell = [[MenuCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
-    MenuItem *item = self.tableArray[indexPath.row];
+    MenuSection *menuSection = [self.menuSections objectAtIndex:indexPath.section];
+    MenuItem *item = [menuSection.items objectAtIndex:indexPath.row];
     
     [cell setItem:item value:indexPath delegate:self];
     
@@ -211,7 +223,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MenuItem  *item = self.tableArray[indexPath.row];
+    MenuSection *menuSection = [self.menuSections objectAtIndex:indexPath.section];
+    MenuItem *item = [menuSection.items objectAtIndex:indexPath.row];
+
     return [MenuCell cellHeightWithItem:item value:nil];
 }
 
@@ -230,9 +244,21 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DDLogInfo(@"");
-    MenuItem *item = [self.tableArray objectAtIndex:indexPath.row];
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
+    
+    MenuSection *menuSection = [self.menuSections objectAtIndex:indexPath.section];
+    MenuItem *item = [menuSection.items objectAtIndex:indexPath.row];
+    
+    MainViewController *vc = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    vc.urlToLoad = [NSURL URLWithString:[[[AppModel sharedInstance] baseURL] stringByAppendingString:item.contentURL]];
+
+    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
+        
+        [[SlideNavigationController sharedInstance] setViewControllers:@[vc] animated:YES];
+    }];
+    
+    
+    
+    
 }
 
 

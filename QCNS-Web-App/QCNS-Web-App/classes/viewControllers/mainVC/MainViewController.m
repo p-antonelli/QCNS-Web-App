@@ -66,6 +66,7 @@
 - (void)dealloc
 {
     DDLogWarn(@"");
+    [self removeMenuNotificationObervers];
 }
 
 #pragma mark - Public
