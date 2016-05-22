@@ -14,6 +14,6 @@
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSArray<MenuItem *> *items;
 
-- (instancetype)initWithDict:(NSDictionary *)dict;
+- (instancetype)initWithTitle:(NSString *)title contentDict:(NSDictionary *)dict;
 
 @end
