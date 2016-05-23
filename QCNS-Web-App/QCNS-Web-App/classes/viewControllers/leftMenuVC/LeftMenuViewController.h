@@ -13,4 +13,6 @@
 - (void)disableButtons;
 - (void)enableButtons;
 
+- (void)updateTexts;
+
 @end

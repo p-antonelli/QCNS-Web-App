@@ -39,12 +39,22 @@
 {
     [super viewWillAppear:animated];
     [self addMenuNotificationObervers];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    self.webView.delegate = self;
+    [self startLoadingWebview];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    
+    DDLogDebug(@"webview : %@", self.webView);
+    DDLogDebug(@"url : %@", self.urlToLoad);
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -74,7 +84,7 @@
 - (void)setUrlToLoad:(NSURL *)urlToLoad
 {
     _urlToLoad = [urlToLoad copy];
-    
+    self.webView.delegate = self;
     [self startLoadingWebview];
 }
 
@@ -82,6 +92,7 @@
 
 - (void)buildUIElements
 {
+    DDLogDebug(@"");
     //    self.view.backgroundColor = RANDOM_COLOR;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     QCNavigationBar *navBar = (QCNavigationBar *)self.navigationController.navigationBar;
@@ -109,6 +120,8 @@
 
 - (void)startLoadingWebview
 {
+    DDLogWarn(@"start loading : %@", self.urlToLoad);
+    DDLogWarn(@"webView delegate : %@", self.webView.delegate);
     if (_urlToLoad)
     {
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:_urlToLoad
@@ -177,15 +190,18 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     DDLogWarn(@"###### DID START LOADING URL : %@", [self.webView.request.URL absoluteString]);
+//    [[AppController sharedInstance] hideWaitingView];
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     DDLogWarn(@"###### DID FINISH LOADING URL : %@", [self.webView.request.URL absoluteString]);
+    [[AppController sharedInstance] hideWaitingView];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error
 {
     DDLogError(@"###### DID FAIL LOADING URL : %@ | error : %@", [self.webView.request.URL absoluteString], error);
+    [[AppController sharedInstance] hideWaitingView];
 }
 
 

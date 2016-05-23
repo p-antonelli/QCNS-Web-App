@@ -26,8 +26,12 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    self.backgroundColor = COSTA_BLUE_COLOR;    
-    self.contentView.backgroundColor = COSTA_BLUE_COLOR;
+//    self.backgroundColor = COSTA_BLUE_COLOR;
+//    self.contentView.backgroundColor = COSTA_BLUE_COLOR;
+    self.backgroundColor = [UIColor whiteColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    self.titleLabel.textColor = [UIColor darkTextColor];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -50,7 +54,7 @@
                            placeholderImage:[UIImage imageFromColor:[UIColor clearColor]]
                                     options:SDWebImageRetryFailed];
 
-    self.pictoImageView.backgroundColor = RANDOM_COLOR;
+//    self.pictoImageView.backgroundColor = RANDOM_COLOR;
 }
 
 // Returns cell height for cell with given item

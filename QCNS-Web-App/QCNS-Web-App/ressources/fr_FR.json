@@ -18,6 +18,7 @@
         "video" : "vidéo",
         "camera_unavailable" : "Aucun appareil photo disponible sur ce téléphone",
         "request_error_message" : "Une erreur est survenue. Veuillez verifier votre connexion internet et réessayer ultèrieurement",
+        "call" : "Appeler",
         
     },
     "view":

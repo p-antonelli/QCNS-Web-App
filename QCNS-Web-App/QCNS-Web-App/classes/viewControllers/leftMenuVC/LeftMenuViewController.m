@@ -32,13 +32,22 @@
 
 #import "MainViewController.h"
 
+#import "HeaderView.h"
+
 
 #define kDefaultTextColor       [UIColor lightGrayColor]
 #define kEnabledTextColor       FEEZLY_BLUE_COLOR
 
 @interface LeftMenuViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+
+@property (weak, nonatomic) IBOutlet UILabel *headerTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerPhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerHourLabel;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTrailingConstraint;
 
@@ -107,28 +116,20 @@
     DDLogWarn(@"");
 }
 
-#pragma mark - Private
+#pragma mark - Public
 
-- (void)buildUIElements
+- (void)updateTexts
 {
     _menuSections = [[AppModel sharedInstance] menuSections];
     
-    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
-    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    self.tableView.separatorColor = [UIColor whiteColor];
-    self.tableView.separatorInset = UIEdgeInsetsMake(5, 20, 0, 20);
-    self.tableViewTrailingConstraint.constant = [[SlideNavigationController sharedInstance] portraitSlideOffset];
+    self.headerTitleLabel.text = [[AppModel sharedInstance] phoningTitle];
+    self.headerPhoneLabel.text = [[AppModel sharedInstance] phoningNumber];
+    self.headerHourLabel.text = [[AppModel sharedInstance] phoningHours];
     
-    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);
-    
-//    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
-//    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
-    
-    [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"Header"];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MenuCell class]) bundle:MAIN_BUNDLE] forCellReuseIdentifier:NSStringFromClass([MenuCell class])];
-    
-    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+    dispatch_async(dispatch_get_main_queue(), ^{
+       
+        [self.tableView reloadData];
+    });
 }
 
 - (void)disableButtons
@@ -140,6 +141,32 @@
 {
     self.tableView.allowsSelection = YES;
 }
+
+
+#pragma mark - Private
+
+- (void)buildUIElements
+{
+    
+    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
+//    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [UIColor whiteColor];
+//    self.tableView.separatorInset = UIEdgeInsetsMake(5, 20, 0, 20);
+    self.tableViewTrailingConstraint.constant = [[SlideNavigationController sharedInstance] portraitSlideOffset];
+    
+//    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);
+//    
+//    DDLogDebug(@"bottom constraint : %@", self.tableViewBottomConstraint);
+//    DDLogDebug(@"bottom constraint const : %f", MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]));
+    
+    [self.tableView registerClass:[HeaderView class] forHeaderFooterViewReuseIdentifier:@"HeaderView"];
+    [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:@"FooterView"];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([MenuCell class]) bundle:MAIN_BUNDLE] forCellReuseIdentifier:NSStringFromClass([MenuCell class])];
+    
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+}
+
 
 - (void)addMenuNotificationObervers
 {
@@ -196,6 +223,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    DDLogDebug(@"nb section : %ld", (long)[self.menuSections count]);
     return [self.menuSections count];
 }
 
@@ -229,7 +257,33 @@
     return [MenuCell cellHeightWithItem:item value:nil];
 }
 
+
+
 #pragma mark - UITableViewDelegate
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    HeaderView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([HeaderView class])];
+    if (!view)
+    {
+        view = [[HeaderView alloc] initWithReuseIdentifier:NSStringFromClass([HeaderView class])];
+    }
+    
+    view.contentView.backgroundColor = [UIColor blackColor];
+    view.titleLabel.textColor = [UIColor whiteColor];
+    view.titleLabel.font = [UIFont boldSystemFontOfSize:12];
+
+    
+    MenuSection *menuSection = [_menuSections objectAtIndex:section];
+    view.titleLabel.text = menuSection.title;
+    
+    return view;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 40;
+}
+
 
 - (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -250,11 +304,20 @@
     
     MainViewController *vc = [[MainViewController alloc] initWithNibName:nil bundle:nil];
     vc.urlToLoad = [NSURL URLWithString:[[[AppModel sharedInstance] baseURL] stringByAppendingString:item.contentURL]];
-
-    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [[SlideNavigationController sharedInstance] setViewControllers:@[vc] animated:YES];
-    }];
+        [[SlideNavigationController sharedInstance] setViewControllers:@[vc]];
+        [[AppController sharedInstance] showWaitingView];
+        
+        [[SlideNavigationController sharedInstance] closeMenuWithCompletion:^{
+            
+        }];
+    });
+    
+//    [[SlideNavigationController sharedInstance] setViewControllers:@[vc] animated:YES];
+
+    
     
     
     

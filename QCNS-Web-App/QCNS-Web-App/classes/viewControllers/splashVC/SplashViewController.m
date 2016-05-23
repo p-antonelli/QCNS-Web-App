@@ -125,7 +125,7 @@
             [mutArr removeObjectAtIndex:0];
             [self.navigationController setViewControllers:mutArr];
             
-            mainVC.urlToLoad = [NSURL URLWithString:kDefaultBaseUrl];
+            mainVC.urlToLoad = [NSURL URLWithString:[[AppModel sharedInstance] baseURL]];
         }
 
         dispatch_after_delay_on_main_queue(1.0, ^{
@@ -143,6 +143,9 @@
 - (void)setupActionDidSucceed:(NSNotification *)notification
 {
     DDLogDebug(@"notif : %@", notification);
+    LeftMenuViewController *leftVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
+    [leftVC updateTexts];
+    
     [[AppController sharedInstance] processFetchAllImageWithDelegate:self];
     
 }
@@ -178,23 +181,29 @@
 - (void)applicationImagesDidFailFetching:(NSError *)error
 {
     DDLogError(@"error : %@", error);
-    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
-        
-        [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.error")
-                                   message:NX_LOCALIZED_STRING(@"common.request_error_message")
-                                yesCaption:NX_LOCALIZED_STRING(@"common.retry")
-                                 noCaption:nil
-                                  yesBlock:^{
-                                      
-                                      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                                          
-                                          [[AppController sharedInstance] showWaitingView];
-                                          [[AppController sharedInstance] processFetchAllImageWithDelegate:self];
-                                      });
-                                      
-                                  }noBlock:nil];
-        
-    }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self pushHomeVC];
+    });
+    
+    
+//    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
+//        
+//        [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.error")
+//                                   message:NX_LOCALIZED_STRING(@"common.request_error_message")
+//                                yesCaption:NX_LOCALIZED_STRING(@"common.retry")
+//                                 noCaption:nil
+//                                  yesBlock:^{
+//                                      
+//                                      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                                          
+//                                          [[AppController sharedInstance] showWaitingView];
+//                                          [[AppController sharedInstance] processFetchAllImageWithDelegate:self];
+//                                      });
+//                                      
+//                                  }noBlock:nil];
+//        
+//    }];
 }
 
 

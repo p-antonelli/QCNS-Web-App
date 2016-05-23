@@ -221,6 +221,17 @@
 - (void)callButtonPressed:(id)sender
 {
     DDLogDebug(@"");
+    [NXAlertViewFactory alertWithTitle:NX_LOCALIZED_STRING(@"common.call")
+                               message:[[AppModel sharedInstance] phoningNumber]
+                            yesCaption:NX_LOCALIZED_STRING(@"common.yes")
+                             noCaption:NX_LOCALIZED_STRING(@"common.no")
+                              yesBlock:^{
+                                  
+                                  NSString *phoneNumber = [[[AppModel sharedInstance] phoningNumber] stringByReplacingOccurrencesOfString:@" " withString:@""];
+                                  NSURL *url = [NSURL URLWithString:[@"tel://%@" stringByAppendingString:phoneNumber]];
+                                  [[UIApplication sharedApplication] openURL:url];
+                                  
+                              } noBlock:nil];
 }
 
 - (void)processFetchAllImageWithDelegate:(id<AppImageDelegate>)delegate

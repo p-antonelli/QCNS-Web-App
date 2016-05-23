@@ -108,6 +108,7 @@
 		E54C21A01C8E0C420047F291 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E59AEBA61CF27B350007E567 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +301,8 @@
 		E54C21A11C8E107F0047F291 /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg@2x.png"; sourceTree = "<group>"; };
 		E58CF9F61CEFCD9A0091B676 /* MenuSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSection.h; sourceTree = "<group>"; };
 		E58CF9F71CEFCD9A0091B676 /* MenuSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSection.m; sourceTree = "<group>"; };
+		E59AEBA41CF27B350007E567 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		E59AEBA51CF27B350007E567 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -657,6 +660,7 @@
 		E54C21451C8DADA70047F291 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E59AEBA31CF27B170007E567 /* header */,
 				E54C21721C8DCE440047F291 /* navBar */,
 			);
 			path = views;
@@ -764,6 +768,16 @@
 				E54C21961C8E0C420047F291 /* icon-29.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		E59AEBA31CF27B170007E567 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				E59AEBA51CF27B350007E567 /* HeaderView.h */,
+				E59AEBA41CF27B350007E567 /* HeaderView.m */,
+			);
+			name = header;
+			path = headerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -921,6 +935,7 @@
 				E54C210A1C8DACF10047F291 /* NSString+CapFirstLetter.m in Sources */,
 				E54C212C1C8DACF10047F291 /* NXGPSController.m in Sources */,
 				E54C20FE1C8DACF10047F291 /* NSDate+DurationString.m in Sources */,
+				E59AEBA61CF27B350007E567 /* HeaderView.m in Sources */,
 				E54C21231C8DACF10047F291 /* UITextField+Insets.m in Sources */,
 				E54C21571C8DB7610047F291 /* RequestAction.m in Sources */,
 				E54C21281C8DACF10047F291 /* NXAlertViewFactory.m in Sources */,

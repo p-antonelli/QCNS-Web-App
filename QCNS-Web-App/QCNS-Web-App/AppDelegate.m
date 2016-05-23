@@ -49,14 +49,14 @@
     navVC.panGestureSideOffset = 20;
     
     // nb px of view remaining on screen when menu is shown
-    navVC.portraitSlideOffset = 120;
+    navVC.portraitSlideOffset = 80;
     if ([NXDevice has3dot5InchScreen] || [NXDevice has4InchScreen])
     {
         navVC.portraitSlideOffset = 80;
     }
     else if ([NXDevice has5dot5InchScreen])
     {
-        navVC.portraitSlideOffset = 150;
+        navVC.portraitSlideOffset = 120;
     }
     
     
