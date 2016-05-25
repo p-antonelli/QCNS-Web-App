@@ -63,11 +63,15 @@
         if (menuDict)
         {
 //            DDLogWarn(@"menu dict : %@", menuDict);
+            NSArray *sortedKeys = [[menuDict allKeys] sortedArrayUsingSelector:@selector(compare:)];
+            
             NSMutableArray *mutArr = [NSMutableArray new];
             MenuSection *section = nil;
-            for (NSString *key in menuDict)
+            NSDictionary *dictTMP = nil;
+            for (NSString *key in sortedKeys)
             {
-                section = [[MenuSection alloc] initWithTitle:key contentDict:[menuDict objectForKey:key]];
+                dictTMP = [menuDict objectForKey:key];
+                section = [[MenuSection alloc] initWithTitle:[dictTMP objectForKey:@"titre"] contentDict:[dictTMP objectForKey:@"sous_menu"]];
                 [mutArr addObject:section];
             }
             _menuSections = [NSArray arrayWithArray:mutArr];
