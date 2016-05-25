@@ -36,19 +36,19 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informations &amp; reservations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYu-Yh-eLx">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04 22 13 16 07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enw-h6-4JW">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lun.Ven. 8h/21h Sam. 9h/20h Dim 10h/20h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-9P-XbN">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -70,12 +70,12 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="Nf9-0v-ZOc"/>
-                            <exclude reference="ILp-92-zw3"/>
-                            <exclude reference="Msl-Zw-TUK"/>
-                            <exclude reference="c3c-xd-pLs"/>
-                            <exclude reference="htj-gE-0Rf"/>
                             <exclude reference="8bp-N2-KWR"/>
                             <exclude reference="dmP-jq-URh"/>
+                            <exclude reference="c3c-xd-pLs"/>
+                            <exclude reference="htj-gE-0Rf"/>
+                            <exclude reference="ILp-92-zw3"/>
+                            <exclude reference="Msl-Zw-TUK"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -86,12 +86,12 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="Nf9-0v-ZOc"/>
-                            <include reference="ILp-92-zw3"/>
-                            <include reference="Msl-Zw-TUK"/>
-                            <include reference="c3c-xd-pLs"/>
-                            <include reference="htj-gE-0Rf"/>
                             <include reference="8bp-N2-KWR"/>
                             <include reference="dmP-jq-URh"/>
+                            <include reference="c3c-xd-pLs"/>
+                            <include reference="htj-gE-0Rf"/>
+                            <include reference="ILp-92-zw3"/>
+                            <include reference="Msl-Zw-TUK"/>
                         </mask>
                     </variation>
                 </view>
@@ -112,13 +112,13 @@
                     <exclude reference="dvK-AL-K7A"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="31w-ZI-hVd"/>
-                    <exclude reference="Pne-6r-VKJ"/>
-                    <exclude reference="il7-WY-1UU"/>
                     <exclude reference="Pc9-tV-jyi"/>
                     <exclude reference="TYB-Oj-zCz"/>
                     <exclude reference="Vdi-qK-aI8"/>
                     <exclude reference="d5Y-Wg-lT8"/>
+                    <exclude reference="31w-ZI-hVd"/>
+                    <exclude reference="Pne-6r-VKJ"/>
+                    <exclude reference="il7-WY-1UU"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -127,13 +127,13 @@
                     <include reference="dvK-AL-K7A"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="31w-ZI-hVd"/>
-                    <include reference="Pne-6r-VKJ"/>
-                    <include reference="il7-WY-1UU"/>
                     <include reference="Pc9-tV-jyi"/>
                     <include reference="TYB-Oj-zCz"/>
                     <include reference="Vdi-qK-aI8"/>
                     <include reference="d5Y-Wg-lT8"/>
+                    <include reference="31w-ZI-hVd"/>
+                    <include reference="Pne-6r-VKJ"/>
+                    <include reference="il7-WY-1UU"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="-321" y="77"/>

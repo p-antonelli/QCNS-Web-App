@@ -814,7 +814,7 @@
 				TargetAttributes = {
 					E54C20451C8D9C2D0047F291 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = QR4E9RTDR5;
+						DevelopmentTeam = 279WW8EPX6;
 					};
 				};
 			};
@@ -1112,12 +1112,13 @@
 			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
 				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.paulantonelli.qcnswebapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.costa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1127,12 +1128,13 @@
 			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
 				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = fr.paulantonelli.qcnswebapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.costa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

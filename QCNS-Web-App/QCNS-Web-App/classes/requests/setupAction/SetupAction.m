@@ -11,7 +11,7 @@
 #import "AppModel.h"
 #import "RequestModel.h"
 
-static NSString *const kActionPath = @"/json_appli";
+static NSString *const kActionPath = @"json_appli";
 
 @interface SetupAction ()
 
