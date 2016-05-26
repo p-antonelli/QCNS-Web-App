@@ -154,6 +154,8 @@
 - (void)buildUIElements
 {
     
+    self.view.backgroundColor = [UIColor clearColor];
+    
 //    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
     self.tableView.backgroundColor = [UIColor clearColor];
 //    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);

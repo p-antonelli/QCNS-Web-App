@@ -72,6 +72,7 @@
     
     
     [self.window makeKeyAndVisible];
+    self.window.backgroundColor = [UIColor clearColor];
     
     
     [navVC prepareMenuForReveal:MenuLeft];
@@ -82,10 +83,11 @@
 //    bg.alpha = 0.2;
     CGRect rect = bg.frame;
     rect.size.width = img.size.width;
-    rect.size.height = MAIN_SCREEN_HEIGHT - kDefaultNavigationBarHeight - 20;
+    rect.size.height = MAIN_SCREEN_HEIGHT - kDefaultNavigationBarHeight + 5;
     rect.origin.y = MAIN_SCREEN_HEIGHT - rect.size.height;
     rect.origin.x = (MAIN_SCREEN_WIDTH - rect.size.width) / 2;
     bg.frame = CGRectIntegral(rect);
+    bg.backgroundColor = [UIColor redColor];
     [self.window insertSubview:bg atIndex:0];
     
 

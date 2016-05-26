@@ -53,7 +53,7 @@
     
     NSString *url = [[[AppModel sharedInstance] baseURL] stringByAppendingString:_item.imageURL];
     
-    NSLog(@"image url : |%@|", url);
+//    NSLog(@"image url : |%@|", url);
     [self.pictoImageView sd_setImageWithURL:[NSURL URLWithString:url]
                            placeholderImage:[UIImage imageFromColor:[UIColor clearColor]]
                                     options:SDWebImageRetryFailed];
