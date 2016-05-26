@@ -14,7 +14,6 @@
 @property (nonatomic, readonly) NSString *contentURL;
 @property (nonatomic, readonly) NSString *imageURL;
 @property (nonatomic, readonly) NSString *backgroundColor;
-@property (nonatomic, readonly) NSString *price;
 
 
 - (instancetype)initWithDict:(NSDictionary *)dict;

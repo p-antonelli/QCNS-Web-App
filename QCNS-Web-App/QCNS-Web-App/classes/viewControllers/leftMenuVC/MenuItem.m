@@ -14,7 +14,6 @@
 @property (nonatomic, readwrite) NSString *contentURL;
 @property (nonatomic, readwrite) NSString *imageURL;
 @property (nonatomic, readwrite) NSString *backgroundColor;
-@property (nonatomic, readwrite) NSString *price;
 
 @end
 
@@ -40,10 +39,6 @@
         strTMP = [dict objectForKey:@"couleur"];
         NilCheck(strTMP);
         _backgroundColor = [strTMP copy];
-        
-        strTMP = [dict objectForKey:@"prix"];
-        NilCheck(strTMP);
-        _price = [strTMP copy];
     }
     return self;
 }
@@ -58,7 +53,6 @@
     item->_contentURL = [self.contentURL copyWithZone:zone];
     item->_imageURL = [self.imageURL copyWithZone:zone];
     item->_backgroundColor = [self.backgroundColor copyWithZone:zone];
-    item->_price = [self.price copyWithZone:zone];
     
     return item;
 }
@@ -70,8 +64,8 @@
     NSDictionary *dict = @{@"title" : _title ?: @"",
                            @"contentURL" : _contentURL ?: @"",
                            @"imageURL" : _imageURL ?: @"",
-                           @"backgroundColor" : _backgroundColor ?: @"",
-                           @"price" : _price ?: @""};
+                           @"backgroundColor" : _backgroundColor ?: @""
+                           };
     return dict;
 }
 
