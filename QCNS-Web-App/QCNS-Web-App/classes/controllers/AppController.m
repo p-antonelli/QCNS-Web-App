@@ -228,7 +228,9 @@
                               yesBlock:^{
                                   
                                   NSString *phoneNumber = [[[AppModel sharedInstance] phoningNumber] stringByReplacingOccurrencesOfString:@" " withString:@""];
-                                  NSURL *url = [NSURL URLWithString:[@"tel://%@" stringByAppendingString:phoneNumber]];
+                                  NSString *telURL = [@"tel:" stringByAppendingString:phoneNumber];
+                                  NSURL *url = [NSURL URLWithString:telURL];
+                                  DDLogError(@"###### PHONE URL : %@ %@ %@", phoneNumber, telURL, url);
                                   [[UIApplication sharedApplication] openURL:url];
                                   
                               } noBlock:nil];

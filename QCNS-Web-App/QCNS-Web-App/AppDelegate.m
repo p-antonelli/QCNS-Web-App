@@ -37,6 +37,7 @@
     
     SplashViewController *splashVC = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
     SlideNavigationController *navVC = [[SlideNavigationController alloc] initWithNavigationBarClass:[QCNavigationBar class] toolbarClass:nil];
+    navVC.enableSwipeGesture = NO;
     navVC.avoidSwitchingToSameClassViewController = NO;
     navVC.enableShadow = NO;
     
@@ -46,7 +47,7 @@
     navVC.leftMenu = leftMenuVC;
     
     // nb px where pan gestion is active
-    navVC.panGestureSideOffset = 20;
+//    navVC.panGestureSideOffset = 20;
     
     // nb px of view remaining on screen when menu is shown
     navVC.portraitSlideOffset = 80;
@@ -66,7 +67,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
-    self.window.backgroundColor = [UIColor redColor];
+    self.window.backgroundColor = [UIColor clearColor];
     self.window.rootViewController = navVC;
     
     

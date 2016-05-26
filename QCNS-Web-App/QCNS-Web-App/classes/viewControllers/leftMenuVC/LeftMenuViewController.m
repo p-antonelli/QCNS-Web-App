@@ -154,7 +154,8 @@
 - (void)buildUIElements
 {
     
-    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
+//    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
+    self.tableView.backgroundColor = [UIColor clearColor];
 //    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor whiteColor];
