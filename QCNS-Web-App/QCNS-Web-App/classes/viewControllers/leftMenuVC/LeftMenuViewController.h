@@ -15,4 +15,6 @@
 
 - (void)updateTexts;
 
+- (void)selectFirstMenuRow;
+
 @end

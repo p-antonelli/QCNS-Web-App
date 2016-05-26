@@ -118,6 +118,12 @@
 
 #pragma mark - Public
 
+- (void)selectFirstMenuRow
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+}
+
 - (void)updateTexts
 {
     _menuSections = [[AppModel sharedInstance] menuSections];

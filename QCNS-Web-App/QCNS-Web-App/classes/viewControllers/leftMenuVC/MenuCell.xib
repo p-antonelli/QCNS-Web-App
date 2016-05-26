@@ -21,7 +21,7 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNg-9M-1rv">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BNg-9M-1rv">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="BNg-9M-1rv" secondAttribute="height" multiplier="1:1" id="Wdp-ya-PxP"/>
@@ -83,7 +83,6 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageView" destination="BNg-9M-1rv" id="Dxn-jO-eq0"/>
                 <outlet property="pictoImageView" destination="BNg-9M-1rv" id="qc2-If-TMw"/>
                 <outlet property="titleLabel" destination="MlP-Qe-oL5" id="8op-Wb-y18"/>
             </connections>

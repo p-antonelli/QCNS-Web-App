@@ -113,6 +113,9 @@
 //    MeetingsViewController *mainVC = [[MeetingsViewController alloc] initWithNibName:nil bundle:nil];
     [[AppController sharedInstance] hideWaitingView];
     
+    LeftMenuViewController *leftMenuVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
+    [leftMenuVC selectFirstMenuRow];
+    
     MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
     
     [CATransaction begin];

@@ -7,6 +7,7 @@
 //
 
 #import "MenuCell.h"
+#import "AppModel.h"
 
 #import "UIImage+Color.h"
 #import "UIImageView+WebCache.h"
@@ -31,7 +32,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.titleLabel.textColor = [UIColor darkTextColor];
-    
+//    self.pictoImageView.backgroundColor = RANDOM_COLOR;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -50,7 +51,10 @@
     _item = item;
     self.titleLabel.text = [_item.title copy];
     
-    [self.pictoImageView sd_setImageWithURL:[NSURL URLWithString:_item.imageURL]
+    NSString *url = [[[AppModel sharedInstance] baseURL] stringByAppendingString:_item.imageURL];
+    
+    NSLog(@"image url : |%@|", url);
+    [self.pictoImageView sd_setImageWithURL:[NSURL URLWithString:url]
                            placeholderImage:[UIImage imageFromColor:[UIColor clearColor]]
                                     options:SDWebImageRetryFailed];
 
