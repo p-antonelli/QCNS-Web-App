@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41D712740A8588C6DFB210A2 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E520C56A1CFBCF3100643D5F /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E520C56D1CFBD0EB00643D5F /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
 		E54C204B1C8D9C2D0047F291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
 		E54C204E1C8D9C2D0047F291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
 		E54C20541C8D9C2D0047F291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
@@ -115,6 +117,10 @@
 		0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QCNS-Web-App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QCNS-Web-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App.debug.xcconfig"; sourceTree = "<group>"; };
 		C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QCNS-Web-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App.release.xcconfig"; sourceTree = "<group>"; };
+		E520C5681CFBCF3100643D5F /* NXURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NXURLParser.h; sourceTree = "<group>"; };
+		E520C5691CFBCF3100643D5F /* NXURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXURLParser.m; sourceTree = "<group>"; };
+		E520C56B1CFBD0EB00643D5F /* NSString+DecodeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DecodeURL.h"; sourceTree = "<group>"; };
+		E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DecodeURL.m"; sourceTree = "<group>"; };
 		E54C20461C8D9C2D0047F291 /* QCNS-Web-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QCNS-Web-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54C204A1C8D9C2D0047F291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E54C204C1C8D9C2D0047F291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -334,6 +340,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E520C5671CFBCF0600643D5F /* URLParser */ = {
+			isa = PBXGroup;
+			children = (
+				E520C5681CFBCF3100643D5F /* NXURLParser.h */,
+				E520C5691CFBCF3100643D5F /* NXURLParser.m */,
+			);
+			path = URLParser;
+			sourceTree = "<group>";
+		};
 		E54C203D1C8D9C2D0047F291 = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				E54C20F81C8DACF10047F291 /* NXCells.h */,
+				E520C5671CFBCF0600643D5F /* URLParser */,
 				E54C207A1C8DACF10047F291 /* Additions */,
 				E54C20D01C8DACF10047F291 /* Alerts */,
 				E54C20D61C8DACF10047F291 /* Device */,
@@ -430,6 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				E54C207B1C8DACF10047F291 /* NSDate+DurationString.h */,
+				E520C56B1CFBD0EB00643D5F /* NSString+DecodeURL.h */,
+				E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */,
 				E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */,
 				E54C207D1C8DACF10047F291 /* NSDate+ISO8601.h */,
 				E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */,
@@ -945,6 +963,7 @@
 				E54C212E1C8DACF10047F291 /* NXHTTPClient.m in Sources */,
 				E54C21381C8DACF10047F291 /* NXVideoView.m in Sources */,
 				E54C21401C8DAD080047F291 /* AppPrefs.m in Sources */,
+				E520C56A1CFBCF3100643D5F /* NXURLParser.m in Sources */,
 				E54C20FF1C8DACF10047F291 /* NSDate+ISO8601.m in Sources */,
 				E54C21291C8DACF10047F291 /* NXAlertViewHandler.m in Sources */,
 				E54C21581C8DB7610047F291 /* RequestError.m in Sources */,
@@ -962,6 +981,7 @@
 				E54C215F1C8DB9440047F291 /* SetupAction.m in Sources */,
 				E54C211D1C8DACF10047F291 /* UIImage+RoundedCorner.m in Sources */,
 				E54C21311C8DACF10047F291 /* NXCustomFormatter.m in Sources */,
+				E520C56D1CFBD0EB00643D5F /* NSString+DecodeURL.m in Sources */,
 				E54C21221C8DACF10047F291 /* UITextField+AccessoryViews.m in Sources */,
 				E54C21121C8DACF10047F291 /* RecursiveDescriptionHelper.m in Sources */,
 				E54C212B1C8DACF10047F291 /* NXDispatcherHelper.m in Sources */,

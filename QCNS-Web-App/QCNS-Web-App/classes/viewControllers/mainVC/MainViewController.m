@@ -14,6 +14,9 @@
 
 #import "QCNavigationBar.h"
 
+#import "NXURLParser.h"
+#import "NSString+DecodeURL.h"
+
 @interface MainViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -131,6 +134,34 @@
     }
 }
 
+
+- (void)openInternalURL:(NSString *)url title:(NSString *)title modal:(BOOL)modal
+{
+    DDLogWarn(@"URL : %@", url);
+    
+    MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+    
+    mainVC.urlToLoad = [NSURL URLWithString:url];
+    mainVC.title = [title copy];
+    [mainVC.view setNeedsDisplay];
+    [self.navigationController pushViewController:mainVC animated:YES];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
+        UINavigationController *navController = self.navigationController;
+        if (modal)
+        {
+            [navController presentViewController:mainVC animated:YES completion:nil];
+        }
+        else
+        {
+            [navController pushViewController:mainVC animated:YES];
+        }
+    });
+}
+
+
 #pragma mark - SlideNavigationControllerDelegate
 
 - (BOOL)slideNavigationControllerShouldDisplayRightMenu
@@ -185,6 +216,64 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     DDLogWarn(@"###### SHOULD LOAD REQUEST WITH URL : %@ %ld", [request.URL absoluteString], (long)navigationType);
+    
+    NSString *reqURLString = [[request.URL absoluteString] copy];
+//    if ([reqURLString rangeOfString:@"push="].location != NSNotFound || ((1 == 1 && ![reqURLString isEqualToString:@"http://app.croisierenet.com/"]) && ![reqURLString hasPrefix:@"http://app.croisierenet.com/liste-produits/1/d-4/croisieres-201606/port_0/comp_/a-prix-0-max/duree-0-max/liste.html"]))
+//    {
+    if ([reqURLString rangeOfString:@"push="].location != NSNotFound)
+    {
+
+        NSString *url =  @"http://app.croisierenet.com/liste-produits/1/d-4/croisieres-201606/port_0/comp_0/a-prix-0-max/duree-0-max/liste.html?push=fille&view_title=%22Votre%20selection%20croisi%C3%A8res%20m%C3%A9dieterran%C3%A9e%22";
+        
+        
+        NXURLParser *parser = [[NXURLParser alloc] initWithURLString:url];
+        NSString *pushValue = [parser valueForVariable:@"push"];
+        NSString *titleValue = [[parser valueForVariable:@"view_title"] stringByDecodingURLFormat];
+        
+        NSLog(@"####### PUSH VALUE : |%@|", pushValue);
+        NSLog(@"####### title VALUE : |%@|", titleValue);
+        
+        if (!pushValue ||
+            [pushValue length] == 0)
+//            ![pushValue isEqualToString:@"fille"] ||
+//            ![pushValue isEqualToString:@"modal"])
+        {
+            return YES;
+        }
+    
+        BOOL modal = NO;
+        if ([pushValue isEqualToString:@"fille"])
+        {
+            reqURLString = [reqURLString stringByReplacingOccurrencesOfString:@"push=fille" withString:@""];
+            reqURLString = [reqURLString stringByReplacingOccurrencesOfString:@"push=fille&" withString:@""];
+            
+        }
+        else if ([pushValue isEqualToString:@"modal"])
+        {
+            modal = YES;
+            reqURLString = [reqURLString stringByReplacingOccurrencesOfString:@"push=modal" withString:@""];
+            reqURLString = [reqURLString stringByReplacingOccurrencesOfString:@"push=modal&" withString:@""];
+        }
+        else
+        {
+            return YES;
+        }
+
+        reqURLString = [reqURLString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"view_title=%@",[parser valueForVariable:@"view_title"]] withString:@""];
+        reqURLString = [reqURLString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"view_title=%@&",[parser valueForVariable:@"view_title"]] withString:@""];
+
+        NSLog(@"###### PUSH CHILD");
+        NSLog(@"##### URL STR NEW : |%@| vs |%@|", reqURLString, [request.URL absoluteString]);
+
+        dispatch_after_delay_on_main_queue(0.1, ^{
+            [self openInternalURL:reqURLString title:titleValue modal:modal];
+        });
+        
+        return NO;
+    }
+    
+    
+    
     return YES;
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView
