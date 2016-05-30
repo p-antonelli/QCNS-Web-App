@@ -23,6 +23,8 @@
 @implementation AppDelegate
 
 
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
@@ -79,18 +81,16 @@
     
     
     UIImage *img = [UIImage imageNamed:@"main-bg"];
-    UIImageView *bg = [[UIImageView alloc] initWithImage:img];
+    _backgroundImageView = [[UIImageView alloc] initWithImage:img];
 //    bg.alpha = 0.2;
-    CGRect rect = bg.frame;
+    CGRect rect = _backgroundImageView.frame;
     rect.size.width = img.size.width;
     rect.size.height = MAIN_SCREEN_HEIGHT - kDefaultNavigationBarHeight + 5;
     rect.origin.y = MAIN_SCREEN_HEIGHT - rect.size.height;
     rect.origin.x = (MAIN_SCREEN_WIDTH - rect.size.width) / 2;
-    bg.frame = CGRectIntegral(rect);
-    bg.backgroundColor = [UIColor redColor];
-    [self.window insertSubview:bg atIndex:0];
-    
-
+    _backgroundImageView.frame = CGRectIntegral(rect);
+    _backgroundImageView.backgroundColor = [UIColor clearColor];
+    [self.window insertSubview:_backgroundImageView atIndex:0];
     
     DDLogDebug(@"navVC : %@", navVC);
     DDLogDebug(@"navVC.vc : %@", navVC.viewControllers);

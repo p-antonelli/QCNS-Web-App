@@ -19,7 +19,9 @@
 #import "LeftMenuViewController.h"
 
 #import "RequestController.h"
+#import "AppDelegate.h"
 
+#import "UIImageView+WebCache.h"
 
 @interface SplashViewController () <AppImageDelegate>
 
@@ -177,6 +179,12 @@
 - (void)applicationImagesDidFetchAtURLs:(NSArray *)imageURLs
 {
     DDLogInfo(@"");
+    
+    NSURL *url = [NSURL URLWithString:[[AppModel sharedInstance] backgroundImageURL]];
+    AppDelegate *appD = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appD.backgroundImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"main-bg"]];
+    
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         [self pushHomeVC];
     });
@@ -184,6 +192,10 @@
 - (void)applicationImagesDidFailFetching:(NSError *)error
 {
     DDLogError(@"error : %@", error);
+    
+    NSURL *url = [NSURL URLWithString:[[AppModel sharedInstance] backgroundImageURL]];
+    AppDelegate *appD = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appD.backgroundImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"main-bg"]];
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self pushHomeVC];
