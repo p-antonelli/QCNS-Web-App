@@ -38,7 +38,7 @@
     LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:nil bundle:nil];
     
     SplashViewController *splashVC = [[SplashViewController alloc] initWithNibName:@"SplashViewController" bundle:nil];
-    SlideNavigationController *navVC = [[SlideNavigationController alloc] initWithNavigationBarClass:[QCNavigationBar class] toolbarClass:nil];
+    SlideNavigationController *navVC = [[SlideNavigationController alloc] initWithNavigationBarClass:[UINavigationBar class] toolbarClass:nil];
     navVC.enableSwipeGesture = NO;
     navVC.avoidSwitchingToSameClassViewController = NO;
     navVC.enableShadow = NO;
@@ -85,7 +85,7 @@
 //    bg.alpha = 0.2;
     CGRect rect = _backgroundImageView.frame;
     rect.size.width = img.size.width;
-    rect.size.height = MAIN_SCREEN_HEIGHT - kDefaultNavigationBarHeight + 5;
+    rect.size.height = MAIN_SCREEN_HEIGHT - 44;
     rect.origin.y = MAIN_SCREEN_HEIGHT - rect.size.height;
     rect.origin.x = (MAIN_SCREEN_WIDTH - rect.size.width) / 2;
     _backgroundImageView.frame = CGRectIntegral(rect);
@@ -99,6 +99,7 @@
     DDLogDebug(@"leftMenuVC : %@", leftMenuVC);
     DDLogDebug(@"window : %@", self.window);
     DDLogDebug(@"window.root : %@", self.window.rootViewController);
+    DDLogDebug(@"window.subviews : %@", self.window.subviews);
     
     return YES;
 }

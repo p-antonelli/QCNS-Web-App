@@ -109,6 +109,8 @@
 		E54C219F1C8E0C420047F291 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
 		E54C21A01C8E0C420047F291 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E56EE76C1CFD016200D7ABCC /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E59AEBA61CF27B350007E567 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
 /* End PBXBuildFile section */
@@ -305,6 +307,9 @@
 		E54C21951C8E0C420047F291 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
 		E54C21961C8E0C420047F291 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		E54C21A11C8E107F0047F291 /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg@2x.png"; sourceTree = "<group>"; };
+		E56EE7691CFD016200D7ABCC /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		E56EE76A1CFD016200D7ABCC /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 		E58CF9F61CEFCD9A0091B676 /* MenuSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSection.h; sourceTree = "<group>"; };
 		E58CF9F71CEFCD9A0091B676 /* MenuSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSection.m; sourceTree = "<group>"; };
 		E59AEBA41CF27B350007E567 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
@@ -687,6 +692,7 @@
 		E54C21461C8DADAD0047F291 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E56EE7681CFD009300D7ABCC /* childVC */,
 				E54C217F1C8DD1480047F291 /* mainVC */,
 				E54C21791C8DD0560047F291 /* splashVC */,
 				E54C21611C8DBB4A0047F291 /* leftMenuVC */,
@@ -788,6 +794,16 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		E56EE7681CFD009300D7ABCC /* childVC */ = {
+			isa = PBXGroup;
+			children = (
+				E56EE7691CFD016200D7ABCC /* ChildViewController.h */,
+				E56EE76A1CFD016200D7ABCC /* ChildViewController.m */,
+				E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */,
+			);
+			path = childVC;
+			sourceTree = "<group>";
+		};
 		E59AEBA31CF27B170007E567 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -878,6 +894,7 @@
 				E54C21991C8E0C420047F291 /* icon-60@3x.png in Resources */,
 				E54C219F1C8E0C420047F291 /* icon-29@2x.png in Resources */,
 				E54C219D1C8E0C420047F291 /* icon-40.png in Resources */,
+				E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */,
 				E54C218B1C8DEF290047F291 /* fontawesome-webfont.ttf in Resources */,
 				E54C21661C8DBB780047F291 /* LeftMenuViewController.xib in Resources */,
 				E54C20541C8D9C2D0047F291 /* Main.storyboard in Resources */,
@@ -987,6 +1004,7 @@
 				E54C212B1C8DACF10047F291 /* NXDispatcherHelper.m in Sources */,
 				E54C21041C8DACF10047F291 /* NSLayoutConstraint+Description.m in Sources */,
 				E54C21001C8DACF10047F291 /* NSDate+NbYears.m in Sources */,
+				E56EE76C1CFD016200D7ABCC /* ChildViewController.m in Sources */,
 				E54C204E1C8D9C2D0047F291 /* AppDelegate.m in Sources */,
 				E54C21031C8DACF10047F291 /* NSDictionary+JSONFile.m in Sources */,
 				E54C212D1C8DACF10047F291 /* NXHTTPAction.m in Sources */,

@@ -26,7 +26,9 @@
         NSMutableArray *vars = [NSMutableArray new];
         //ignore the beginning of the string and skip to the vars
         [scanner scanUpToString:@"?" intoString:nil];
-        while ([scanner scanUpToString:@"&" intoString:&tempString])
+//        while ([scanner scanUpToString:@"&" intoString:&tempString])
+        NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"&#"];
+        while ([scanner scanUpToCharactersFromSet:charSet intoString:&tempString])
         {
             [vars addObject:tempString];
         }

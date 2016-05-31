@@ -45,7 +45,7 @@ static NSString *const kActionPath = @"json_appli";
                              @"screen_size" : [NSString stringWithFormat:@"%ldx%ld", (long)MAIN_SCREEN_WIDTH, (long)MAIN_SCREEN_HEIGHT]};
     
 
-    NSString *path = [NSString stringWithFormat:@"%@/%ld.json", kActionPath, [[AppModel sharedInstance] currentBrand]];
+    NSString *path = [NSString stringWithFormat:@"%@/%ld.json", kActionPath, (long)[[AppModel sharedInstance] currentBrand]];
     return [RequestModel urlWithPath:path params:params];
 }
 

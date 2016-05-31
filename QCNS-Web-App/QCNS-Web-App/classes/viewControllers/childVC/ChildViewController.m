@@ -1,43 +1,29 @@
 //
-//  MainViewController.m
+//  ChildViewController.m
 //  QCNS-Web-App
 //
-//  Created by Paul Antonelli on 07/03/2016.
+//  Created by Paul Antonelli on 31/05/2016.
 //  Copyright © 2016 Paul Antonelli | NYX INFO. All rights reserved.
 //
 
-#import "MainViewController.h"
-
-#import "AppModel.h"
-#import "AppController.h"
-#import "SlideNavigationController.h"
-
-//#import "QCNavigationBar.h"
 #import "ChildViewController.h"
-
+#import "SlideNavigationController.h"
+#import "AppController.h"
 #import "NXURLParser.h"
+
 #import "NSString+DecodeURL.h"
 #import "UIImage+Color.h"
 
-@interface MainViewController () <UIWebViewDelegate>
+
+@interface ChildViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-
-@property (weak, nonatomic) IBOutlet UIView *headerContainerView;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
-
-
-@property (weak, nonatomic) IBOutlet UIButton *leftMenuButton;
-@property (weak, nonatomic) IBOutlet UIButton *rightMenuButton;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuButtonWConstraint;
-
 @property (nonatomic, readwrite) BOOL hasPushedChildVC;
+
 
 @end
 
-@implementation MainViewController
+@implementation ChildViewController
 
 #pragma mark - UIViewController LifeCycle
 
@@ -57,9 +43,7 @@
     [super viewWillAppear:animated];
     
     self.webView.delegate = self;
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    
-    if (!_hasPushedChildVC)
+    if (!self.hasPushedChildVC)
     {
         [self startLoadingWebview];
     }
@@ -68,9 +52,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
-    _hasPushedChildVC = NO;
- }
+    
+    self.hasPushedChildVC = NO;
+}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -106,51 +90,21 @@
 - (void)buildUIElements
 {
     DDLogDebug(@"");
+    DDLogError(@"######## PRESENTED MODALLY : %d", self.isPresentedModally);
     //    self.view.backgroundColor = RANDOM_COLOR;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = YES;
+    self.navigationController.navigationBar.translucent = NO;
     
-    // remove "Retour" in back button when pushed childVC
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStyleDone target:nil action:nil];
- 
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
     
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
-    
-    [self.backgroundImageView setImage:[UIImage imageNamed:@"costa-navbar"]];
-    
-    self.rightMenuButton.titleLabel.font = AWESOME_FONT(30);
-    self.rightMenuButton.titleLabel.textColor = [UIColor whiteColor];
-    [self.rightMenuButton setTitle:[NSString stringForFontAwesomeIcon:FAPhone] forState:UIControlStateNormal];
-    
-    [self.rightMenuButton addTarget:[AppController sharedInstance]
-                            action:@selector(callButtonPressed:)
-                  forControlEvents:UIControlEventTouchUpInside];
-
-    
-    [self.rightMenuButton setBackgroundImage:[UIImage imageFromColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
-    [self.rightMenuButton setTitleEdgeInsets:UIEdgeInsetsMake(3, 0, 0, 0)];
-    self.rightMenuButton.clipsToBounds = YES;
-    self.rightMenuButton.tintColor = [UIColor whiteColor];
-    self.rightMenuButton.layer.cornerRadius = self.menuButtonWConstraint.constant / 2.0;
-    self.rightMenuButton.layer.borderColor = [[UIColor whiteColor] CGColor];
-    self.rightMenuButton.layer.borderWidth = 4;
-    
-    // 
-    
-    UIImage *image = [[UIImage imageNamed:@"menu-button"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    [self.leftMenuButton setImage:image forState:UIControlStateNormal];
-    [self.leftMenuButton setBackgroundImage:[UIImage imageFromColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
-    [self.leftMenuButton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 1, 0.5f)];
-    self.leftMenuButton.clipsToBounds = YES;
-    self.leftMenuButton.tintColor = [UIColor whiteColor];
-    self.leftMenuButton.layer.cornerRadius = self.menuButtonWConstraint.constant / 2.0;
-    self.leftMenuButton.layer.borderColor = [[UIColor whiteColor] CGColor];
-    self.leftMenuButton.layer.borderWidth = 4;
-    
-    [self.leftMenuButton addTarget:[SlideNavigationController sharedInstance]
-                            action:@selector(toggleLeftMenu)
-                  forControlEvents:UIControlEventTouchUpInside];
+    if (self.isPresentedModally)
+    {
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Retour" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonPressed:)];
+        self.navigationItem.leftBarButtonItem = backItem;
+    }
 }
+
 
 - (void)startLoadingWebview
 {
@@ -173,23 +127,21 @@
     [[AppController sharedInstance] showWaitingView];
     
     ChildViewController *childVC = [[ChildViewController alloc] initWithNibName:nil bundle:nil];
-    if (modal)
-    {
-        childVC.isPresentedModally = YES;
-    }
     
     childVC.urlToLoad = [NSURL URLWithString:url];
     childVC.title = [title copy];
+    
     [childVC.view setNeedsDisplay];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    
+        
         [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
         UINavigationController *navController = self.navigationController;
         [navController setNavigationBarHidden:NO animated:NO];
         _hasPushedChildVC = YES;
         if (modal)
         {
+            childVC.isPresentedModally = YES;
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:childVC];
             
             //now present this navigation controller modally
@@ -202,16 +154,10 @@
     });
 }
 
-#pragma mark - SlideNavigationControllerDelegate
-
-- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+- (void)backButtonPressed:(id)sender
 {
-    return NO;
-}
-
-- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
-{
-    return NO;
+    DDLogDebug(@"");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -227,12 +173,15 @@
         NSString *pushValue = [parser valueForVariable:@"push"];
         NSString *titleValue = [[parser valueForVariable:@"view_title"] stringByDecodingURLFormat];
         
+//        NSLog(@"####### PUSH VALUE : |%@|", pushValue);
+//        NSLog(@"####### title VALUE : |%@|", titleValue);
+        
         if (!pushValue ||
             [pushValue length] == 0)
         {
             return YES;
         }
-    
+        
         BOOL modal = NO;
         if ([pushValue isEqualToString:@"fille"])
         {
@@ -250,7 +199,7 @@
         {
             return YES;
         }
-
+        
         reqURLString = [reqURLString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"view_title=%@",[parser valueForVariable:@"view_title"]] withString:@""];
         reqURLString = [reqURLString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"view_title=%@&",[parser valueForVariable:@"view_title"]] withString:@""];
         
@@ -258,7 +207,8 @@
         {
             reqURLString = [reqURLString stringByReplacingOccurrencesOfString:@"?&#" withString:@"#"];
         }
-
+                
+        // push children
         dispatch_after_delay_on_main_queue(0.1, ^{
             [self openInternalURL:reqURLString title:titleValue modal:modal];
         });

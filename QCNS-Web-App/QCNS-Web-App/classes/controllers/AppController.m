@@ -377,37 +377,19 @@
 - (void)setupNavigationBar
 {
     DDLogDebug(@"");
-    UIImage *backImg = [[UIImage imageNamed:@"back-img"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    [[UINavigationBar appearance] setBackIndicatorImage:backImg];
-    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImg];
+//    UIImage *backImg = [[UIImage imageNamed:@"back-img"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    [[UINavigationBar appearance] setBackIndicatorImage:backImg];
+//    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImg];
+//
     
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-//    [[UINavigationBar appearance] setBarTintColor:COSTA_BLUE_COLOR];
-//    [[UINavigationBar appearance] setTitleTextAttributes:@{
-//                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
-//                                                           NSFontAttributeName: BOLD_FONT(19.0f)
-//                                                           }];
-    
-//    [[UINavigationBar appearanceWhenContainedIn:[MFMailComposeViewController class], nil] setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
-    
-//    [[FZNavigationBar appearance] setTitleVerticalPositionAdjustment:15 forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:COSTA_BLUE_COLOR];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                           NSFontAttributeName: BOLD_FONT(19.0f)
+                                                           }];
 
-    
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-//                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
-//                                                           NSForegroundColorAttributeName: [UIColor whiteColor]
-//                                                           }
-//                                                forState:UIControlStateNormal];
-//    
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-//                                                           NSFontAttributeName: REGULAR_FONT(14.0f),
-//                                                           NSForegroundColorAttributeName: GRAY_TEXT_COLOR
-//                                                           }
-//                                                forState:UIControlStateDisabled];
-
-
-//    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"Annuler"];
-    
 }
 
 - (void)dealloc
