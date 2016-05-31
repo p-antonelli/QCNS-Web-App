@@ -34,8 +34,6 @@
         }
         
         _variables = [NSArray arrayWithArray:vars];
-        
-        NSLog(@"var : %@", _variables);
     }
     return self;
 }

@@ -131,7 +131,7 @@
     [self.rightMenuButton setTitleEdgeInsets:UIEdgeInsetsMake(3, 0, 0, 0)];
     self.rightMenuButton.clipsToBounds = YES;
     self.rightMenuButton.tintColor = [UIColor whiteColor];
-    self.rightMenuButton.layer.cornerRadius = self.menuButtonWConstraint.constant / 2.0;
+    self.rightMenuButton.layer.cornerRadius = CGRectGetWidth(self.rightMenuButton.frame) / 2.0;
     self.rightMenuButton.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.rightMenuButton.layer.borderWidth = 4;
     
@@ -143,7 +143,7 @@
     [self.leftMenuButton setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 1, 0.5f)];
     self.leftMenuButton.clipsToBounds = YES;
     self.leftMenuButton.tintColor = [UIColor whiteColor];
-    self.leftMenuButton.layer.cornerRadius = self.menuButtonWConstraint.constant / 2.0;
+    self.leftMenuButton.layer.cornerRadius = CGRectGetWidth(self.leftMenuButton.frame) / 2.0;
     self.leftMenuButton.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.leftMenuButton.layer.borderWidth = 4;
     
