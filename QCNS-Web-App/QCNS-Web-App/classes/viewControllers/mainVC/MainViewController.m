@@ -155,7 +155,10 @@
 - (void)startLoadingWebview
 {
     DDLogWarn(@"start loading : %@", self.urlToLoad);
+    
+    self.webView.delegate = self;    
     DDLogWarn(@"webView delegate : %@", self.webView.delegate);
+    
     if (_urlToLoad)
     {
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:_urlToLoad
