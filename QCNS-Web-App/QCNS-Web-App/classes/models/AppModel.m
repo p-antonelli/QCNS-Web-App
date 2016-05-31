@@ -68,11 +68,11 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     
     if ([_backgroundImageURL length] > 0)
     {
-        [mutSet addObject:[_baseURL stringByAppendingString:_backgroundImageURL]];
+//        [mutSet addObject:[_baseURL stringByAppendingString:_backgroundImageURL]];
+        [mutSet addObject:_backgroundImageURL];
     }
     
-    DDLogError(@"back img url : %@", [_baseURL stringByAppendingString:_backgroundImageURL]);
-    DDLogError(@"back img url : %@ | %@", _baseURL, _backgroundImageURL);
+    DDLogError(@"back img url : %@", _backgroundImageURL);
     DDLogError(@"");
     
     for (MenuSection *section in _menuSections)
@@ -81,7 +81,8 @@ static NSString * const kDefaultLocale      = @"fr_FR";
         {
             if ([item.imageURL length] > 0)
             {
-                [mutSet addObject:[_baseURL stringByAppendingString:item.imageURL]];
+//                [mutSet addObject:[_baseURL stringByAppendingString:item.imageURL]];
+                [mutSet addObject:item.imageURL];
             }
         }
     }

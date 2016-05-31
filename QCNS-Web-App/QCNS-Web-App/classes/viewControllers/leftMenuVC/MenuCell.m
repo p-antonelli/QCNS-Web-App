@@ -51,7 +51,8 @@
     _item = item;
     self.titleLabel.text = [_item.title copy];
     
-    NSString *url = [[[AppModel sharedInstance] baseURL] stringByAppendingString:_item.imageURL];
+//    NSString *url = [[[AppModel sharedInstance] baseURL] stringByAppendingString:_item.imageURL];
+    NSString *url = [_item.imageURL copy];
     
 //    NSLog(@"image url : |%@|", url);
     [self.pictoImageView sd_setImageWithURL:[NSURL URLWithString:url]
