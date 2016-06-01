@@ -100,7 +100,7 @@
     
     if (self.isPresentedModally)
     {
-        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Retour" style:UIBarButtonItemStyleDone target:self action:@selector(backButtonPressed:)];
+        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:NX_LOCALIZED_STRING(@"common.back") style:UIBarButtonItemStyleDone target:self action:@selector(backButtonPressed:)];
         self.navigationItem.leftBarButtonItem = backItem;
     }
 }

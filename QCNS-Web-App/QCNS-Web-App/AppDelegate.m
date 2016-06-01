@@ -23,7 +23,7 @@
 @implementation AppDelegate
 
 
-
+#warning TODO : LOCALIZE APPLICATION TEXTS
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
