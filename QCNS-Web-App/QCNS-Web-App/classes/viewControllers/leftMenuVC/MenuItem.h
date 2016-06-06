@@ -13,7 +13,7 @@
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, readonly) NSString *contentURL;
 @property (nonatomic, readonly) NSString *imageURL;
-@property (nonatomic, readonly) NSString *backgroundColor;
+@property (nonatomic, readonly) UIColor *backgroundColor;
 
 
 - (instancetype)initWithDict:(NSDictionary *)dict;

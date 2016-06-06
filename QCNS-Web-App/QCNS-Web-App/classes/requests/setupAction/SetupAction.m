@@ -40,7 +40,7 @@ static NSString *const kActionPath = @"json_appli";
                              @"brand" : @"apple",
                              @"model" : [NXDevice modelName],
                              @"device_unique_id" : [NXDevice uniqueID],
-                             @"lang" : [[NSLocale preferredLanguages] objectAtIndex:0],
+                             @"lang" : [NXDevice currentLocaleISO],
                              @"version" : [NXDevice bundleVersion],
                              @"screen_size" : [NSString stringWithFormat:@"%ldx%ld", (long)MAIN_SCREEN_WIDTH, (long)MAIN_SCREEN_HEIGHT]};
     

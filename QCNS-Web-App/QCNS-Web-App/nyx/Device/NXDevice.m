@@ -37,6 +37,8 @@ int main (int argc, char *argv[]);
 @property (nonatomic, readwrite) NSString *uniqueID;
 @property (nonatomic, readwrite) NSString *vendorID;
 
+@property (nonatomic, readwrite) NSString *currentLocaleISO;
+
 @property (nonatomic, readwrite) CGSize screenSize;
 
 @property (nonatomic, readwrite) BOOL has3dot5InchScreen;   // iPhone3G, 4
@@ -114,6 +116,8 @@ int main (int argc, char *argv[]);
 
     return [self.vendorID copy];
 }
+
++ (NSString *)currentLocaleISO {    return [[[self class] sharedInstance] currentLocaleISO];}
 
 + (CGSize)screenSize {     return [[[self class] sharedInstance] screenSize];}
 
@@ -213,6 +217,13 @@ int main (int argc, char *argv[]);
 
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         self.documentsDirectory = [paths objectAtIndex:0];
+        
+        NSLocale *locale = [NSLocale currentLocale];
+        NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
+        
+        NSString *language = [[NSLocale preferredLanguages] firstObject];
+        self.currentLocaleISO = [NSString stringWithFormat:@"%@_%@",language,countryCode];
+
     }
     return self;
 }

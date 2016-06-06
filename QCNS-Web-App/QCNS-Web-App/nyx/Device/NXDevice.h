@@ -58,4 +58,7 @@
 // UIDevice identifierForVender helper
 + (NSString *)vendorID;
 
+// eg : fr_FR, en_US
++ (NSString *)currentLocaleISO;
+
 @end

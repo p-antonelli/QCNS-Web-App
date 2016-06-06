@@ -1,0 +1,37 @@
+{
+    "common":
+    {
+        "ok" : "Ok",
+        "yes" : "Yes",
+        "no" : "No",
+        "error" : "Error",
+        "info" : "Information",
+        "warning" : "Warning",
+        "send" : "Envoyer",
+        "back" : "Back",
+        "cancel" : "Cancel",
+        "done" : "Valid",
+        "continue" : "Continue",
+        "retry" : "Retry",
+        "save" : "save" ,
+        "picture" : "picture",
+        "video" : "video",
+        "camera_unavailable" : "No camera available on this device",
+        "request_error_message" : "An error has occurred. Please check your internet connection and try again.",
+        "call" : "Call",
+        
+    },
+    "view":
+    {
+        "left_menu":
+        {
+        },
+        "right_menu":
+        {
+        },
+    },
+    
+    "data":
+    {
+    },
+}

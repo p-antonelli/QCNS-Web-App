@@ -10,7 +10,7 @@
 #import "NSDictionary+JSONFile.h"
 #import "AppController.h"
 #import "NSString+FontAwesome.h"
-
+#import "NXDevice.h"
 
 static NSString * const kDefaultLanguage    = @"fr";
 static NSString * const kDefaultLocale      = @"fr_FR";
@@ -101,7 +101,7 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     self = [super init];
     if (self)
     {
-        _locale = kDefaultLocale;
+        _locale = [NXDevice currentLocaleISO];
         _language = kDefaultLanguage;
         
         [self setupCurrentBrand];
@@ -140,7 +140,14 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 - (void)loadLocalFile
 {
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:@"fr_FR.json"];
+    NSString *jsonFileName = @"fr_FR.json";
+    
+    if (![self.locale hasPrefix:@"fr"])
+    {
+        jsonFileName = @"en_US.json";
+    }
+    
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfJSONFile:jsonFileName];
     DDLogInfo(@"Locale : %@ %@", self.locale, dict);
     [[NXLocalizer sharedInstance] loadLocalizationData:dict forLocale:self.locale];
 }

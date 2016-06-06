@@ -13,7 +13,6 @@
 		E54C204B1C8D9C2D0047F291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
 		E54C204E1C8D9C2D0047F291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
 		E54C20541C8D9C2D0047F291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E54C20561C8D9C2D0047F291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
 		E54C20591C8D9C2D0047F291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
 		E54C20FE1C8DACF10047F291 /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
 		E54C20FF1C8DACF10047F291 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
@@ -111,8 +110,551 @@
 		E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E56EE76C1CFD016200D7ABCC /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
 		E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E58CEA841D00ED670042300F /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E58CEA871D00EFD00042300F /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
 		E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E59AEBA61CF27B350007E567 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E59FD3441D04DC5400E9997A /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
+		E59FD3451D04DC5400E9997A /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
+		E59FD3461D04DC5400E9997A /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
+		E59FD3471D04DC5400E9997A /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20981C8DACF10047F291 /* NSString+FontAwesome.m */; };
+		E59FD3481D04DC5400E9997A /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21491C8DB71C0047F291 /* AppController.m */; };
+		E59FD3491D04DC5400E9997A /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
+		E59FD34A1D04DC5400E9997A /* UIApplication+HideKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A71C8DACF10047F291 /* UIApplication+HideKeyboard.m */; };
+		E59FD34B1D04DC5400E9997A /* NSString+NXContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209B1C8DACF10047F291 /* NSString+NXContainsString.m */; };
+		E59FD34C1D04DC5400E9997A /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213D1C8DAD080047F291 /* Common.m */; };
+		E59FD34D1D04DC5400E9997A /* UIImageView+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BF1C8DACF10047F291 /* UIImageView+ImageTintColor.m */; };
+		E59FD34E1D04DC5400E9997A /* NSString+CapFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20941C8DACF10047F291 /* NSString+CapFirstLetter.m */; };
+		E59FD34F1D04DC5400E9997A /* NXGPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DE1C8DACF10047F291 /* NXGPSController.m */; };
+		E59FD3501D04DC5400E9997A /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
+		E59FD3511D04DC5400E9997A /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E59FD3521D04DC5400E9997A /* UITextField+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C71C8DACF10047F291 /* UITextField+Insets.m */; };
+		E59FD3531D04DC5400E9997A /* RequestAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21521C8DB7610047F291 /* RequestAction.m */; };
+		E59FD3541D04DC5400E9997A /* NXAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D21C8DACF10047F291 /* NXAlertViewFactory.m */; };
+		E59FD3551D04DC5400E9997A /* NXMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F11C8DACF10047F291 /* NXMediaPicker.m */; };
+		E59FD3561D04DC5400E9997A /* NXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D81C8DACF10047F291 /* NXDevice.m */; };
+		E59FD3571D04DC5400E9997A /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B11C8DACF10047F291 /* UIImage+Alpha.m */; };
+		E59FD3581D04DC5400E9997A /* NXHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E31C8DACF10047F291 /* NXHTTPClient.m */; };
+		E59FD3591D04DC5400E9997A /* NXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FD1C8DACF10047F291 /* NXVideoView.m */; };
+		E59FD35A1D04DC5400E9997A /* AppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213A1C8DAD080047F291 /* AppPrefs.m */; };
+		E59FD35B1D04DC5400E9997A /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E59FD35C1D04DC5400E9997A /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
+		E59FD35D1D04DC5400E9997A /* NXAlertViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D41C8DACF10047F291 /* NXAlertViewHandler.m */; };
+		E59FD35E1D04DC5400E9997A /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21541C8DB7610047F291 /* RequestError.m */; };
+		E59FD35F1D04DC5400E9997A /* RequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21561C8DB7610047F291 /* RequestResponse.m */; };
+		E59FD3601D04DC5400E9997A /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214F1C8DB7410047F291 /* AppModel.m */; };
+		E59FD3611D04DC5400E9997A /* UICollectionView+CenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AD1C8DACF10047F291 /* UICollectionView+CenterCell.m */; };
+		E59FD3621D04DC5400E9997A /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209D1C8DACF10047F291 /* NSString+Random.m */; };
+		E59FD3631D04DC5400E9997A /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20961C8DACF10047F291 /* NSString+EmailValidation.m */; };
+		E59FD3641D04DC5400E9997A /* NSDictionary+Cascade.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20821C8DACF10047F291 /* NSDictionary+Cascade.m */; };
+		E59FD3651D04DC5400E9997A /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B31C8DACF10047F291 /* UIImage+Base64.m */; };
+		E59FD3661D04DC5400E9997A /* NXMediaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FB1C8DACF10047F291 /* NXMediaPool.m */; };
+		E59FD3671D04DC5400E9997A /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B91C8DACF10047F291 /* UIImage+Resize.m */; };
+		E59FD3681D04DC5400E9997A /* UILabel+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C31C8DACF10047F291 /* UILabel+Insets.m */; };
+		E59FD3691D04DC5400E9997A /* NXHTTPJSONAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E51C8DACF10047F291 /* NXHTTPJSONAction.m */; };
+		E59FD36A1D04DC5400E9997A /* SetupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215C1C8DB9440047F291 /* SetupAction.m */; };
+		E59FD36B1D04DC5400E9997A /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BB1C8DACF10047F291 /* UIImage+RoundedCorner.m */; };
+		E59FD36C1D04DC5400E9997A /* NXCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EB1C8DACF10047F291 /* NXCustomFormatter.m */; };
+		E59FD36D1D04DC5400E9997A /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
+		E59FD36E1D04DC5400E9997A /* UITextField+AccessoryViews.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C51C8DACF10047F291 /* UITextField+AccessoryViews.m */; };
+		E59FD36F1D04DC5400E9997A /* RecursiveDescriptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A51C8DACF10047F291 /* RecursiveDescriptionHelper.m */; };
+		E59FD3701D04DC5400E9997A /* NXDispatcherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DB1C8DACF10047F291 /* NXDispatcherHelper.m */; };
+		E59FD3711D04DC5400E9997A /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20881C8DACF10047F291 /* NSLayoutConstraint+Description.m */; };
+		E59FD3721D04DC5400E9997A /* NSDate+NbYears.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20801C8DACF10047F291 /* NSDate+NbYears.m */; };
+		E59FD3731D04DC5400E9997A /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E59FD3741D04DC5400E9997A /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
+		E59FD3751D04DC5400E9997A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
+		E59FD3761D04DC5400E9997A /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
+		E59FD3771D04DC5400E9997A /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
+		E59FD3781D04DC5400E9997A /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
+		E59FD3791D04DC5400E9997A /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
+		E59FD37A1D04DC5400E9997A /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
+		E59FD37B1D04DC5400E9997A /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E59FD37C1D04DC5400E9997A /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
+		E59FD37D1D04DC5400E9997A /* UIImage+tintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BD1C8DACF10047F291 /* UIImage+tintColor.m */; };
+		E59FD37E1D04DC5400E9997A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
+		E59FD37F1D04DC5400E9997A /* UIImage+ImageNamedNoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B71C8DACF10047F291 /* UIImage+ImageNamedNoCache.m */; };
+		E59FD3801D04DC5400E9997A /* UIViewController+segueDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CF1C8DACF10047F291 /* UIViewController+segueDelay.m */; };
+		E59FD3811D04DC5400E9997A /* UIView+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C91C8DACF10047F291 /* UIView+Description.m */; };
+		E59FD3821D04DC5400E9997A /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CD1C8DACF10047F291 /* UIView+ScreenShot.m */; };
+		E59FD3831D04DC5400E9997A /* NSObject+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208C1C8DACF10047F291 /* NSObject+KeyboardObserver.m */; };
+		E59FD3841D04DC5400E9997A /* UILabel+AwesomeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C11C8DACF10047F291 /* UILabel+AwesomeFont.m */; };
+		E59FD3851D04DC5400E9997A /* NSString+trimLeadingWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209F1C8DACF10047F291 /* NSString+trimLeadingWhitespace.m */; };
+		E59FD3861D04DC5400E9997A /* UIView+RenderToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CB1C8DACF10047F291 /* UIView+RenderToImage.m */; };
+		E59FD3871D04DC5400E9997A /* NSURL+PathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A31C8DACF10047F291 /* NSURL+PathParameters.m */; };
+		E59FD3881D04DC5400E9997A /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21631C8DBB780047F291 /* LeftMenuViewController.m */; };
+		E59FD3891D04DC5400E9997A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
+		E59FD38A1D04DC5400E9997A /* UIBarButtonItem+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AB1C8DACF10047F291 /* UIBarButtonItem+Helpers.m */; };
+		E59FD38B1D04DC5400E9997A /* NSDictionary+FormParamString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20841C8DACF10047F291 /* NSDictionary+FormParamString.m */; };
+		E59FD38C1D04DC5400E9997A /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
+		E59FD38D1D04DC5400E9997A /* NXMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F31C8DACF10047F291 /* NXMediaPickerCell.m */; };
+		E59FD38E1D04DC5400E9997A /* NXLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EE1C8DACF10047F291 /* NXLogger.m */; };
+		E59FD38F1D04DC5400E9997A /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214C1C8DB72E0047F291 /* RequestController.m */; };
+		E59FD3901D04DC5400E9997A /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21681C8DBBEE0047F291 /* RequestModel.m */; };
+		E59FD3911D04DC5400E9997A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
+		E59FD3921D04DC5400E9997A /* UIApplication+LocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A91C8DACF10047F291 /* UIApplication+LocalNotification.m */; };
+		E59FD3931D04DC5400E9997A /* NSObject+NXActionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208E1C8DACF10047F291 /* NSObject+NXActionObserver.m */; };
+		E59FD3941D04DC5400E9997A /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
+		E59FD3951D04DC5400E9997A /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
+		E59FD3971D04DC5400E9997A /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E59FD3991D04DC5400E9997A /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
+		E59FD39A1D04DC5400E9997A /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
+		E59FD39B1D04DC5400E9997A /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E59FD39C1D04DC5400E9997A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
+		E59FD39D1D04DC5400E9997A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
+		E59FD39E1D04DC5400E9997A /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
+		E59FD39F1D04DC5400E9997A /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
+		E59FD3A01D04DC5400E9997A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
+		E59FD3A11D04DC5400E9997A /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E59FD3A21D04DC5400E9997A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
+		E59FD3A31D04DC5400E9997A /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
+		E59FD3A41D04DC5400E9997A /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
+		E59FD3A61D04DC5400E9997A /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
+		E59FD3A71D04DC5400E9997A /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
+		E59FD3A81D04DC5400E9997A /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
+		E59FD3A91D04DC5400E9997A /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
+		E59FD3AA1D04DC5400E9997A /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
+		E59FD3AB1D04DC5400E9997A /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
+		E59FD3AC1D04DC5400E9997A /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E59FD3AD1D04DC5400E9997A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
+		E59FD3AE1D04DC5400E9997A /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E59FD3AF1D04DC5400E9997A /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
+		E59FD3B01D04DC5400E9997A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
+		E59FD3B11D04DC5400E9997A /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5B0CCFB1D0633A400CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
+		E5B0CCFC1D0633A400CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
+		E5B0CCFD1D0633A400CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
+		E5B0CCFE1D0633A400CF37A4 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20981C8DACF10047F291 /* NSString+FontAwesome.m */; };
+		E5B0CCFF1D0633A400CF37A4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21491C8DB71C0047F291 /* AppController.m */; };
+		E5B0CD001D0633A400CF37A4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
+		E5B0CD011D0633A400CF37A4 /* UIApplication+HideKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A71C8DACF10047F291 /* UIApplication+HideKeyboard.m */; };
+		E5B0CD021D0633A400CF37A4 /* NSString+NXContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209B1C8DACF10047F291 /* NSString+NXContainsString.m */; };
+		E5B0CD031D0633A400CF37A4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213D1C8DAD080047F291 /* Common.m */; };
+		E5B0CD041D0633A400CF37A4 /* UIImageView+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BF1C8DACF10047F291 /* UIImageView+ImageTintColor.m */; };
+		E5B0CD051D0633A400CF37A4 /* NSString+CapFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20941C8DACF10047F291 /* NSString+CapFirstLetter.m */; };
+		E5B0CD061D0633A400CF37A4 /* NXGPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DE1C8DACF10047F291 /* NXGPSController.m */; };
+		E5B0CD071D0633A400CF37A4 /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
+		E5B0CD081D0633A400CF37A4 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E5B0CD091D0633A400CF37A4 /* UITextField+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C71C8DACF10047F291 /* UITextField+Insets.m */; };
+		E5B0CD0A1D0633A400CF37A4 /* RequestAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21521C8DB7610047F291 /* RequestAction.m */; };
+		E5B0CD0B1D0633A400CF37A4 /* NXAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D21C8DACF10047F291 /* NXAlertViewFactory.m */; };
+		E5B0CD0C1D0633A400CF37A4 /* NXMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F11C8DACF10047F291 /* NXMediaPicker.m */; };
+		E5B0CD0D1D0633A400CF37A4 /* NXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D81C8DACF10047F291 /* NXDevice.m */; };
+		E5B0CD0E1D0633A400CF37A4 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B11C8DACF10047F291 /* UIImage+Alpha.m */; };
+		E5B0CD0F1D0633A400CF37A4 /* NXHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E31C8DACF10047F291 /* NXHTTPClient.m */; };
+		E5B0CD101D0633A400CF37A4 /* NXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FD1C8DACF10047F291 /* NXVideoView.m */; };
+		E5B0CD111D0633A400CF37A4 /* AppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213A1C8DAD080047F291 /* AppPrefs.m */; };
+		E5B0CD121D0633A400CF37A4 /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E5B0CD131D0633A400CF37A4 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
+		E5B0CD141D0633A400CF37A4 /* NXAlertViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D41C8DACF10047F291 /* NXAlertViewHandler.m */; };
+		E5B0CD151D0633A400CF37A4 /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21541C8DB7610047F291 /* RequestError.m */; };
+		E5B0CD161D0633A400CF37A4 /* RequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21561C8DB7610047F291 /* RequestResponse.m */; };
+		E5B0CD171D0633A400CF37A4 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214F1C8DB7410047F291 /* AppModel.m */; };
+		E5B0CD181D0633A400CF37A4 /* UICollectionView+CenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AD1C8DACF10047F291 /* UICollectionView+CenterCell.m */; };
+		E5B0CD191D0633A400CF37A4 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209D1C8DACF10047F291 /* NSString+Random.m */; };
+		E5B0CD1A1D0633A400CF37A4 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20961C8DACF10047F291 /* NSString+EmailValidation.m */; };
+		E5B0CD1B1D0633A400CF37A4 /* NSDictionary+Cascade.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20821C8DACF10047F291 /* NSDictionary+Cascade.m */; };
+		E5B0CD1C1D0633A400CF37A4 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B31C8DACF10047F291 /* UIImage+Base64.m */; };
+		E5B0CD1D1D0633A400CF37A4 /* NXMediaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FB1C8DACF10047F291 /* NXMediaPool.m */; };
+		E5B0CD1E1D0633A400CF37A4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B91C8DACF10047F291 /* UIImage+Resize.m */; };
+		E5B0CD1F1D0633A400CF37A4 /* UILabel+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C31C8DACF10047F291 /* UILabel+Insets.m */; };
+		E5B0CD201D0633A400CF37A4 /* NXHTTPJSONAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E51C8DACF10047F291 /* NXHTTPJSONAction.m */; };
+		E5B0CD211D0633A400CF37A4 /* SetupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215C1C8DB9440047F291 /* SetupAction.m */; };
+		E5B0CD221D0633A400CF37A4 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BB1C8DACF10047F291 /* UIImage+RoundedCorner.m */; };
+		E5B0CD231D0633A400CF37A4 /* NXCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EB1C8DACF10047F291 /* NXCustomFormatter.m */; };
+		E5B0CD241D0633A400CF37A4 /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
+		E5B0CD251D0633A400CF37A4 /* UITextField+AccessoryViews.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C51C8DACF10047F291 /* UITextField+AccessoryViews.m */; };
+		E5B0CD261D0633A400CF37A4 /* RecursiveDescriptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A51C8DACF10047F291 /* RecursiveDescriptionHelper.m */; };
+		E5B0CD271D0633A400CF37A4 /* NXDispatcherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DB1C8DACF10047F291 /* NXDispatcherHelper.m */; };
+		E5B0CD281D0633A400CF37A4 /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20881C8DACF10047F291 /* NSLayoutConstraint+Description.m */; };
+		E5B0CD291D0633A400CF37A4 /* NSDate+NbYears.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20801C8DACF10047F291 /* NSDate+NbYears.m */; };
+		E5B0CD2A1D0633A400CF37A4 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E5B0CD2B1D0633A400CF37A4 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
+		E5B0CD2C1D0633A400CF37A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
+		E5B0CD2D1D0633A400CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
+		E5B0CD2E1D0633A400CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
+		E5B0CD2F1D0633A400CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
+		E5B0CD301D0633A400CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
+		E5B0CD311D0633A400CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
+		E5B0CD321D0633A400CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E5B0CD331D0633A400CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
+		E5B0CD341D0633A400CF37A4 /* UIImage+tintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BD1C8DACF10047F291 /* UIImage+tintColor.m */; };
+		E5B0CD351D0633A400CF37A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
+		E5B0CD361D0633A400CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B71C8DACF10047F291 /* UIImage+ImageNamedNoCache.m */; };
+		E5B0CD371D0633A400CF37A4 /* UIViewController+segueDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CF1C8DACF10047F291 /* UIViewController+segueDelay.m */; };
+		E5B0CD381D0633A400CF37A4 /* UIView+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C91C8DACF10047F291 /* UIView+Description.m */; };
+		E5B0CD391D0633A400CF37A4 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CD1C8DACF10047F291 /* UIView+ScreenShot.m */; };
+		E5B0CD3A1D0633A400CF37A4 /* NSObject+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208C1C8DACF10047F291 /* NSObject+KeyboardObserver.m */; };
+		E5B0CD3B1D0633A400CF37A4 /* UILabel+AwesomeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C11C8DACF10047F291 /* UILabel+AwesomeFont.m */; };
+		E5B0CD3C1D0633A400CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209F1C8DACF10047F291 /* NSString+trimLeadingWhitespace.m */; };
+		E5B0CD3D1D0633A400CF37A4 /* UIView+RenderToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CB1C8DACF10047F291 /* UIView+RenderToImage.m */; };
+		E5B0CD3E1D0633A400CF37A4 /* NSURL+PathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A31C8DACF10047F291 /* NSURL+PathParameters.m */; };
+		E5B0CD3F1D0633A400CF37A4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21631C8DBB780047F291 /* LeftMenuViewController.m */; };
+		E5B0CD401D0633A400CF37A4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
+		E5B0CD411D0633A400CF37A4 /* UIBarButtonItem+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AB1C8DACF10047F291 /* UIBarButtonItem+Helpers.m */; };
+		E5B0CD421D0633A400CF37A4 /* NSDictionary+FormParamString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20841C8DACF10047F291 /* NSDictionary+FormParamString.m */; };
+		E5B0CD431D0633A400CF37A4 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
+		E5B0CD441D0633A400CF37A4 /* NXMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F31C8DACF10047F291 /* NXMediaPickerCell.m */; };
+		E5B0CD451D0633A400CF37A4 /* NXLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EE1C8DACF10047F291 /* NXLogger.m */; };
+		E5B0CD461D0633A400CF37A4 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214C1C8DB72E0047F291 /* RequestController.m */; };
+		E5B0CD471D0633A400CF37A4 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21681C8DBBEE0047F291 /* RequestModel.m */; };
+		E5B0CD481D0633A400CF37A4 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
+		E5B0CD491D0633A400CF37A4 /* UIApplication+LocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A91C8DACF10047F291 /* UIApplication+LocalNotification.m */; };
+		E5B0CD4A1D0633A400CF37A4 /* NSObject+NXActionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208E1C8DACF10047F291 /* NSObject+NXActionObserver.m */; };
+		E5B0CD4B1D0633A400CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
+		E5B0CD4C1D0633A400CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
+		E5B0CD4E1D0633A400CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E5B0CD501D0633A400CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
+		E5B0CD511D0633A400CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
+		E5B0CD521D0633A400CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E5B0CD531D0633A400CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
+		E5B0CD541D0633A400CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
+		E5B0CD551D0633A400CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
+		E5B0CD561D0633A400CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
+		E5B0CD571D0633A400CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
+		E5B0CD581D0633A400CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E5B0CD591D0633A400CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
+		E5B0CD5A1D0633A400CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
+		E5B0CD5B1D0633A400CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
+		E5B0CD5C1D0633A400CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
+		E5B0CD5D1D0633A400CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
+		E5B0CD5E1D0633A400CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
+		E5B0CD5F1D0633A400CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
+		E5B0CD601D0633A400CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
+		E5B0CD611D0633A400CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
+		E5B0CD621D0633A400CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E5B0CD631D0633A400CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
+		E5B0CD641D0633A400CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E5B0CD651D0633A400CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
+		E5B0CD661D0633A400CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
+		E5B0CD671D0633A400CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5B0CD731D0633B500CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
+		E5B0CD741D0633B500CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
+		E5B0CD751D0633B500CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
+		E5B0CD761D0633B500CF37A4 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20981C8DACF10047F291 /* NSString+FontAwesome.m */; };
+		E5B0CD771D0633B500CF37A4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21491C8DB71C0047F291 /* AppController.m */; };
+		E5B0CD781D0633B500CF37A4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
+		E5B0CD791D0633B500CF37A4 /* UIApplication+HideKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A71C8DACF10047F291 /* UIApplication+HideKeyboard.m */; };
+		E5B0CD7A1D0633B500CF37A4 /* NSString+NXContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209B1C8DACF10047F291 /* NSString+NXContainsString.m */; };
+		E5B0CD7B1D0633B500CF37A4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213D1C8DAD080047F291 /* Common.m */; };
+		E5B0CD7C1D0633B500CF37A4 /* UIImageView+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BF1C8DACF10047F291 /* UIImageView+ImageTintColor.m */; };
+		E5B0CD7D1D0633B500CF37A4 /* NSString+CapFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20941C8DACF10047F291 /* NSString+CapFirstLetter.m */; };
+		E5B0CD7E1D0633B500CF37A4 /* NXGPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DE1C8DACF10047F291 /* NXGPSController.m */; };
+		E5B0CD7F1D0633B500CF37A4 /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
+		E5B0CD801D0633B500CF37A4 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E5B0CD811D0633B500CF37A4 /* UITextField+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C71C8DACF10047F291 /* UITextField+Insets.m */; };
+		E5B0CD821D0633B500CF37A4 /* RequestAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21521C8DB7610047F291 /* RequestAction.m */; };
+		E5B0CD831D0633B500CF37A4 /* NXAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D21C8DACF10047F291 /* NXAlertViewFactory.m */; };
+		E5B0CD841D0633B500CF37A4 /* NXMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F11C8DACF10047F291 /* NXMediaPicker.m */; };
+		E5B0CD851D0633B500CF37A4 /* NXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D81C8DACF10047F291 /* NXDevice.m */; };
+		E5B0CD861D0633B500CF37A4 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B11C8DACF10047F291 /* UIImage+Alpha.m */; };
+		E5B0CD871D0633B500CF37A4 /* NXHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E31C8DACF10047F291 /* NXHTTPClient.m */; };
+		E5B0CD881D0633B500CF37A4 /* NXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FD1C8DACF10047F291 /* NXVideoView.m */; };
+		E5B0CD891D0633B500CF37A4 /* AppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213A1C8DAD080047F291 /* AppPrefs.m */; };
+		E5B0CD8A1D0633B500CF37A4 /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E5B0CD8B1D0633B500CF37A4 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
+		E5B0CD8C1D0633B500CF37A4 /* NXAlertViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D41C8DACF10047F291 /* NXAlertViewHandler.m */; };
+		E5B0CD8D1D0633B500CF37A4 /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21541C8DB7610047F291 /* RequestError.m */; };
+		E5B0CD8E1D0633B500CF37A4 /* RequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21561C8DB7610047F291 /* RequestResponse.m */; };
+		E5B0CD8F1D0633B500CF37A4 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214F1C8DB7410047F291 /* AppModel.m */; };
+		E5B0CD901D0633B500CF37A4 /* UICollectionView+CenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AD1C8DACF10047F291 /* UICollectionView+CenterCell.m */; };
+		E5B0CD911D0633B500CF37A4 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209D1C8DACF10047F291 /* NSString+Random.m */; };
+		E5B0CD921D0633B500CF37A4 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20961C8DACF10047F291 /* NSString+EmailValidation.m */; };
+		E5B0CD931D0633B500CF37A4 /* NSDictionary+Cascade.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20821C8DACF10047F291 /* NSDictionary+Cascade.m */; };
+		E5B0CD941D0633B500CF37A4 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B31C8DACF10047F291 /* UIImage+Base64.m */; };
+		E5B0CD951D0633B500CF37A4 /* NXMediaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FB1C8DACF10047F291 /* NXMediaPool.m */; };
+		E5B0CD961D0633B500CF37A4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B91C8DACF10047F291 /* UIImage+Resize.m */; };
+		E5B0CD971D0633B500CF37A4 /* UILabel+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C31C8DACF10047F291 /* UILabel+Insets.m */; };
+		E5B0CD981D0633B500CF37A4 /* NXHTTPJSONAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E51C8DACF10047F291 /* NXHTTPJSONAction.m */; };
+		E5B0CD991D0633B500CF37A4 /* SetupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215C1C8DB9440047F291 /* SetupAction.m */; };
+		E5B0CD9A1D0633B500CF37A4 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BB1C8DACF10047F291 /* UIImage+RoundedCorner.m */; };
+		E5B0CD9B1D0633B500CF37A4 /* NXCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EB1C8DACF10047F291 /* NXCustomFormatter.m */; };
+		E5B0CD9C1D0633B500CF37A4 /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
+		E5B0CD9D1D0633B500CF37A4 /* UITextField+AccessoryViews.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C51C8DACF10047F291 /* UITextField+AccessoryViews.m */; };
+		E5B0CD9E1D0633B500CF37A4 /* RecursiveDescriptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A51C8DACF10047F291 /* RecursiveDescriptionHelper.m */; };
+		E5B0CD9F1D0633B500CF37A4 /* NXDispatcherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DB1C8DACF10047F291 /* NXDispatcherHelper.m */; };
+		E5B0CDA01D0633B500CF37A4 /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20881C8DACF10047F291 /* NSLayoutConstraint+Description.m */; };
+		E5B0CDA11D0633B500CF37A4 /* NSDate+NbYears.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20801C8DACF10047F291 /* NSDate+NbYears.m */; };
+		E5B0CDA21D0633B500CF37A4 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E5B0CDA31D0633B500CF37A4 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
+		E5B0CDA41D0633B500CF37A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
+		E5B0CDA51D0633B500CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
+		E5B0CDA61D0633B500CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
+		E5B0CDA71D0633B500CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
+		E5B0CDA81D0633B500CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
+		E5B0CDA91D0633B500CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
+		E5B0CDAA1D0633B500CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E5B0CDAB1D0633B500CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
+		E5B0CDAC1D0633B500CF37A4 /* UIImage+tintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BD1C8DACF10047F291 /* UIImage+tintColor.m */; };
+		E5B0CDAD1D0633B500CF37A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
+		E5B0CDAE1D0633B500CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B71C8DACF10047F291 /* UIImage+ImageNamedNoCache.m */; };
+		E5B0CDAF1D0633B500CF37A4 /* UIViewController+segueDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CF1C8DACF10047F291 /* UIViewController+segueDelay.m */; };
+		E5B0CDB01D0633B500CF37A4 /* UIView+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C91C8DACF10047F291 /* UIView+Description.m */; };
+		E5B0CDB11D0633B500CF37A4 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CD1C8DACF10047F291 /* UIView+ScreenShot.m */; };
+		E5B0CDB21D0633B500CF37A4 /* NSObject+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208C1C8DACF10047F291 /* NSObject+KeyboardObserver.m */; };
+		E5B0CDB31D0633B500CF37A4 /* UILabel+AwesomeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C11C8DACF10047F291 /* UILabel+AwesomeFont.m */; };
+		E5B0CDB41D0633B500CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209F1C8DACF10047F291 /* NSString+trimLeadingWhitespace.m */; };
+		E5B0CDB51D0633B500CF37A4 /* UIView+RenderToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CB1C8DACF10047F291 /* UIView+RenderToImage.m */; };
+		E5B0CDB61D0633B500CF37A4 /* NSURL+PathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A31C8DACF10047F291 /* NSURL+PathParameters.m */; };
+		E5B0CDB71D0633B500CF37A4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21631C8DBB780047F291 /* LeftMenuViewController.m */; };
+		E5B0CDB81D0633B500CF37A4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
+		E5B0CDB91D0633B500CF37A4 /* UIBarButtonItem+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AB1C8DACF10047F291 /* UIBarButtonItem+Helpers.m */; };
+		E5B0CDBA1D0633B500CF37A4 /* NSDictionary+FormParamString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20841C8DACF10047F291 /* NSDictionary+FormParamString.m */; };
+		E5B0CDBB1D0633B500CF37A4 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
+		E5B0CDBC1D0633B500CF37A4 /* NXMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F31C8DACF10047F291 /* NXMediaPickerCell.m */; };
+		E5B0CDBD1D0633B500CF37A4 /* NXLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EE1C8DACF10047F291 /* NXLogger.m */; };
+		E5B0CDBE1D0633B500CF37A4 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214C1C8DB72E0047F291 /* RequestController.m */; };
+		E5B0CDBF1D0633B500CF37A4 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21681C8DBBEE0047F291 /* RequestModel.m */; };
+		E5B0CDC01D0633B500CF37A4 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
+		E5B0CDC11D0633B500CF37A4 /* UIApplication+LocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A91C8DACF10047F291 /* UIApplication+LocalNotification.m */; };
+		E5B0CDC21D0633B500CF37A4 /* NSObject+NXActionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208E1C8DACF10047F291 /* NSObject+NXActionObserver.m */; };
+		E5B0CDC31D0633B500CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
+		E5B0CDC41D0633B500CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
+		E5B0CDC61D0633B500CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E5B0CDC81D0633B500CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
+		E5B0CDC91D0633B500CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
+		E5B0CDCA1D0633B500CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E5B0CDCB1D0633B500CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
+		E5B0CDCC1D0633B500CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
+		E5B0CDCD1D0633B500CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
+		E5B0CDCE1D0633B500CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
+		E5B0CDCF1D0633B500CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
+		E5B0CDD01D0633B500CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E5B0CDD11D0633B500CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
+		E5B0CDD21D0633B500CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
+		E5B0CDD31D0633B500CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
+		E5B0CDD41D0633B500CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
+		E5B0CDD51D0633B500CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
+		E5B0CDD61D0633B500CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
+		E5B0CDD71D0633B500CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
+		E5B0CDD81D0633B500CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
+		E5B0CDD91D0633B500CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
+		E5B0CDDA1D0633B500CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E5B0CDDB1D0633B500CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
+		E5B0CDDC1D0633B500CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E5B0CDDD1D0633B500CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
+		E5B0CDDE1D0633B500CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
+		E5B0CDDF1D0633B500CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5B0CDEB1D0633F300CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
+		E5B0CDEC1D0633F300CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
+		E5B0CDED1D0633F300CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
+		E5B0CDEE1D0633F300CF37A4 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20981C8DACF10047F291 /* NSString+FontAwesome.m */; };
+		E5B0CDEF1D0633F300CF37A4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21491C8DB71C0047F291 /* AppController.m */; };
+		E5B0CDF01D0633F300CF37A4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
+		E5B0CDF11D0633F300CF37A4 /* UIApplication+HideKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A71C8DACF10047F291 /* UIApplication+HideKeyboard.m */; };
+		E5B0CDF21D0633F300CF37A4 /* NSString+NXContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209B1C8DACF10047F291 /* NSString+NXContainsString.m */; };
+		E5B0CDF31D0633F300CF37A4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213D1C8DAD080047F291 /* Common.m */; };
+		E5B0CDF41D0633F300CF37A4 /* UIImageView+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BF1C8DACF10047F291 /* UIImageView+ImageTintColor.m */; };
+		E5B0CDF51D0633F300CF37A4 /* NSString+CapFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20941C8DACF10047F291 /* NSString+CapFirstLetter.m */; };
+		E5B0CDF61D0633F300CF37A4 /* NXGPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DE1C8DACF10047F291 /* NXGPSController.m */; };
+		E5B0CDF71D0633F300CF37A4 /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
+		E5B0CDF81D0633F300CF37A4 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E5B0CDF91D0633F300CF37A4 /* UITextField+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C71C8DACF10047F291 /* UITextField+Insets.m */; };
+		E5B0CDFA1D0633F300CF37A4 /* RequestAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21521C8DB7610047F291 /* RequestAction.m */; };
+		E5B0CDFB1D0633F300CF37A4 /* NXAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D21C8DACF10047F291 /* NXAlertViewFactory.m */; };
+		E5B0CDFC1D0633F300CF37A4 /* NXMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F11C8DACF10047F291 /* NXMediaPicker.m */; };
+		E5B0CDFD1D0633F300CF37A4 /* NXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D81C8DACF10047F291 /* NXDevice.m */; };
+		E5B0CDFE1D0633F300CF37A4 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B11C8DACF10047F291 /* UIImage+Alpha.m */; };
+		E5B0CDFF1D0633F300CF37A4 /* NXHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E31C8DACF10047F291 /* NXHTTPClient.m */; };
+		E5B0CE001D0633F300CF37A4 /* NXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FD1C8DACF10047F291 /* NXVideoView.m */; };
+		E5B0CE011D0633F300CF37A4 /* AppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213A1C8DAD080047F291 /* AppPrefs.m */; };
+		E5B0CE021D0633F300CF37A4 /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E5B0CE031D0633F300CF37A4 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
+		E5B0CE041D0633F300CF37A4 /* NXAlertViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D41C8DACF10047F291 /* NXAlertViewHandler.m */; };
+		E5B0CE051D0633F300CF37A4 /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21541C8DB7610047F291 /* RequestError.m */; };
+		E5B0CE061D0633F300CF37A4 /* RequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21561C8DB7610047F291 /* RequestResponse.m */; };
+		E5B0CE071D0633F300CF37A4 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214F1C8DB7410047F291 /* AppModel.m */; };
+		E5B0CE081D0633F300CF37A4 /* UICollectionView+CenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AD1C8DACF10047F291 /* UICollectionView+CenterCell.m */; };
+		E5B0CE091D0633F300CF37A4 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209D1C8DACF10047F291 /* NSString+Random.m */; };
+		E5B0CE0A1D0633F300CF37A4 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20961C8DACF10047F291 /* NSString+EmailValidation.m */; };
+		E5B0CE0B1D0633F300CF37A4 /* NSDictionary+Cascade.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20821C8DACF10047F291 /* NSDictionary+Cascade.m */; };
+		E5B0CE0C1D0633F300CF37A4 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B31C8DACF10047F291 /* UIImage+Base64.m */; };
+		E5B0CE0D1D0633F300CF37A4 /* NXMediaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FB1C8DACF10047F291 /* NXMediaPool.m */; };
+		E5B0CE0E1D0633F300CF37A4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B91C8DACF10047F291 /* UIImage+Resize.m */; };
+		E5B0CE0F1D0633F300CF37A4 /* UILabel+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C31C8DACF10047F291 /* UILabel+Insets.m */; };
+		E5B0CE101D0633F300CF37A4 /* NXHTTPJSONAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E51C8DACF10047F291 /* NXHTTPJSONAction.m */; };
+		E5B0CE111D0633F300CF37A4 /* SetupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215C1C8DB9440047F291 /* SetupAction.m */; };
+		E5B0CE121D0633F300CF37A4 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BB1C8DACF10047F291 /* UIImage+RoundedCorner.m */; };
+		E5B0CE131D0633F300CF37A4 /* NXCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EB1C8DACF10047F291 /* NXCustomFormatter.m */; };
+		E5B0CE141D0633F300CF37A4 /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
+		E5B0CE151D0633F300CF37A4 /* UITextField+AccessoryViews.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C51C8DACF10047F291 /* UITextField+AccessoryViews.m */; };
+		E5B0CE161D0633F300CF37A4 /* RecursiveDescriptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A51C8DACF10047F291 /* RecursiveDescriptionHelper.m */; };
+		E5B0CE171D0633F300CF37A4 /* NXDispatcherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DB1C8DACF10047F291 /* NXDispatcherHelper.m */; };
+		E5B0CE181D0633F300CF37A4 /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20881C8DACF10047F291 /* NSLayoutConstraint+Description.m */; };
+		E5B0CE191D0633F300CF37A4 /* NSDate+NbYears.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20801C8DACF10047F291 /* NSDate+NbYears.m */; };
+		E5B0CE1A1D0633F300CF37A4 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E5B0CE1B1D0633F300CF37A4 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
+		E5B0CE1C1D0633F300CF37A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
+		E5B0CE1D1D0633F300CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
+		E5B0CE1E1D0633F300CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
+		E5B0CE1F1D0633F300CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
+		E5B0CE201D0633F300CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
+		E5B0CE211D0633F300CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
+		E5B0CE221D0633F300CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E5B0CE231D0633F300CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
+		E5B0CE241D0633F300CF37A4 /* UIImage+tintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BD1C8DACF10047F291 /* UIImage+tintColor.m */; };
+		E5B0CE251D0633F300CF37A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
+		E5B0CE261D0633F300CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B71C8DACF10047F291 /* UIImage+ImageNamedNoCache.m */; };
+		E5B0CE271D0633F300CF37A4 /* UIViewController+segueDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CF1C8DACF10047F291 /* UIViewController+segueDelay.m */; };
+		E5B0CE281D0633F300CF37A4 /* UIView+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C91C8DACF10047F291 /* UIView+Description.m */; };
+		E5B0CE291D0633F300CF37A4 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CD1C8DACF10047F291 /* UIView+ScreenShot.m */; };
+		E5B0CE2A1D0633F300CF37A4 /* NSObject+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208C1C8DACF10047F291 /* NSObject+KeyboardObserver.m */; };
+		E5B0CE2B1D0633F300CF37A4 /* UILabel+AwesomeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C11C8DACF10047F291 /* UILabel+AwesomeFont.m */; };
+		E5B0CE2C1D0633F300CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209F1C8DACF10047F291 /* NSString+trimLeadingWhitespace.m */; };
+		E5B0CE2D1D0633F300CF37A4 /* UIView+RenderToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CB1C8DACF10047F291 /* UIView+RenderToImage.m */; };
+		E5B0CE2E1D0633F300CF37A4 /* NSURL+PathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A31C8DACF10047F291 /* NSURL+PathParameters.m */; };
+		E5B0CE2F1D0633F300CF37A4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21631C8DBB780047F291 /* LeftMenuViewController.m */; };
+		E5B0CE301D0633F300CF37A4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
+		E5B0CE311D0633F300CF37A4 /* UIBarButtonItem+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AB1C8DACF10047F291 /* UIBarButtonItem+Helpers.m */; };
+		E5B0CE321D0633F300CF37A4 /* NSDictionary+FormParamString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20841C8DACF10047F291 /* NSDictionary+FormParamString.m */; };
+		E5B0CE331D0633F300CF37A4 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
+		E5B0CE341D0633F300CF37A4 /* NXMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F31C8DACF10047F291 /* NXMediaPickerCell.m */; };
+		E5B0CE351D0633F300CF37A4 /* NXLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EE1C8DACF10047F291 /* NXLogger.m */; };
+		E5B0CE361D0633F300CF37A4 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214C1C8DB72E0047F291 /* RequestController.m */; };
+		E5B0CE371D0633F300CF37A4 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21681C8DBBEE0047F291 /* RequestModel.m */; };
+		E5B0CE381D0633F300CF37A4 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
+		E5B0CE391D0633F300CF37A4 /* UIApplication+LocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A91C8DACF10047F291 /* UIApplication+LocalNotification.m */; };
+		E5B0CE3A1D0633F300CF37A4 /* NSObject+NXActionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208E1C8DACF10047F291 /* NSObject+NXActionObserver.m */; };
+		E5B0CE3B1D0633F300CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
+		E5B0CE3C1D0633F300CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
+		E5B0CE3E1D0633F300CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E5B0CE401D0633F300CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
+		E5B0CE411D0633F300CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
+		E5B0CE421D0633F300CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E5B0CE431D0633F300CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
+		E5B0CE441D0633F300CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
+		E5B0CE451D0633F300CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
+		E5B0CE461D0633F300CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
+		E5B0CE471D0633F300CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
+		E5B0CE481D0633F300CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E5B0CE491D0633F300CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
+		E5B0CE4A1D0633F300CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
+		E5B0CE4B1D0633F300CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
+		E5B0CE4C1D0633F300CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
+		E5B0CE4D1D0633F300CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
+		E5B0CE4E1D0633F300CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
+		E5B0CE4F1D0633F300CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
+		E5B0CE501D0633F300CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
+		E5B0CE511D0633F300CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
+		E5B0CE521D0633F300CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E5B0CE531D0633F300CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
+		E5B0CE541D0633F300CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E5B0CE551D0633F300CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
+		E5B0CE561D0633F300CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
+		E5B0CE571D0633F300CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5B0CE631D06340900CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
+		E5B0CE641D06340900CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
+		E5B0CE651D06340900CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
+		E5B0CE661D06340900CF37A4 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20981C8DACF10047F291 /* NSString+FontAwesome.m */; };
+		E5B0CE671D06340900CF37A4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21491C8DB71C0047F291 /* AppController.m */; };
+		E5B0CE681D06340900CF37A4 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
+		E5B0CE691D06340900CF37A4 /* UIApplication+HideKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A71C8DACF10047F291 /* UIApplication+HideKeyboard.m */; };
+		E5B0CE6A1D06340900CF37A4 /* NSString+NXContainsString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209B1C8DACF10047F291 /* NSString+NXContainsString.m */; };
+		E5B0CE6B1D06340900CF37A4 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213D1C8DAD080047F291 /* Common.m */; };
+		E5B0CE6C1D06340900CF37A4 /* UIImageView+ImageTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BF1C8DACF10047F291 /* UIImageView+ImageTintColor.m */; };
+		E5B0CE6D1D06340900CF37A4 /* NSString+CapFirstLetter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20941C8DACF10047F291 /* NSString+CapFirstLetter.m */; };
+		E5B0CE6E1D06340900CF37A4 /* NXGPSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DE1C8DACF10047F291 /* NXGPSController.m */; };
+		E5B0CE6F1D06340900CF37A4 /* NSDate+DurationString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */; };
+		E5B0CE701D06340900CF37A4 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59AEBA41CF27B350007E567 /* HeaderView.m */; };
+		E5B0CE711D06340900CF37A4 /* UITextField+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C71C8DACF10047F291 /* UITextField+Insets.m */; };
+		E5B0CE721D06340900CF37A4 /* RequestAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21521C8DB7610047F291 /* RequestAction.m */; };
+		E5B0CE731D06340900CF37A4 /* NXAlertViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D21C8DACF10047F291 /* NXAlertViewFactory.m */; };
+		E5B0CE741D06340900CF37A4 /* NXMediaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F11C8DACF10047F291 /* NXMediaPicker.m */; };
+		E5B0CE751D06340900CF37A4 /* NXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D81C8DACF10047F291 /* NXDevice.m */; };
+		E5B0CE761D06340900CF37A4 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B11C8DACF10047F291 /* UIImage+Alpha.m */; };
+		E5B0CE771D06340900CF37A4 /* NXHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E31C8DACF10047F291 /* NXHTTPClient.m */; };
+		E5B0CE781D06340900CF37A4 /* NXVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FD1C8DACF10047F291 /* NXVideoView.m */; };
+		E5B0CE791D06340900CF37A4 /* AppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C213A1C8DAD080047F291 /* AppPrefs.m */; };
+		E5B0CE7A1D06340900CF37A4 /* NXURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C5691CFBCF3100643D5F /* NXURLParser.m */; };
+		E5B0CE7B1D06340900CF37A4 /* NSDate+ISO8601.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */; };
+		E5B0CE7C1D06340900CF37A4 /* NXAlertViewHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20D41C8DACF10047F291 /* NXAlertViewHandler.m */; };
+		E5B0CE7D1D06340900CF37A4 /* RequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21541C8DB7610047F291 /* RequestError.m */; };
+		E5B0CE7E1D06340900CF37A4 /* RequestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21561C8DB7610047F291 /* RequestResponse.m */; };
+		E5B0CE7F1D06340900CF37A4 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214F1C8DB7410047F291 /* AppModel.m */; };
+		E5B0CE801D06340900CF37A4 /* UICollectionView+CenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AD1C8DACF10047F291 /* UICollectionView+CenterCell.m */; };
+		E5B0CE811D06340900CF37A4 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209D1C8DACF10047F291 /* NSString+Random.m */; };
+		E5B0CE821D06340900CF37A4 /* NSString+EmailValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20961C8DACF10047F291 /* NSString+EmailValidation.m */; };
+		E5B0CE831D06340900CF37A4 /* NSDictionary+Cascade.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20821C8DACF10047F291 /* NSDictionary+Cascade.m */; };
+		E5B0CE841D06340900CF37A4 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B31C8DACF10047F291 /* UIImage+Base64.m */; };
+		E5B0CE851D06340900CF37A4 /* NXMediaPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20FB1C8DACF10047F291 /* NXMediaPool.m */; };
+		E5B0CE861D06340900CF37A4 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B91C8DACF10047F291 /* UIImage+Resize.m */; };
+		E5B0CE871D06340900CF37A4 /* UILabel+Insets.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C31C8DACF10047F291 /* UILabel+Insets.m */; };
+		E5B0CE881D06340900CF37A4 /* NXHTTPJSONAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E51C8DACF10047F291 /* NXHTTPJSONAction.m */; };
+		E5B0CE891D06340900CF37A4 /* SetupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215C1C8DB9440047F291 /* SetupAction.m */; };
+		E5B0CE8A1D06340900CF37A4 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BB1C8DACF10047F291 /* UIImage+RoundedCorner.m */; };
+		E5B0CE8B1D06340900CF37A4 /* NXCustomFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EB1C8DACF10047F291 /* NXCustomFormatter.m */; };
+		E5B0CE8C1D06340900CF37A4 /* NSString+DecodeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */; };
+		E5B0CE8D1D06340900CF37A4 /* UITextField+AccessoryViews.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C51C8DACF10047F291 /* UITextField+AccessoryViews.m */; };
+		E5B0CE8E1D06340900CF37A4 /* RecursiveDescriptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A51C8DACF10047F291 /* RecursiveDescriptionHelper.m */; };
+		E5B0CE8F1D06340900CF37A4 /* NXDispatcherHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20DB1C8DACF10047F291 /* NXDispatcherHelper.m */; };
+		E5B0CE901D06340900CF37A4 /* NSLayoutConstraint+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20881C8DACF10047F291 /* NSLayoutConstraint+Description.m */; };
+		E5B0CE911D06340900CF37A4 /* NSDate+NbYears.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20801C8DACF10047F291 /* NSDate+NbYears.m */; };
+		E5B0CE921D06340900CF37A4 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
+		E5B0CE931D06340900CF37A4 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CEA861D00EFD00042300F /* UIColor+HexString.m */; };
+		E5B0CE941D06340900CF37A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204D1C8D9C2D0047F291 /* AppDelegate.m */; };
+		E5B0CE951D06340900CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
+		E5B0CE961D06340900CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
+		E5B0CE971D06340900CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
+		E5B0CE981D06340900CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
+		E5B0CE991D06340900CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
+		E5B0CE9A1D06340900CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
+		E5B0CE9B1D06340900CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
+		E5B0CE9C1D06340900CF37A4 /* UIImage+tintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20BD1C8DACF10047F291 /* UIImage+tintColor.m */; };
+		E5B0CE9D1D06340900CF37A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C204A1C8D9C2D0047F291 /* main.m */; };
+		E5B0CE9E1D06340900CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B71C8DACF10047F291 /* UIImage+ImageNamedNoCache.m */; };
+		E5B0CE9F1D06340900CF37A4 /* UIViewController+segueDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CF1C8DACF10047F291 /* UIViewController+segueDelay.m */; };
+		E5B0CEA01D06340900CF37A4 /* UIView+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C91C8DACF10047F291 /* UIView+Description.m */; };
+		E5B0CEA11D06340900CF37A4 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CD1C8DACF10047F291 /* UIView+ScreenShot.m */; };
+		E5B0CEA21D06340900CF37A4 /* NSObject+KeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208C1C8DACF10047F291 /* NSObject+KeyboardObserver.m */; };
+		E5B0CEA31D06340900CF37A4 /* UILabel+AwesomeFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20C11C8DACF10047F291 /* UILabel+AwesomeFont.m */; };
+		E5B0CEA41D06340900CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C209F1C8DACF10047F291 /* NSString+trimLeadingWhitespace.m */; };
+		E5B0CEA51D06340900CF37A4 /* UIView+RenderToImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20CB1C8DACF10047F291 /* UIView+RenderToImage.m */; };
+		E5B0CEA61D06340900CF37A4 /* NSURL+PathParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A31C8DACF10047F291 /* NSURL+PathParameters.m */; };
+		E5B0CEA71D06340900CF37A4 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21631C8DBB780047F291 /* LeftMenuViewController.m */; };
+		E5B0CEA81D06340900CF37A4 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
+		E5B0CEA91D06340900CF37A4 /* UIBarButtonItem+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AB1C8DACF10047F291 /* UIBarButtonItem+Helpers.m */; };
+		E5B0CEAA1D06340900CF37A4 /* NSDictionary+FormParamString.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20841C8DACF10047F291 /* NSDictionary+FormParamString.m */; };
+		E5B0CEAB1D06340900CF37A4 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
+		E5B0CEAC1D06340900CF37A4 /* NXMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F31C8DACF10047F291 /* NXMediaPickerCell.m */; };
+		E5B0CEAD1D06340900CF37A4 /* NXLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20EE1C8DACF10047F291 /* NXLogger.m */; };
+		E5B0CEAE1D06340900CF37A4 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C214C1C8DB72E0047F291 /* RequestController.m */; };
+		E5B0CEAF1D06340900CF37A4 /* RequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21681C8DBBEE0047F291 /* RequestModel.m */; };
+		E5B0CEB01D06340900CF37A4 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
+		E5B0CEB11D06340900CF37A4 /* UIApplication+LocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A91C8DACF10047F291 /* UIApplication+LocalNotification.m */; };
+		E5B0CEB21D06340900CF37A4 /* NSObject+NXActionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208E1C8DACF10047F291 /* NSObject+NXActionObserver.m */; };
+		E5B0CEB31D06340900CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
+		E5B0CEB41D06340900CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
+		E5B0CEB61D06340900CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
+		E5B0CEB81D06340900CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
+		E5B0CEB91D06340900CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
+		E5B0CEBA1D06340900CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
+		E5B0CEBB1D06340900CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
+		E5B0CEBC1D06340900CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
+		E5B0CEBD1D06340900CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
+		E5B0CEBE1D06340900CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
+		E5B0CEBF1D06340900CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
+		E5B0CEC01D06340900CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
+		E5B0CEC11D06340900CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
+		E5B0CEC21D06340900CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
+		E5B0CEC31D06340900CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
+		E5B0CEC41D06340900CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
+		E5B0CEC51D06340900CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
+		E5B0CEC61D06340900CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
+		E5B0CEC71D06340900CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
+		E5B0CEC81D06340900CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
+		E5B0CEC91D06340900CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
+		E5B0CECA1D06340900CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
+		E5B0CECB1D06340900CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
+		E5B0CECC1D06340900CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
+		E5B0CECD1D06340900CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
+		E5B0CECE1D06340900CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
+		E5B0CECF1D06340900CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5B0CEDC1D06373A00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5B0CEDD1D06375500CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5B0CEDF1D06375C00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5B0CEE01D06375E00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5B0CEE11D06375F00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5B0CEE21D06375F00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,7 +665,7 @@
 		E520C5691CFBCF3100643D5F /* NXURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NXURLParser.m; sourceTree = "<group>"; };
 		E520C56B1CFBD0EB00643D5F /* NSString+DecodeURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DecodeURL.h"; sourceTree = "<group>"; };
 		E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DecodeURL.m"; sourceTree = "<group>"; };
-		E54C20461C8D9C2D0047F291 /* QCNS-Web-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QCNS-Web-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54C20461C8D9C2D0047F291 /* Costa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Costa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54C204A1C8D9C2D0047F291 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E54C204C1C8D9C2D0047F291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E54C204D1C8D9C2D0047F291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -310,10 +852,24 @@
 		E56EE7691CFD016200D7ABCC /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		E56EE76A1CFD016200D7ABCC /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
+		E58CEA831D00ED670042300F /* en_US.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en_US.json; sourceTree = "<group>"; };
+		E58CEA851D00EFD00042300F /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		E58CEA861D00EFD00042300F /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		E58CEA881D00F2650042300F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E58CF9F61CEFCD9A0091B676 /* MenuSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSection.h; sourceTree = "<group>"; };
 		E58CF9F71CEFCD9A0091B676 /* MenuSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSection.m; sourceTree = "<group>"; };
 		E59AEBA41CF27B350007E567 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		E59AEBA51CF27B350007E567 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		E59FD3B71D04DC5400E9997A /* MSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E59FD3B81D04DC5400E9997A /* QCNS-Web-App copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QCNS-Web-App copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/QCNS-Web-App copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CD6E1D0633A400CF37A4 /* NCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B0CD6F1D0633A400CF37A4 /* MSC copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MSC copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/MSC copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CDE61D0633B500CF37A4 /* RCCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B0CDE71D0633B500CF37A4 /* NCL copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NCL copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/NCL copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CE5E1D0633F300CF37A4 /* CDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B0CE5F1D0633F300CF37A4 /* RCCL copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RCCL copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/RCCL copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CED61D06340900CF37A4 /* CroisiEurope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroisiEurope.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B0CED71D06340900CF37A4 /* CDF copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CDF copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CDF copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +878,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D712740A8588C6DFB210A2 /* libPods-QCNS-Web-App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59FD3961D04DC5400E9997A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59FD3971D04DC5400E9997A /* libPods-QCNS-Web-App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CD4D1D0633A400CF37A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CD4E1D0633A400CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CDC51D0633B500CF37A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CDC61D0633B500CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CE3D1D0633F300CF37A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CE3E1D0633F300CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CEB51D06340900CF37A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CEB61D06340900CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,13 +957,23 @@
 				E54C20471C8D9C2D0047F291 /* Products */,
 				D8171E0FE0C116DB4B4FD482 /* Pods */,
 				3A5935C719B3874C1A62F327 /* Frameworks */,
+				E59FD3B81D04DC5400E9997A /* QCNS-Web-App copy-Info.plist */,
+				E5B0CD6F1D0633A400CF37A4 /* MSC copy-Info.plist */,
+				E5B0CDE71D0633B500CF37A4 /* NCL copy-Info.plist */,
+				E5B0CE5F1D0633F300CF37A4 /* RCCL copy-Info.plist */,
+				E5B0CED71D06340900CF37A4 /* CDF copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		E54C20471C8D9C2D0047F291 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E54C20461C8D9C2D0047F291 /* QCNS-Web-App.app */,
+				E54C20461C8D9C2D0047F291 /* Costa.app */,
+				E59FD3B71D04DC5400E9997A /* MSC.app */,
+				E5B0CD6E1D0633A400CF37A4 /* NCL.app */,
+				E5B0CDE61D0633B500CF37A4 /* RCCL.app */,
+				E5B0CE5E1D0633F300CF37A4 /* CDF.app */,
+				E5B0CED61D06340900CF37A4 /* CroisiEurope.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +1026,7 @@
 			children = (
 				E54C21891C8DEE740047F291 /* fonts */,
 				E54C21821C8DDB540047F291 /* fr_FR.json */,
+				E58CEA831D00ED670042300F /* en_US.json */,
 				E54C21761C8DCFA40047F291 /* images */,
 				E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */,
 				E54C20521C8D9C2D0047F291 /* Main.storyboard */,
@@ -454,6 +1061,8 @@
 				E520C56B1CFBD0EB00643D5F /* NSString+DecodeURL.h */,
 				E520C56C1CFBD0EB00643D5F /* NSString+DecodeURL.m */,
 				E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */,
+				E58CEA851D00EFD00042300F /* UIColor+HexString.h */,
+				E58CEA861D00EFD00042300F /* UIColor+HexString.m */,
 				E54C207D1C8DACF10047F291 /* NSDate+ISO8601.h */,
 				E54C207E1C8DACF10047F291 /* NSDate+ISO8601.m */,
 				E54C207F1C8DACF10047F291 /* NSDate+NbYears.h */,
@@ -817,9 +1426,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E54C20451C8D9C2D0047F291 /* QCNS-Web-App */ = {
+		E54C20451C8D9C2D0047F291 /* Costa */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E54C205D1C8D9C2D0047F291 /* Build configuration list for PBXNativeTarget "QCNS-Web-App" */;
+			buildConfigurationList = E54C205D1C8D9C2D0047F291 /* Build configuration list for PBXNativeTarget "Costa" */;
 			buildPhases = (
 				4B51A7C7901453F83CD9B315 /* Check Pods Manifest.lock */,
 				E54C20421C8D9C2D0047F291 /* Sources */,
@@ -832,9 +1441,109 @@
 			);
 			dependencies = (
 			);
-			name = "QCNS-Web-App";
+			name = Costa;
 			productName = "QCNS-Web-App";
-			productReference = E54C20461C8D9C2D0047F291 /* QCNS-Web-App.app */;
+			productReference = E54C20461C8D9C2D0047F291 /* Costa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E59FD3411D04DC5400E9997A /* MSC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E59FD3B41D04DC5400E9997A /* Build configuration list for PBXNativeTarget "MSC" */;
+			buildPhases = (
+				E59FD3421D04DC5400E9997A /* Check Pods Manifest.lock */,
+				E59FD3431D04DC5400E9997A /* Sources */,
+				E59FD3961D04DC5400E9997A /* Frameworks */,
+				E59FD3981D04DC5400E9997A /* Resources */,
+				E59FD3B21D04DC5400E9997A /* Embed Pods Frameworks */,
+				E59FD3B31D04DC5400E9997A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MSC;
+			productName = "QCNS-Web-App";
+			productReference = E59FD3B71D04DC5400E9997A /* MSC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5B0CCF81D0633A400CF37A4 /* NCL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B0CD6B1D0633A400CF37A4 /* Build configuration list for PBXNativeTarget "NCL" */;
+			buildPhases = (
+				E5B0CCF91D0633A400CF37A4 /* Check Pods Manifest.lock */,
+				E5B0CCFA1D0633A400CF37A4 /* Sources */,
+				E5B0CD4D1D0633A400CF37A4 /* Frameworks */,
+				E5B0CD4F1D0633A400CF37A4 /* Resources */,
+				E5B0CD691D0633A400CF37A4 /* Embed Pods Frameworks */,
+				E5B0CD6A1D0633A400CF37A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NCL;
+			productName = "QCNS-Web-App";
+			productReference = E5B0CD6E1D0633A400CF37A4 /* NCL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5B0CD701D0633B500CF37A4 /* RCCL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B0CDE31D0633B500CF37A4 /* Build configuration list for PBXNativeTarget "RCCL" */;
+			buildPhases = (
+				E5B0CD711D0633B500CF37A4 /* Check Pods Manifest.lock */,
+				E5B0CD721D0633B500CF37A4 /* Sources */,
+				E5B0CDC51D0633B500CF37A4 /* Frameworks */,
+				E5B0CDC71D0633B500CF37A4 /* Resources */,
+				E5B0CDE11D0633B500CF37A4 /* Embed Pods Frameworks */,
+				E5B0CDE21D0633B500CF37A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RCCL;
+			productName = "QCNS-Web-App";
+			productReference = E5B0CDE61D0633B500CF37A4 /* RCCL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5B0CDE81D0633F300CF37A4 /* CDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B0CE5B1D0633F300CF37A4 /* Build configuration list for PBXNativeTarget "CDF" */;
+			buildPhases = (
+				E5B0CDE91D0633F300CF37A4 /* Check Pods Manifest.lock */,
+				E5B0CDEA1D0633F300CF37A4 /* Sources */,
+				E5B0CE3D1D0633F300CF37A4 /* Frameworks */,
+				E5B0CE3F1D0633F300CF37A4 /* Resources */,
+				E5B0CE591D0633F300CF37A4 /* Embed Pods Frameworks */,
+				E5B0CE5A1D0633F300CF37A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CDF;
+			productName = "QCNS-Web-App";
+			productReference = E5B0CE5E1D0633F300CF37A4 /* CDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5B0CE601D06340900CF37A4 /* CroisiEurope */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5B0CED31D06340900CF37A4 /* Build configuration list for PBXNativeTarget "CroisiEurope" */;
+			buildPhases = (
+				E5B0CE611D06340900CF37A4 /* Check Pods Manifest.lock */,
+				E5B0CE621D06340900CF37A4 /* Sources */,
+				E5B0CEB51D06340900CF37A4 /* Frameworks */,
+				E5B0CEB71D06340900CF37A4 /* Resources */,
+				E5B0CED11D06340900CF37A4 /* Embed Pods Frameworks */,
+				E5B0CED21D06340900CF37A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CroisiEurope;
+			productName = "QCNS-Web-App";
+			productReference = E5B0CED61D06340900CF37A4 /* CroisiEurope.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -848,6 +1557,21 @@
 				TargetAttributes = {
 					E54C20451C8D9C2D0047F291 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 279WW8EPX6;
+					};
+					E59FD3411D04DC5400E9997A = {
+						DevelopmentTeam = 279WW8EPX6;
+					};
+					E5B0CCF81D0633A400CF37A4 = {
+						DevelopmentTeam = 279WW8EPX6;
+					};
+					E5B0CD701D0633B500CF37A4 = {
+						DevelopmentTeam = 279WW8EPX6;
+					};
+					E5B0CDE81D0633F300CF37A4 = {
+						DevelopmentTeam = 279WW8EPX6;
+					};
+					E5B0CE601D06340900CF37A4 = {
 						DevelopmentTeam = 279WW8EPX6;
 					};
 				};
@@ -865,7 +1589,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E54C20451C8D9C2D0047F291 /* QCNS-Web-App */,
+				E54C20451C8D9C2D0047F291 /* Costa */,
+				E59FD3411D04DC5400E9997A /* MSC */,
+				E5B0CCF81D0633A400CF37A4 /* NCL */,
+				E5B0CD701D0633B500CF37A4 /* RCCL */,
+				E5B0CDE81D0633F300CF37A4 /* CDF */,
+				E5B0CE601D06340900CF37A4 /* CroisiEurope */,
 			);
 		};
 /* End PBXProject section */
@@ -887,7 +1616,6 @@
 				E54C21881C8DDE770047F291 /* MainViewController.xib in Resources */,
 				E54C219A1C8E0C420047F291 /* icon-60@2x.png in Resources */,
 				E54C21831C8DDB540047F291 /* fr_FR.json in Resources */,
-				E54C20561C8D9C2D0047F291 /* Assets.xcassets in Resources */,
 				E54C219C1C8E0C420047F291 /* icon-40@2x.png in Resources */,
 				E54C21351C8DACF10047F291 /* NXMediaPickerCell.xib in Resources */,
 				E54C219E1C8E0C420047F291 /* icon-29@3x.png in Resources */,
@@ -896,9 +1624,171 @@
 				E54C219D1C8E0C420047F291 /* icon-40.png in Resources */,
 				E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */,
 				E54C218B1C8DEF290047F291 /* fontawesome-webfont.ttf in Resources */,
+				E58CEA841D00ED670042300F /* en_US.json in Resources */,
 				E54C21661C8DBB780047F291 /* LeftMenuViewController.xib in Resources */,
 				E54C20541C8D9C2D0047F291 /* Main.storyboard in Resources */,
 				E54C21981C8E0C420047F291 /* icon-76.png in Resources */,
+				E5B0CEE01D06375E00CF37A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E59FD3981D04DC5400E9997A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59FD3991D04DC5400E9997A /* icon-40@3x.png in Resources */,
+				E59FD39A1D04DC5400E9997A /* MenuCell.xib in Resources */,
+				E59FD39B1D04DC5400E9997A /* main-bg@2x.png in Resources */,
+				E59FD39C1D04DC5400E9997A /* LaunchScreen.storyboard in Resources */,
+				E59FD39D1D04DC5400E9997A /* Default@2x.png in Resources */,
+				E59FD39E1D04DC5400E9997A /* costa-navbar@2x.png in Resources */,
+				E59FD39F1D04DC5400E9997A /* icon-76@2x.png in Resources */,
+				E59FD3A01D04DC5400E9997A /* SplashViewController.xib in Resources */,
+				E59FD3A11D04DC5400E9997A /* icon-29.png in Resources */,
+				E59FD3A21D04DC5400E9997A /* MainViewController.xib in Resources */,
+				E59FD3A31D04DC5400E9997A /* icon-60@2x.png in Resources */,
+				E59FD3A41D04DC5400E9997A /* fr_FR.json in Resources */,
+				E59FD3A61D04DC5400E9997A /* icon-40@2x.png in Resources */,
+				E59FD3A71D04DC5400E9997A /* NXMediaPickerCell.xib in Resources */,
+				E59FD3A81D04DC5400E9997A /* icon-29@3x.png in Resources */,
+				E59FD3A91D04DC5400E9997A /* icon-60@3x.png in Resources */,
+				E59FD3AA1D04DC5400E9997A /* icon-29@2x.png in Resources */,
+				E59FD3AB1D04DC5400E9997A /* icon-40.png in Resources */,
+				E59FD3AC1D04DC5400E9997A /* ChildViewController.xib in Resources */,
+				E59FD3AD1D04DC5400E9997A /* fontawesome-webfont.ttf in Resources */,
+				E59FD3AE1D04DC5400E9997A /* en_US.json in Resources */,
+				E59FD3AF1D04DC5400E9997A /* LeftMenuViewController.xib in Resources */,
+				E59FD3B01D04DC5400E9997A /* Main.storyboard in Resources */,
+				E59FD3B11D04DC5400E9997A /* icon-76.png in Resources */,
+				E5B0CEDF1D06375C00CF37A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CD4F1D0633A400CF37A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CD501D0633A400CF37A4 /* icon-40@3x.png in Resources */,
+				E5B0CD511D0633A400CF37A4 /* MenuCell.xib in Resources */,
+				E5B0CD521D0633A400CF37A4 /* main-bg@2x.png in Resources */,
+				E5B0CD531D0633A400CF37A4 /* LaunchScreen.storyboard in Resources */,
+				E5B0CD541D0633A400CF37A4 /* Default@2x.png in Resources */,
+				E5B0CD551D0633A400CF37A4 /* costa-navbar@2x.png in Resources */,
+				E5B0CD561D0633A400CF37A4 /* icon-76@2x.png in Resources */,
+				E5B0CD571D0633A400CF37A4 /* SplashViewController.xib in Resources */,
+				E5B0CD581D0633A400CF37A4 /* icon-29.png in Resources */,
+				E5B0CD591D0633A400CF37A4 /* MainViewController.xib in Resources */,
+				E5B0CD5A1D0633A400CF37A4 /* icon-60@2x.png in Resources */,
+				E5B0CD5B1D0633A400CF37A4 /* fr_FR.json in Resources */,
+				E5B0CD5C1D0633A400CF37A4 /* icon-40@2x.png in Resources */,
+				E5B0CD5D1D0633A400CF37A4 /* NXMediaPickerCell.xib in Resources */,
+				E5B0CD5E1D0633A400CF37A4 /* icon-29@3x.png in Resources */,
+				E5B0CD5F1D0633A400CF37A4 /* icon-60@3x.png in Resources */,
+				E5B0CD601D0633A400CF37A4 /* icon-29@2x.png in Resources */,
+				E5B0CD611D0633A400CF37A4 /* icon-40.png in Resources */,
+				E5B0CD621D0633A400CF37A4 /* ChildViewController.xib in Resources */,
+				E5B0CD631D0633A400CF37A4 /* fontawesome-webfont.ttf in Resources */,
+				E5B0CD641D0633A400CF37A4 /* en_US.json in Resources */,
+				E5B0CD651D0633A400CF37A4 /* LeftMenuViewController.xib in Resources */,
+				E5B0CD661D0633A400CF37A4 /* Main.storyboard in Resources */,
+				E5B0CD671D0633A400CF37A4 /* icon-76.png in Resources */,
+				E5B0CEDD1D06375500CF37A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CDC71D0633B500CF37A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CDC81D0633B500CF37A4 /* icon-40@3x.png in Resources */,
+				E5B0CDC91D0633B500CF37A4 /* MenuCell.xib in Resources */,
+				E5B0CDCA1D0633B500CF37A4 /* main-bg@2x.png in Resources */,
+				E5B0CDCB1D0633B500CF37A4 /* LaunchScreen.storyboard in Resources */,
+				E5B0CDCC1D0633B500CF37A4 /* Default@2x.png in Resources */,
+				E5B0CDCD1D0633B500CF37A4 /* costa-navbar@2x.png in Resources */,
+				E5B0CDCE1D0633B500CF37A4 /* icon-76@2x.png in Resources */,
+				E5B0CDCF1D0633B500CF37A4 /* SplashViewController.xib in Resources */,
+				E5B0CDD01D0633B500CF37A4 /* icon-29.png in Resources */,
+				E5B0CDD11D0633B500CF37A4 /* MainViewController.xib in Resources */,
+				E5B0CDD21D0633B500CF37A4 /* icon-60@2x.png in Resources */,
+				E5B0CDD31D0633B500CF37A4 /* fr_FR.json in Resources */,
+				E5B0CDD41D0633B500CF37A4 /* icon-40@2x.png in Resources */,
+				E5B0CDD51D0633B500CF37A4 /* NXMediaPickerCell.xib in Resources */,
+				E5B0CDD61D0633B500CF37A4 /* icon-29@3x.png in Resources */,
+				E5B0CDD71D0633B500CF37A4 /* icon-60@3x.png in Resources */,
+				E5B0CDD81D0633B500CF37A4 /* icon-29@2x.png in Resources */,
+				E5B0CDD91D0633B500CF37A4 /* icon-40.png in Resources */,
+				E5B0CDDA1D0633B500CF37A4 /* ChildViewController.xib in Resources */,
+				E5B0CDDB1D0633B500CF37A4 /* fontawesome-webfont.ttf in Resources */,
+				E5B0CDDC1D0633B500CF37A4 /* en_US.json in Resources */,
+				E5B0CDDD1D0633B500CF37A4 /* LeftMenuViewController.xib in Resources */,
+				E5B0CDDE1D0633B500CF37A4 /* Main.storyboard in Resources */,
+				E5B0CDDF1D0633B500CF37A4 /* icon-76.png in Resources */,
+				E5B0CEDC1D06373A00CF37A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CE3F1D0633F300CF37A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CE401D0633F300CF37A4 /* icon-40@3x.png in Resources */,
+				E5B0CE411D0633F300CF37A4 /* MenuCell.xib in Resources */,
+				E5B0CE421D0633F300CF37A4 /* main-bg@2x.png in Resources */,
+				E5B0CE431D0633F300CF37A4 /* LaunchScreen.storyboard in Resources */,
+				E5B0CE441D0633F300CF37A4 /* Default@2x.png in Resources */,
+				E5B0CE451D0633F300CF37A4 /* costa-navbar@2x.png in Resources */,
+				E5B0CE461D0633F300CF37A4 /* icon-76@2x.png in Resources */,
+				E5B0CE471D0633F300CF37A4 /* SplashViewController.xib in Resources */,
+				E5B0CE481D0633F300CF37A4 /* icon-29.png in Resources */,
+				E5B0CE491D0633F300CF37A4 /* MainViewController.xib in Resources */,
+				E5B0CE4A1D0633F300CF37A4 /* icon-60@2x.png in Resources */,
+				E5B0CE4B1D0633F300CF37A4 /* fr_FR.json in Resources */,
+				E5B0CE4C1D0633F300CF37A4 /* icon-40@2x.png in Resources */,
+				E5B0CE4D1D0633F300CF37A4 /* NXMediaPickerCell.xib in Resources */,
+				E5B0CE4E1D0633F300CF37A4 /* icon-29@3x.png in Resources */,
+				E5B0CE4F1D0633F300CF37A4 /* icon-60@3x.png in Resources */,
+				E5B0CE501D0633F300CF37A4 /* icon-29@2x.png in Resources */,
+				E5B0CE511D0633F300CF37A4 /* icon-40.png in Resources */,
+				E5B0CE521D0633F300CF37A4 /* ChildViewController.xib in Resources */,
+				E5B0CE531D0633F300CF37A4 /* fontawesome-webfont.ttf in Resources */,
+				E5B0CE541D0633F300CF37A4 /* en_US.json in Resources */,
+				E5B0CE551D0633F300CF37A4 /* LeftMenuViewController.xib in Resources */,
+				E5B0CE561D0633F300CF37A4 /* Main.storyboard in Resources */,
+				E5B0CE571D0633F300CF37A4 /* icon-76.png in Resources */,
+				E5B0CEE11D06375F00CF37A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CEB71D06340900CF37A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CEB81D06340900CF37A4 /* icon-40@3x.png in Resources */,
+				E5B0CEB91D06340900CF37A4 /* MenuCell.xib in Resources */,
+				E5B0CEBA1D06340900CF37A4 /* main-bg@2x.png in Resources */,
+				E5B0CEBB1D06340900CF37A4 /* LaunchScreen.storyboard in Resources */,
+				E5B0CEBC1D06340900CF37A4 /* Default@2x.png in Resources */,
+				E5B0CEBD1D06340900CF37A4 /* costa-navbar@2x.png in Resources */,
+				E5B0CEBE1D06340900CF37A4 /* icon-76@2x.png in Resources */,
+				E5B0CEBF1D06340900CF37A4 /* SplashViewController.xib in Resources */,
+				E5B0CEC01D06340900CF37A4 /* icon-29.png in Resources */,
+				E5B0CEC11D06340900CF37A4 /* MainViewController.xib in Resources */,
+				E5B0CEC21D06340900CF37A4 /* icon-60@2x.png in Resources */,
+				E5B0CEC31D06340900CF37A4 /* fr_FR.json in Resources */,
+				E5B0CEC41D06340900CF37A4 /* icon-40@2x.png in Resources */,
+				E5B0CEC51D06340900CF37A4 /* NXMediaPickerCell.xib in Resources */,
+				E5B0CEC61D06340900CF37A4 /* icon-29@3x.png in Resources */,
+				E5B0CEC71D06340900CF37A4 /* icon-60@3x.png in Resources */,
+				E5B0CEC81D06340900CF37A4 /* icon-29@2x.png in Resources */,
+				E5B0CEC91D06340900CF37A4 /* icon-40.png in Resources */,
+				E5B0CECA1D06340900CF37A4 /* ChildViewController.xib in Resources */,
+				E5B0CECB1D06340900CF37A4 /* fontawesome-webfont.ttf in Resources */,
+				E5B0CECC1D06340900CF37A4 /* en_US.json in Resources */,
+				E5B0CECD1D06340900CF37A4 /* LeftMenuViewController.xib in Resources */,
+				E5B0CECE1D06340900CF37A4 /* Main.storyboard in Resources */,
+				E5B0CECF1D06340900CF37A4 /* icon-76.png in Resources */,
+				E5B0CEE21D06375F00CF37A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +1823,231 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E59FD3421D04DC5400E9997A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E59FD3B21D04DC5400E9997A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E59FD3B31D04DC5400E9997A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CCF91D0633A400CF37A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CD691D0633A400CF37A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CD6A1D0633A400CF37A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CD711D0633B500CF37A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CDE11D0633B500CF37A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CDE21D0633B500CF37A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CDE91D0633F300CF37A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CE591D0633F300CF37A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CE5A1D0633F300CF37A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CE611D06340900CF37A4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CED11D06340900CF37A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B0CED21D06340900CF37A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QCNS-Web-App/Pods-QCNS-Web-App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F789455FFB38E2340C85A617 /* Copy Pods Resources */ = {
@@ -1005,6 +2120,7 @@
 				E54C21041C8DACF10047F291 /* NSLayoutConstraint+Description.m in Sources */,
 				E54C21001C8DACF10047F291 /* NSDate+NbYears.m in Sources */,
 				E56EE76C1CFD016200D7ABCC /* ChildViewController.m in Sources */,
+				E58CEA871D00EFD00042300F /* UIColor+HexString.m in Sources */,
 				E54C204E1C8D9C2D0047F291 /* AppDelegate.m in Sources */,
 				E54C21031C8DACF10047F291 /* NSDictionary+JSONFile.m in Sources */,
 				E54C212D1C8DACF10047F291 /* NXHTTPAction.m in Sources */,
@@ -1041,6 +2157,451 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E59FD3431D04DC5400E9997A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59FD3441D04DC5400E9997A /* SetupResponse.m in Sources */,
+				E59FD3451D04DC5400E9997A /* NSNotificationCenter+Additions.m in Sources */,
+				E59FD3461D04DC5400E9997A /* NXLocalizer.m in Sources */,
+				E59FD3471D04DC5400E9997A /* NSString+FontAwesome.m in Sources */,
+				E59FD3481D04DC5400E9997A /* AppController.m in Sources */,
+				E59FD3491D04DC5400E9997A /* MenuCell.m in Sources */,
+				E59FD34A1D04DC5400E9997A /* UIApplication+HideKeyboard.m in Sources */,
+				E59FD34B1D04DC5400E9997A /* NSString+NXContainsString.m in Sources */,
+				E59FD34C1D04DC5400E9997A /* Common.m in Sources */,
+				E59FD34D1D04DC5400E9997A /* UIImageView+ImageTintColor.m in Sources */,
+				E59FD34E1D04DC5400E9997A /* NSString+CapFirstLetter.m in Sources */,
+				E59FD34F1D04DC5400E9997A /* NXGPSController.m in Sources */,
+				E59FD3501D04DC5400E9997A /* NSDate+DurationString.m in Sources */,
+				E59FD3511D04DC5400E9997A /* HeaderView.m in Sources */,
+				E59FD3521D04DC5400E9997A /* UITextField+Insets.m in Sources */,
+				E59FD3531D04DC5400E9997A /* RequestAction.m in Sources */,
+				E59FD3541D04DC5400E9997A /* NXAlertViewFactory.m in Sources */,
+				E59FD3551D04DC5400E9997A /* NXMediaPicker.m in Sources */,
+				E59FD3561D04DC5400E9997A /* NXDevice.m in Sources */,
+				E59FD3571D04DC5400E9997A /* UIImage+Alpha.m in Sources */,
+				E59FD3581D04DC5400E9997A /* NXHTTPClient.m in Sources */,
+				E59FD3591D04DC5400E9997A /* NXVideoView.m in Sources */,
+				E59FD35A1D04DC5400E9997A /* AppPrefs.m in Sources */,
+				E59FD35B1D04DC5400E9997A /* NXURLParser.m in Sources */,
+				E59FD35C1D04DC5400E9997A /* NSDate+ISO8601.m in Sources */,
+				E59FD35D1D04DC5400E9997A /* NXAlertViewHandler.m in Sources */,
+				E59FD35E1D04DC5400E9997A /* RequestError.m in Sources */,
+				E59FD35F1D04DC5400E9997A /* RequestResponse.m in Sources */,
+				E59FD3601D04DC5400E9997A /* AppModel.m in Sources */,
+				E59FD3611D04DC5400E9997A /* UICollectionView+CenterCell.m in Sources */,
+				E59FD3621D04DC5400E9997A /* NSString+Random.m in Sources */,
+				E59FD3631D04DC5400E9997A /* NSString+EmailValidation.m in Sources */,
+				E59FD3641D04DC5400E9997A /* NSDictionary+Cascade.m in Sources */,
+				E59FD3651D04DC5400E9997A /* UIImage+Base64.m in Sources */,
+				E59FD3661D04DC5400E9997A /* NXMediaPool.m in Sources */,
+				E59FD3671D04DC5400E9997A /* UIImage+Resize.m in Sources */,
+				E59FD3681D04DC5400E9997A /* UILabel+Insets.m in Sources */,
+				E59FD3691D04DC5400E9997A /* NXHTTPJSONAction.m in Sources */,
+				E59FD36A1D04DC5400E9997A /* SetupAction.m in Sources */,
+				E59FD36B1D04DC5400E9997A /* UIImage+RoundedCorner.m in Sources */,
+				E59FD36C1D04DC5400E9997A /* NXCustomFormatter.m in Sources */,
+				E59FD36D1D04DC5400E9997A /* NSString+DecodeURL.m in Sources */,
+				E59FD36E1D04DC5400E9997A /* UITextField+AccessoryViews.m in Sources */,
+				E59FD36F1D04DC5400E9997A /* RecursiveDescriptionHelper.m in Sources */,
+				E59FD3701D04DC5400E9997A /* NXDispatcherHelper.m in Sources */,
+				E59FD3711D04DC5400E9997A /* NSLayoutConstraint+Description.m in Sources */,
+				E59FD3721D04DC5400E9997A /* NSDate+NbYears.m in Sources */,
+				E59FD3731D04DC5400E9997A /* ChildViewController.m in Sources */,
+				E59FD3741D04DC5400E9997A /* UIColor+HexString.m in Sources */,
+				E59FD3751D04DC5400E9997A /* AppDelegate.m in Sources */,
+				E59FD3761D04DC5400E9997A /* NSDictionary+JSONFile.m in Sources */,
+				E59FD3771D04DC5400E9997A /* NXHTTPAction.m in Sources */,
+				E59FD3781D04DC5400E9997A /* NSString+URLEncode.m in Sources */,
+				E59FD3791D04DC5400E9997A /* QCNavigationBar.m in Sources */,
+				E59FD37A1D04DC5400E9997A /* UIImage+Color.m in Sources */,
+				E59FD37B1D04DC5400E9997A /* MenuSection.m in Sources */,
+				E59FD37C1D04DC5400E9997A /* NotificationPermissionHandler.m in Sources */,
+				E59FD37D1D04DC5400E9997A /* UIImage+tintColor.m in Sources */,
+				E59FD37E1D04DC5400E9997A /* main.m in Sources */,
+				E59FD37F1D04DC5400E9997A /* UIImage+ImageNamedNoCache.m in Sources */,
+				E59FD3801D04DC5400E9997A /* UIViewController+segueDelay.m in Sources */,
+				E59FD3811D04DC5400E9997A /* UIView+Description.m in Sources */,
+				E59FD3821D04DC5400E9997A /* UIView+ScreenShot.m in Sources */,
+				E59FD3831D04DC5400E9997A /* NSObject+KeyboardObserver.m in Sources */,
+				E59FD3841D04DC5400E9997A /* UILabel+AwesomeFont.m in Sources */,
+				E59FD3851D04DC5400E9997A /* NSString+trimLeadingWhitespace.m in Sources */,
+				E59FD3861D04DC5400E9997A /* UIView+RenderToImage.m in Sources */,
+				E59FD3871D04DC5400E9997A /* NSURL+PathParameters.m in Sources */,
+				E59FD3881D04DC5400E9997A /* LeftMenuViewController.m in Sources */,
+				E59FD3891D04DC5400E9997A /* MainViewController.m in Sources */,
+				E59FD38A1D04DC5400E9997A /* UIBarButtonItem+Helpers.m in Sources */,
+				E59FD38B1D04DC5400E9997A /* NSDictionary+FormParamString.m in Sources */,
+				E59FD38C1D04DC5400E9997A /* MenuItem.m in Sources */,
+				E59FD38D1D04DC5400E9997A /* NXMediaPickerCell.m in Sources */,
+				E59FD38E1D04DC5400E9997A /* NXLogger.m in Sources */,
+				E59FD38F1D04DC5400E9997A /* RequestController.m in Sources */,
+				E59FD3901D04DC5400E9997A /* RequestModel.m in Sources */,
+				E59FD3911D04DC5400E9997A /* SplashViewController.m in Sources */,
+				E59FD3921D04DC5400E9997A /* UIApplication+LocalNotification.m in Sources */,
+				E59FD3931D04DC5400E9997A /* NSObject+NXActionObserver.m in Sources */,
+				E59FD3941D04DC5400E9997A /* NSObject+RunTimeDescription.m in Sources */,
+				E59FD3951D04DC5400E9997A /* UIColor+NavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CCFA1D0633A400CF37A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CCFB1D0633A400CF37A4 /* SetupResponse.m in Sources */,
+				E5B0CCFC1D0633A400CF37A4 /* NSNotificationCenter+Additions.m in Sources */,
+				E5B0CCFD1D0633A400CF37A4 /* NXLocalizer.m in Sources */,
+				E5B0CCFE1D0633A400CF37A4 /* NSString+FontAwesome.m in Sources */,
+				E5B0CCFF1D0633A400CF37A4 /* AppController.m in Sources */,
+				E5B0CD001D0633A400CF37A4 /* MenuCell.m in Sources */,
+				E5B0CD011D0633A400CF37A4 /* UIApplication+HideKeyboard.m in Sources */,
+				E5B0CD021D0633A400CF37A4 /* NSString+NXContainsString.m in Sources */,
+				E5B0CD031D0633A400CF37A4 /* Common.m in Sources */,
+				E5B0CD041D0633A400CF37A4 /* UIImageView+ImageTintColor.m in Sources */,
+				E5B0CD051D0633A400CF37A4 /* NSString+CapFirstLetter.m in Sources */,
+				E5B0CD061D0633A400CF37A4 /* NXGPSController.m in Sources */,
+				E5B0CD071D0633A400CF37A4 /* NSDate+DurationString.m in Sources */,
+				E5B0CD081D0633A400CF37A4 /* HeaderView.m in Sources */,
+				E5B0CD091D0633A400CF37A4 /* UITextField+Insets.m in Sources */,
+				E5B0CD0A1D0633A400CF37A4 /* RequestAction.m in Sources */,
+				E5B0CD0B1D0633A400CF37A4 /* NXAlertViewFactory.m in Sources */,
+				E5B0CD0C1D0633A400CF37A4 /* NXMediaPicker.m in Sources */,
+				E5B0CD0D1D0633A400CF37A4 /* NXDevice.m in Sources */,
+				E5B0CD0E1D0633A400CF37A4 /* UIImage+Alpha.m in Sources */,
+				E5B0CD0F1D0633A400CF37A4 /* NXHTTPClient.m in Sources */,
+				E5B0CD101D0633A400CF37A4 /* NXVideoView.m in Sources */,
+				E5B0CD111D0633A400CF37A4 /* AppPrefs.m in Sources */,
+				E5B0CD121D0633A400CF37A4 /* NXURLParser.m in Sources */,
+				E5B0CD131D0633A400CF37A4 /* NSDate+ISO8601.m in Sources */,
+				E5B0CD141D0633A400CF37A4 /* NXAlertViewHandler.m in Sources */,
+				E5B0CD151D0633A400CF37A4 /* RequestError.m in Sources */,
+				E5B0CD161D0633A400CF37A4 /* RequestResponse.m in Sources */,
+				E5B0CD171D0633A400CF37A4 /* AppModel.m in Sources */,
+				E5B0CD181D0633A400CF37A4 /* UICollectionView+CenterCell.m in Sources */,
+				E5B0CD191D0633A400CF37A4 /* NSString+Random.m in Sources */,
+				E5B0CD1A1D0633A400CF37A4 /* NSString+EmailValidation.m in Sources */,
+				E5B0CD1B1D0633A400CF37A4 /* NSDictionary+Cascade.m in Sources */,
+				E5B0CD1C1D0633A400CF37A4 /* UIImage+Base64.m in Sources */,
+				E5B0CD1D1D0633A400CF37A4 /* NXMediaPool.m in Sources */,
+				E5B0CD1E1D0633A400CF37A4 /* UIImage+Resize.m in Sources */,
+				E5B0CD1F1D0633A400CF37A4 /* UILabel+Insets.m in Sources */,
+				E5B0CD201D0633A400CF37A4 /* NXHTTPJSONAction.m in Sources */,
+				E5B0CD211D0633A400CF37A4 /* SetupAction.m in Sources */,
+				E5B0CD221D0633A400CF37A4 /* UIImage+RoundedCorner.m in Sources */,
+				E5B0CD231D0633A400CF37A4 /* NXCustomFormatter.m in Sources */,
+				E5B0CD241D0633A400CF37A4 /* NSString+DecodeURL.m in Sources */,
+				E5B0CD251D0633A400CF37A4 /* UITextField+AccessoryViews.m in Sources */,
+				E5B0CD261D0633A400CF37A4 /* RecursiveDescriptionHelper.m in Sources */,
+				E5B0CD271D0633A400CF37A4 /* NXDispatcherHelper.m in Sources */,
+				E5B0CD281D0633A400CF37A4 /* NSLayoutConstraint+Description.m in Sources */,
+				E5B0CD291D0633A400CF37A4 /* NSDate+NbYears.m in Sources */,
+				E5B0CD2A1D0633A400CF37A4 /* ChildViewController.m in Sources */,
+				E5B0CD2B1D0633A400CF37A4 /* UIColor+HexString.m in Sources */,
+				E5B0CD2C1D0633A400CF37A4 /* AppDelegate.m in Sources */,
+				E5B0CD2D1D0633A400CF37A4 /* NSDictionary+JSONFile.m in Sources */,
+				E5B0CD2E1D0633A400CF37A4 /* NXHTTPAction.m in Sources */,
+				E5B0CD2F1D0633A400CF37A4 /* NSString+URLEncode.m in Sources */,
+				E5B0CD301D0633A400CF37A4 /* QCNavigationBar.m in Sources */,
+				E5B0CD311D0633A400CF37A4 /* UIImage+Color.m in Sources */,
+				E5B0CD321D0633A400CF37A4 /* MenuSection.m in Sources */,
+				E5B0CD331D0633A400CF37A4 /* NotificationPermissionHandler.m in Sources */,
+				E5B0CD341D0633A400CF37A4 /* UIImage+tintColor.m in Sources */,
+				E5B0CD351D0633A400CF37A4 /* main.m in Sources */,
+				E5B0CD361D0633A400CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */,
+				E5B0CD371D0633A400CF37A4 /* UIViewController+segueDelay.m in Sources */,
+				E5B0CD381D0633A400CF37A4 /* UIView+Description.m in Sources */,
+				E5B0CD391D0633A400CF37A4 /* UIView+ScreenShot.m in Sources */,
+				E5B0CD3A1D0633A400CF37A4 /* NSObject+KeyboardObserver.m in Sources */,
+				E5B0CD3B1D0633A400CF37A4 /* UILabel+AwesomeFont.m in Sources */,
+				E5B0CD3C1D0633A400CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */,
+				E5B0CD3D1D0633A400CF37A4 /* UIView+RenderToImage.m in Sources */,
+				E5B0CD3E1D0633A400CF37A4 /* NSURL+PathParameters.m in Sources */,
+				E5B0CD3F1D0633A400CF37A4 /* LeftMenuViewController.m in Sources */,
+				E5B0CD401D0633A400CF37A4 /* MainViewController.m in Sources */,
+				E5B0CD411D0633A400CF37A4 /* UIBarButtonItem+Helpers.m in Sources */,
+				E5B0CD421D0633A400CF37A4 /* NSDictionary+FormParamString.m in Sources */,
+				E5B0CD431D0633A400CF37A4 /* MenuItem.m in Sources */,
+				E5B0CD441D0633A400CF37A4 /* NXMediaPickerCell.m in Sources */,
+				E5B0CD451D0633A400CF37A4 /* NXLogger.m in Sources */,
+				E5B0CD461D0633A400CF37A4 /* RequestController.m in Sources */,
+				E5B0CD471D0633A400CF37A4 /* RequestModel.m in Sources */,
+				E5B0CD481D0633A400CF37A4 /* SplashViewController.m in Sources */,
+				E5B0CD491D0633A400CF37A4 /* UIApplication+LocalNotification.m in Sources */,
+				E5B0CD4A1D0633A400CF37A4 /* NSObject+NXActionObserver.m in Sources */,
+				E5B0CD4B1D0633A400CF37A4 /* NSObject+RunTimeDescription.m in Sources */,
+				E5B0CD4C1D0633A400CF37A4 /* UIColor+NavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CD721D0633B500CF37A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CD731D0633B500CF37A4 /* SetupResponse.m in Sources */,
+				E5B0CD741D0633B500CF37A4 /* NSNotificationCenter+Additions.m in Sources */,
+				E5B0CD751D0633B500CF37A4 /* NXLocalizer.m in Sources */,
+				E5B0CD761D0633B500CF37A4 /* NSString+FontAwesome.m in Sources */,
+				E5B0CD771D0633B500CF37A4 /* AppController.m in Sources */,
+				E5B0CD781D0633B500CF37A4 /* MenuCell.m in Sources */,
+				E5B0CD791D0633B500CF37A4 /* UIApplication+HideKeyboard.m in Sources */,
+				E5B0CD7A1D0633B500CF37A4 /* NSString+NXContainsString.m in Sources */,
+				E5B0CD7B1D0633B500CF37A4 /* Common.m in Sources */,
+				E5B0CD7C1D0633B500CF37A4 /* UIImageView+ImageTintColor.m in Sources */,
+				E5B0CD7D1D0633B500CF37A4 /* NSString+CapFirstLetter.m in Sources */,
+				E5B0CD7E1D0633B500CF37A4 /* NXGPSController.m in Sources */,
+				E5B0CD7F1D0633B500CF37A4 /* NSDate+DurationString.m in Sources */,
+				E5B0CD801D0633B500CF37A4 /* HeaderView.m in Sources */,
+				E5B0CD811D0633B500CF37A4 /* UITextField+Insets.m in Sources */,
+				E5B0CD821D0633B500CF37A4 /* RequestAction.m in Sources */,
+				E5B0CD831D0633B500CF37A4 /* NXAlertViewFactory.m in Sources */,
+				E5B0CD841D0633B500CF37A4 /* NXMediaPicker.m in Sources */,
+				E5B0CD851D0633B500CF37A4 /* NXDevice.m in Sources */,
+				E5B0CD861D0633B500CF37A4 /* UIImage+Alpha.m in Sources */,
+				E5B0CD871D0633B500CF37A4 /* NXHTTPClient.m in Sources */,
+				E5B0CD881D0633B500CF37A4 /* NXVideoView.m in Sources */,
+				E5B0CD891D0633B500CF37A4 /* AppPrefs.m in Sources */,
+				E5B0CD8A1D0633B500CF37A4 /* NXURLParser.m in Sources */,
+				E5B0CD8B1D0633B500CF37A4 /* NSDate+ISO8601.m in Sources */,
+				E5B0CD8C1D0633B500CF37A4 /* NXAlertViewHandler.m in Sources */,
+				E5B0CD8D1D0633B500CF37A4 /* RequestError.m in Sources */,
+				E5B0CD8E1D0633B500CF37A4 /* RequestResponse.m in Sources */,
+				E5B0CD8F1D0633B500CF37A4 /* AppModel.m in Sources */,
+				E5B0CD901D0633B500CF37A4 /* UICollectionView+CenterCell.m in Sources */,
+				E5B0CD911D0633B500CF37A4 /* NSString+Random.m in Sources */,
+				E5B0CD921D0633B500CF37A4 /* NSString+EmailValidation.m in Sources */,
+				E5B0CD931D0633B500CF37A4 /* NSDictionary+Cascade.m in Sources */,
+				E5B0CD941D0633B500CF37A4 /* UIImage+Base64.m in Sources */,
+				E5B0CD951D0633B500CF37A4 /* NXMediaPool.m in Sources */,
+				E5B0CD961D0633B500CF37A4 /* UIImage+Resize.m in Sources */,
+				E5B0CD971D0633B500CF37A4 /* UILabel+Insets.m in Sources */,
+				E5B0CD981D0633B500CF37A4 /* NXHTTPJSONAction.m in Sources */,
+				E5B0CD991D0633B500CF37A4 /* SetupAction.m in Sources */,
+				E5B0CD9A1D0633B500CF37A4 /* UIImage+RoundedCorner.m in Sources */,
+				E5B0CD9B1D0633B500CF37A4 /* NXCustomFormatter.m in Sources */,
+				E5B0CD9C1D0633B500CF37A4 /* NSString+DecodeURL.m in Sources */,
+				E5B0CD9D1D0633B500CF37A4 /* UITextField+AccessoryViews.m in Sources */,
+				E5B0CD9E1D0633B500CF37A4 /* RecursiveDescriptionHelper.m in Sources */,
+				E5B0CD9F1D0633B500CF37A4 /* NXDispatcherHelper.m in Sources */,
+				E5B0CDA01D0633B500CF37A4 /* NSLayoutConstraint+Description.m in Sources */,
+				E5B0CDA11D0633B500CF37A4 /* NSDate+NbYears.m in Sources */,
+				E5B0CDA21D0633B500CF37A4 /* ChildViewController.m in Sources */,
+				E5B0CDA31D0633B500CF37A4 /* UIColor+HexString.m in Sources */,
+				E5B0CDA41D0633B500CF37A4 /* AppDelegate.m in Sources */,
+				E5B0CDA51D0633B500CF37A4 /* NSDictionary+JSONFile.m in Sources */,
+				E5B0CDA61D0633B500CF37A4 /* NXHTTPAction.m in Sources */,
+				E5B0CDA71D0633B500CF37A4 /* NSString+URLEncode.m in Sources */,
+				E5B0CDA81D0633B500CF37A4 /* QCNavigationBar.m in Sources */,
+				E5B0CDA91D0633B500CF37A4 /* UIImage+Color.m in Sources */,
+				E5B0CDAA1D0633B500CF37A4 /* MenuSection.m in Sources */,
+				E5B0CDAB1D0633B500CF37A4 /* NotificationPermissionHandler.m in Sources */,
+				E5B0CDAC1D0633B500CF37A4 /* UIImage+tintColor.m in Sources */,
+				E5B0CDAD1D0633B500CF37A4 /* main.m in Sources */,
+				E5B0CDAE1D0633B500CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */,
+				E5B0CDAF1D0633B500CF37A4 /* UIViewController+segueDelay.m in Sources */,
+				E5B0CDB01D0633B500CF37A4 /* UIView+Description.m in Sources */,
+				E5B0CDB11D0633B500CF37A4 /* UIView+ScreenShot.m in Sources */,
+				E5B0CDB21D0633B500CF37A4 /* NSObject+KeyboardObserver.m in Sources */,
+				E5B0CDB31D0633B500CF37A4 /* UILabel+AwesomeFont.m in Sources */,
+				E5B0CDB41D0633B500CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */,
+				E5B0CDB51D0633B500CF37A4 /* UIView+RenderToImage.m in Sources */,
+				E5B0CDB61D0633B500CF37A4 /* NSURL+PathParameters.m in Sources */,
+				E5B0CDB71D0633B500CF37A4 /* LeftMenuViewController.m in Sources */,
+				E5B0CDB81D0633B500CF37A4 /* MainViewController.m in Sources */,
+				E5B0CDB91D0633B500CF37A4 /* UIBarButtonItem+Helpers.m in Sources */,
+				E5B0CDBA1D0633B500CF37A4 /* NSDictionary+FormParamString.m in Sources */,
+				E5B0CDBB1D0633B500CF37A4 /* MenuItem.m in Sources */,
+				E5B0CDBC1D0633B500CF37A4 /* NXMediaPickerCell.m in Sources */,
+				E5B0CDBD1D0633B500CF37A4 /* NXLogger.m in Sources */,
+				E5B0CDBE1D0633B500CF37A4 /* RequestController.m in Sources */,
+				E5B0CDBF1D0633B500CF37A4 /* RequestModel.m in Sources */,
+				E5B0CDC01D0633B500CF37A4 /* SplashViewController.m in Sources */,
+				E5B0CDC11D0633B500CF37A4 /* UIApplication+LocalNotification.m in Sources */,
+				E5B0CDC21D0633B500CF37A4 /* NSObject+NXActionObserver.m in Sources */,
+				E5B0CDC31D0633B500CF37A4 /* NSObject+RunTimeDescription.m in Sources */,
+				E5B0CDC41D0633B500CF37A4 /* UIColor+NavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CDEA1D0633F300CF37A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CDEB1D0633F300CF37A4 /* SetupResponse.m in Sources */,
+				E5B0CDEC1D0633F300CF37A4 /* NSNotificationCenter+Additions.m in Sources */,
+				E5B0CDED1D0633F300CF37A4 /* NXLocalizer.m in Sources */,
+				E5B0CDEE1D0633F300CF37A4 /* NSString+FontAwesome.m in Sources */,
+				E5B0CDEF1D0633F300CF37A4 /* AppController.m in Sources */,
+				E5B0CDF01D0633F300CF37A4 /* MenuCell.m in Sources */,
+				E5B0CDF11D0633F300CF37A4 /* UIApplication+HideKeyboard.m in Sources */,
+				E5B0CDF21D0633F300CF37A4 /* NSString+NXContainsString.m in Sources */,
+				E5B0CDF31D0633F300CF37A4 /* Common.m in Sources */,
+				E5B0CDF41D0633F300CF37A4 /* UIImageView+ImageTintColor.m in Sources */,
+				E5B0CDF51D0633F300CF37A4 /* NSString+CapFirstLetter.m in Sources */,
+				E5B0CDF61D0633F300CF37A4 /* NXGPSController.m in Sources */,
+				E5B0CDF71D0633F300CF37A4 /* NSDate+DurationString.m in Sources */,
+				E5B0CDF81D0633F300CF37A4 /* HeaderView.m in Sources */,
+				E5B0CDF91D0633F300CF37A4 /* UITextField+Insets.m in Sources */,
+				E5B0CDFA1D0633F300CF37A4 /* RequestAction.m in Sources */,
+				E5B0CDFB1D0633F300CF37A4 /* NXAlertViewFactory.m in Sources */,
+				E5B0CDFC1D0633F300CF37A4 /* NXMediaPicker.m in Sources */,
+				E5B0CDFD1D0633F300CF37A4 /* NXDevice.m in Sources */,
+				E5B0CDFE1D0633F300CF37A4 /* UIImage+Alpha.m in Sources */,
+				E5B0CDFF1D0633F300CF37A4 /* NXHTTPClient.m in Sources */,
+				E5B0CE001D0633F300CF37A4 /* NXVideoView.m in Sources */,
+				E5B0CE011D0633F300CF37A4 /* AppPrefs.m in Sources */,
+				E5B0CE021D0633F300CF37A4 /* NXURLParser.m in Sources */,
+				E5B0CE031D0633F300CF37A4 /* NSDate+ISO8601.m in Sources */,
+				E5B0CE041D0633F300CF37A4 /* NXAlertViewHandler.m in Sources */,
+				E5B0CE051D0633F300CF37A4 /* RequestError.m in Sources */,
+				E5B0CE061D0633F300CF37A4 /* RequestResponse.m in Sources */,
+				E5B0CE071D0633F300CF37A4 /* AppModel.m in Sources */,
+				E5B0CE081D0633F300CF37A4 /* UICollectionView+CenterCell.m in Sources */,
+				E5B0CE091D0633F300CF37A4 /* NSString+Random.m in Sources */,
+				E5B0CE0A1D0633F300CF37A4 /* NSString+EmailValidation.m in Sources */,
+				E5B0CE0B1D0633F300CF37A4 /* NSDictionary+Cascade.m in Sources */,
+				E5B0CE0C1D0633F300CF37A4 /* UIImage+Base64.m in Sources */,
+				E5B0CE0D1D0633F300CF37A4 /* NXMediaPool.m in Sources */,
+				E5B0CE0E1D0633F300CF37A4 /* UIImage+Resize.m in Sources */,
+				E5B0CE0F1D0633F300CF37A4 /* UILabel+Insets.m in Sources */,
+				E5B0CE101D0633F300CF37A4 /* NXHTTPJSONAction.m in Sources */,
+				E5B0CE111D0633F300CF37A4 /* SetupAction.m in Sources */,
+				E5B0CE121D0633F300CF37A4 /* UIImage+RoundedCorner.m in Sources */,
+				E5B0CE131D0633F300CF37A4 /* NXCustomFormatter.m in Sources */,
+				E5B0CE141D0633F300CF37A4 /* NSString+DecodeURL.m in Sources */,
+				E5B0CE151D0633F300CF37A4 /* UITextField+AccessoryViews.m in Sources */,
+				E5B0CE161D0633F300CF37A4 /* RecursiveDescriptionHelper.m in Sources */,
+				E5B0CE171D0633F300CF37A4 /* NXDispatcherHelper.m in Sources */,
+				E5B0CE181D0633F300CF37A4 /* NSLayoutConstraint+Description.m in Sources */,
+				E5B0CE191D0633F300CF37A4 /* NSDate+NbYears.m in Sources */,
+				E5B0CE1A1D0633F300CF37A4 /* ChildViewController.m in Sources */,
+				E5B0CE1B1D0633F300CF37A4 /* UIColor+HexString.m in Sources */,
+				E5B0CE1C1D0633F300CF37A4 /* AppDelegate.m in Sources */,
+				E5B0CE1D1D0633F300CF37A4 /* NSDictionary+JSONFile.m in Sources */,
+				E5B0CE1E1D0633F300CF37A4 /* NXHTTPAction.m in Sources */,
+				E5B0CE1F1D0633F300CF37A4 /* NSString+URLEncode.m in Sources */,
+				E5B0CE201D0633F300CF37A4 /* QCNavigationBar.m in Sources */,
+				E5B0CE211D0633F300CF37A4 /* UIImage+Color.m in Sources */,
+				E5B0CE221D0633F300CF37A4 /* MenuSection.m in Sources */,
+				E5B0CE231D0633F300CF37A4 /* NotificationPermissionHandler.m in Sources */,
+				E5B0CE241D0633F300CF37A4 /* UIImage+tintColor.m in Sources */,
+				E5B0CE251D0633F300CF37A4 /* main.m in Sources */,
+				E5B0CE261D0633F300CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */,
+				E5B0CE271D0633F300CF37A4 /* UIViewController+segueDelay.m in Sources */,
+				E5B0CE281D0633F300CF37A4 /* UIView+Description.m in Sources */,
+				E5B0CE291D0633F300CF37A4 /* UIView+ScreenShot.m in Sources */,
+				E5B0CE2A1D0633F300CF37A4 /* NSObject+KeyboardObserver.m in Sources */,
+				E5B0CE2B1D0633F300CF37A4 /* UILabel+AwesomeFont.m in Sources */,
+				E5B0CE2C1D0633F300CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */,
+				E5B0CE2D1D0633F300CF37A4 /* UIView+RenderToImage.m in Sources */,
+				E5B0CE2E1D0633F300CF37A4 /* NSURL+PathParameters.m in Sources */,
+				E5B0CE2F1D0633F300CF37A4 /* LeftMenuViewController.m in Sources */,
+				E5B0CE301D0633F300CF37A4 /* MainViewController.m in Sources */,
+				E5B0CE311D0633F300CF37A4 /* UIBarButtonItem+Helpers.m in Sources */,
+				E5B0CE321D0633F300CF37A4 /* NSDictionary+FormParamString.m in Sources */,
+				E5B0CE331D0633F300CF37A4 /* MenuItem.m in Sources */,
+				E5B0CE341D0633F300CF37A4 /* NXMediaPickerCell.m in Sources */,
+				E5B0CE351D0633F300CF37A4 /* NXLogger.m in Sources */,
+				E5B0CE361D0633F300CF37A4 /* RequestController.m in Sources */,
+				E5B0CE371D0633F300CF37A4 /* RequestModel.m in Sources */,
+				E5B0CE381D0633F300CF37A4 /* SplashViewController.m in Sources */,
+				E5B0CE391D0633F300CF37A4 /* UIApplication+LocalNotification.m in Sources */,
+				E5B0CE3A1D0633F300CF37A4 /* NSObject+NXActionObserver.m in Sources */,
+				E5B0CE3B1D0633F300CF37A4 /* NSObject+RunTimeDescription.m in Sources */,
+				E5B0CE3C1D0633F300CF37A4 /* UIColor+NavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B0CE621D06340900CF37A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B0CE631D06340900CF37A4 /* SetupResponse.m in Sources */,
+				E5B0CE641D06340900CF37A4 /* NSNotificationCenter+Additions.m in Sources */,
+				E5B0CE651D06340900CF37A4 /* NXLocalizer.m in Sources */,
+				E5B0CE661D06340900CF37A4 /* NSString+FontAwesome.m in Sources */,
+				E5B0CE671D06340900CF37A4 /* AppController.m in Sources */,
+				E5B0CE681D06340900CF37A4 /* MenuCell.m in Sources */,
+				E5B0CE691D06340900CF37A4 /* UIApplication+HideKeyboard.m in Sources */,
+				E5B0CE6A1D06340900CF37A4 /* NSString+NXContainsString.m in Sources */,
+				E5B0CE6B1D06340900CF37A4 /* Common.m in Sources */,
+				E5B0CE6C1D06340900CF37A4 /* UIImageView+ImageTintColor.m in Sources */,
+				E5B0CE6D1D06340900CF37A4 /* NSString+CapFirstLetter.m in Sources */,
+				E5B0CE6E1D06340900CF37A4 /* NXGPSController.m in Sources */,
+				E5B0CE6F1D06340900CF37A4 /* NSDate+DurationString.m in Sources */,
+				E5B0CE701D06340900CF37A4 /* HeaderView.m in Sources */,
+				E5B0CE711D06340900CF37A4 /* UITextField+Insets.m in Sources */,
+				E5B0CE721D06340900CF37A4 /* RequestAction.m in Sources */,
+				E5B0CE731D06340900CF37A4 /* NXAlertViewFactory.m in Sources */,
+				E5B0CE741D06340900CF37A4 /* NXMediaPicker.m in Sources */,
+				E5B0CE751D06340900CF37A4 /* NXDevice.m in Sources */,
+				E5B0CE761D06340900CF37A4 /* UIImage+Alpha.m in Sources */,
+				E5B0CE771D06340900CF37A4 /* NXHTTPClient.m in Sources */,
+				E5B0CE781D06340900CF37A4 /* NXVideoView.m in Sources */,
+				E5B0CE791D06340900CF37A4 /* AppPrefs.m in Sources */,
+				E5B0CE7A1D06340900CF37A4 /* NXURLParser.m in Sources */,
+				E5B0CE7B1D06340900CF37A4 /* NSDate+ISO8601.m in Sources */,
+				E5B0CE7C1D06340900CF37A4 /* NXAlertViewHandler.m in Sources */,
+				E5B0CE7D1D06340900CF37A4 /* RequestError.m in Sources */,
+				E5B0CE7E1D06340900CF37A4 /* RequestResponse.m in Sources */,
+				E5B0CE7F1D06340900CF37A4 /* AppModel.m in Sources */,
+				E5B0CE801D06340900CF37A4 /* UICollectionView+CenterCell.m in Sources */,
+				E5B0CE811D06340900CF37A4 /* NSString+Random.m in Sources */,
+				E5B0CE821D06340900CF37A4 /* NSString+EmailValidation.m in Sources */,
+				E5B0CE831D06340900CF37A4 /* NSDictionary+Cascade.m in Sources */,
+				E5B0CE841D06340900CF37A4 /* UIImage+Base64.m in Sources */,
+				E5B0CE851D06340900CF37A4 /* NXMediaPool.m in Sources */,
+				E5B0CE861D06340900CF37A4 /* UIImage+Resize.m in Sources */,
+				E5B0CE871D06340900CF37A4 /* UILabel+Insets.m in Sources */,
+				E5B0CE881D06340900CF37A4 /* NXHTTPJSONAction.m in Sources */,
+				E5B0CE891D06340900CF37A4 /* SetupAction.m in Sources */,
+				E5B0CE8A1D06340900CF37A4 /* UIImage+RoundedCorner.m in Sources */,
+				E5B0CE8B1D06340900CF37A4 /* NXCustomFormatter.m in Sources */,
+				E5B0CE8C1D06340900CF37A4 /* NSString+DecodeURL.m in Sources */,
+				E5B0CE8D1D06340900CF37A4 /* UITextField+AccessoryViews.m in Sources */,
+				E5B0CE8E1D06340900CF37A4 /* RecursiveDescriptionHelper.m in Sources */,
+				E5B0CE8F1D06340900CF37A4 /* NXDispatcherHelper.m in Sources */,
+				E5B0CE901D06340900CF37A4 /* NSLayoutConstraint+Description.m in Sources */,
+				E5B0CE911D06340900CF37A4 /* NSDate+NbYears.m in Sources */,
+				E5B0CE921D06340900CF37A4 /* ChildViewController.m in Sources */,
+				E5B0CE931D06340900CF37A4 /* UIColor+HexString.m in Sources */,
+				E5B0CE941D06340900CF37A4 /* AppDelegate.m in Sources */,
+				E5B0CE951D06340900CF37A4 /* NSDictionary+JSONFile.m in Sources */,
+				E5B0CE961D06340900CF37A4 /* NXHTTPAction.m in Sources */,
+				E5B0CE971D06340900CF37A4 /* NSString+URLEncode.m in Sources */,
+				E5B0CE981D06340900CF37A4 /* QCNavigationBar.m in Sources */,
+				E5B0CE991D06340900CF37A4 /* UIImage+Color.m in Sources */,
+				E5B0CE9A1D06340900CF37A4 /* MenuSection.m in Sources */,
+				E5B0CE9B1D06340900CF37A4 /* NotificationPermissionHandler.m in Sources */,
+				E5B0CE9C1D06340900CF37A4 /* UIImage+tintColor.m in Sources */,
+				E5B0CE9D1D06340900CF37A4 /* main.m in Sources */,
+				E5B0CE9E1D06340900CF37A4 /* UIImage+ImageNamedNoCache.m in Sources */,
+				E5B0CE9F1D06340900CF37A4 /* UIViewController+segueDelay.m in Sources */,
+				E5B0CEA01D06340900CF37A4 /* UIView+Description.m in Sources */,
+				E5B0CEA11D06340900CF37A4 /* UIView+ScreenShot.m in Sources */,
+				E5B0CEA21D06340900CF37A4 /* NSObject+KeyboardObserver.m in Sources */,
+				E5B0CEA31D06340900CF37A4 /* UILabel+AwesomeFont.m in Sources */,
+				E5B0CEA41D06340900CF37A4 /* NSString+trimLeadingWhitespace.m in Sources */,
+				E5B0CEA51D06340900CF37A4 /* UIView+RenderToImage.m in Sources */,
+				E5B0CEA61D06340900CF37A4 /* NSURL+PathParameters.m in Sources */,
+				E5B0CEA71D06340900CF37A4 /* LeftMenuViewController.m in Sources */,
+				E5B0CEA81D06340900CF37A4 /* MainViewController.m in Sources */,
+				E5B0CEA91D06340900CF37A4 /* UIBarButtonItem+Helpers.m in Sources */,
+				E5B0CEAA1D06340900CF37A4 /* NSDictionary+FormParamString.m in Sources */,
+				E5B0CEAB1D06340900CF37A4 /* MenuItem.m in Sources */,
+				E5B0CEAC1D06340900CF37A4 /* NXMediaPickerCell.m in Sources */,
+				E5B0CEAD1D06340900CF37A4 /* NXLogger.m in Sources */,
+				E5B0CEAE1D06340900CF37A4 /* RequestController.m in Sources */,
+				E5B0CEAF1D06340900CF37A4 /* RequestModel.m in Sources */,
+				E5B0CEB01D06340900CF37A4 /* SplashViewController.m in Sources */,
+				E5B0CEB11D06340900CF37A4 /* UIApplication+LocalNotification.m in Sources */,
+				E5B0CEB21D06340900CF37A4 /* NSObject+NXActionObserver.m in Sources */,
+				E5B0CEB31D06340900CF37A4 /* NSObject+RunTimeDescription.m in Sources */,
+				E5B0CEB41D06340900CF37A4 /* UIColor+NavigationBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -1057,6 +2618,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E54C20581C8D9C2D0047F291 /* Base */,
+				E58CEA881D00F2650042300F /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			path = ..;
@@ -1101,7 +2663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1138,7 +2700,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1149,8 +2711,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon_costa;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
 				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
@@ -1165,14 +2727,174 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon_costa;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
 				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.costa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E59FD3B51D04DC5400E9997A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_msc;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "QCNS-Web-App copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.msc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E59FD3B61D04DC5400E9997A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_msc;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "QCNS-Web-App copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.msc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5B0CD6C1D0633A400CF37A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_ncl;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "MSC copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.ncl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5B0CD6D1D0633A400CF37A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_ncl;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "MSC copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.ncl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5B0CDE41D0633B500CF37A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_rccl;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "NCL copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.rccl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5B0CDE51D0633B500CF37A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_rccl;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "NCL copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.rccl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5B0CE5C1D0633F300CF37A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_cdf;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "RCCL copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.cdf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5B0CE5D1D0633F300CF37A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_cdf;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "RCCL copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.cdf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5B0CED41D06340900CF37A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_croisieurope;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "CDF copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.croisieurope;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5B0CED51D06340900CF37A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_croisieurope;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				INFOPLIST_FILE = "CDF copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.croisieurope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1189,11 +2911,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E54C205D1C8D9C2D0047F291 /* Build configuration list for PBXNativeTarget "QCNS-Web-App" */ = {
+		E54C205D1C8D9C2D0047F291 /* Build configuration list for PBXNativeTarget "Costa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E54C205E1C8D9C2D0047F291 /* Debug */,
 				E54C205F1C8D9C2D0047F291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E59FD3B41D04DC5400E9997A /* Build configuration list for PBXNativeTarget "MSC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E59FD3B51D04DC5400E9997A /* Debug */,
+				E59FD3B61D04DC5400E9997A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B0CD6B1D0633A400CF37A4 /* Build configuration list for PBXNativeTarget "NCL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B0CD6C1D0633A400CF37A4 /* Debug */,
+				E5B0CD6D1D0633A400CF37A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B0CDE31D0633B500CF37A4 /* Build configuration list for PBXNativeTarget "RCCL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B0CDE41D0633B500CF37A4 /* Debug */,
+				E5B0CDE51D0633B500CF37A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B0CE5B1D0633F300CF37A4 /* Build configuration list for PBXNativeTarget "CDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B0CE5C1D0633F300CF37A4 /* Debug */,
+				E5B0CE5D1D0633F300CF37A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5B0CED31D06340900CF37A4 /* Build configuration list for PBXNativeTarget "CroisiEurope" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5B0CED41D06340900CF37A4 /* Debug */,
+				E5B0CED51D06340900CF37A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

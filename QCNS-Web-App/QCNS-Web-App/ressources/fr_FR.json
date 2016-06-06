@@ -4,7 +4,7 @@
         "ok" : "Ok",
         "yes" : "Oui",
         "no" : "Non",
-        "error" : "Error",
+        "error" : "Erreur",
         "info" : "Information",
         "warning" : "Attention",
         "send" : "Envoyer",
@@ -35,3 +35,5 @@
     {
     },
 }
+
+

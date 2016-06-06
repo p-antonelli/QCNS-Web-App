@@ -7,13 +7,14 @@
 //
 
 #import "MenuItem.h"
+#import "UIColor+HexString.h"
 
 @interface MenuItem ()
 
 @property (nonatomic, readwrite) NSString *title;
 @property (nonatomic, readwrite) NSString *contentURL;
 @property (nonatomic, readwrite) NSString *imageURL;
-@property (nonatomic, readwrite) NSString *backgroundColor;
+@property (nonatomic, readwrite) UIColor *backgroundColor;
 
 @end
 
@@ -38,7 +39,11 @@
         
         strTMP = [dict objectForKey:@"couleur"];
         NilCheck(strTMP);
-        _backgroundColor = [strTMP copy];
+        if (strTMP)
+        {
+            _backgroundColor = [UIColor colorWithHexString:strTMP];
+        }
+
     }
     return self;
 }

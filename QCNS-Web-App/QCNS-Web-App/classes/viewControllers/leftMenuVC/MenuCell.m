@@ -54,6 +54,11 @@
 //    NSString *url = [[[AppModel sharedInstance] baseURL] stringByAppendingString:_item.imageURL];
     NSString *url = [_item.imageURL copy];
     
+    if (_item.backgroundColor)
+    {
+        self.contentView.backgroundColor = [_item.backgroundColor copy];
+    }
+    
 //    NSLog(@"image url : |%@|", url);
     [self.pictoImageView sd_setImageWithURL:[NSURL URLWithString:url]
                            placeholderImage:[UIImage imageFromColor:[UIColor clearColor]]
