@@ -29,16 +29,22 @@
 {
     // No available keys in dictionary
     if ([self count] == 0)
+    {
         return nil;
+    }
     
     // nil / empty key
     if (!key || [key length] == 0)
+    {
         return nil;
+    }
     
     // Malformed key
     NSArray *keysArray = [key componentsSeparatedByString:separator];
     if (!keysArray || [keysArray count] == 0)
+    {
         return nil;
+    }
     
     // Prepare loop variables
     NSInteger count = [keysArray count];
@@ -60,15 +66,21 @@
         {
             // Not the last iteration
             if (objTmp && [objTmp isKindOfClass:[NSDictionary class]])
+            {
                 dictTmp = (NSDictionary *)objTmp; // it is a valid NSDictionary, go deeper...
+            }
             else
+            {
                 break; // Invalid object
+            }
         }
         else
         {
             // Last iteration
             if (objTmp)
+            {
                 return objTmp;
+            }
         }
     }
     

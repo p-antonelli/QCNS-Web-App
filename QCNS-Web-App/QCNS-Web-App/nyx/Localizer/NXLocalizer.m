@@ -58,7 +58,9 @@
 //    NSLog(@"key : %@", key);
     id obj = [[_data objectForKey:_currentLocale] objectForCascadeKey:key];
     if (!obj || ![obj isKindOfClass:[NSString class]])
+    {
         return fallback ?: _invalidString;
+    }
     
     return obj;
 }
@@ -71,7 +73,9 @@
     
     // Notify if necessary
     if ([locale isEqualToString:_currentLocale])
+    {
         [NOTIFICATION_CENTER postNotificationName:NX_LOCALIZER_CURRENT_LOCALE_DATA_UPDATED_NOTIFICATION object:nil];
+    }
 }
 
 #pragma mark - Getters
