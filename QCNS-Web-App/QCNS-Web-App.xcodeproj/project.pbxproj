@@ -672,7 +672,7 @@
 		E54C20531C8D9C2D0047F291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E54C20551C8D9C2D0047F291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54C20581C8D9C2D0047F291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E54C205A1C8D9C2D0047F291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54C205A1C8D9C2D0047F291 /* Costa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Costa-Info.plist"; sourceTree = "<group>"; };
 		E54C207B1C8DACF10047F291 /* NSDate+DurationString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DurationString.h"; sourceTree = "<group>"; };
 		E54C207C1C8DACF10047F291 /* NSDate+DurationString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DurationString.m"; sourceTree = "<group>"; };
 		E54C207D1C8DACF10047F291 /* NSDate+ISO8601.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ISO8601.h"; sourceTree = "<group>"; };
@@ -861,15 +861,15 @@
 		E59AEBA41CF27B350007E567 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		E59AEBA51CF27B350007E567 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		E59FD3B71D04DC5400E9997A /* MSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E59FD3B81D04DC5400E9997A /* QCNS-Web-App copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QCNS-Web-App copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/QCNS-Web-App copy-Info.plist"; sourceTree = "<absolute>"; };
+		E59FD3B81D04DC5400E9997A /* MSC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MSC-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/MSC-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CD6E1D0633A400CF37A4 /* NCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B0CD6F1D0633A400CF37A4 /* MSC copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MSC copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/MSC copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CD6F1D0633A400CF37A4 /* NCL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NCL-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/NCL-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CDE61D0633B500CF37A4 /* RCCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B0CDE71D0633B500CF37A4 /* NCL copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NCL copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/NCL copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CDE71D0633B500CF37A4 /* RCCL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RCCL-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/RCCL-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CE5E1D0633F300CF37A4 /* CDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B0CE5F1D0633F300CF37A4 /* RCCL copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RCCL copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/RCCL copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CE5F1D0633F300CF37A4 /* CDF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CDF-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CDF-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CED61D06340900CF37A4 /* CroisiEurope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroisiEurope.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B0CED71D06340900CF37A4 /* CDF copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CDF copy-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CDF copy-Info.plist"; sourceTree = "<absolute>"; };
+		E5B0CED71D06340900CF37A4 /* CroisiEurop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CroisiEurop-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CroisiEurop-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -957,11 +957,6 @@
 				E54C20471C8D9C2D0047F291 /* Products */,
 				D8171E0FE0C116DB4B4FD482 /* Pods */,
 				3A5935C719B3874C1A62F327 /* Frameworks */,
-				E59FD3B81D04DC5400E9997A /* QCNS-Web-App copy-Info.plist */,
-				E5B0CD6F1D0633A400CF37A4 /* MSC copy-Info.plist */,
-				E5B0CDE71D0633B500CF37A4 /* NCL copy-Info.plist */,
-				E5B0CE5F1D0633F300CF37A4 /* RCCL copy-Info.plist */,
-				E5B0CED71D06340900CF37A4 /* CDF copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -994,7 +989,12 @@
 				E54C20621C8DAC600047F291 /* nyx */,
 				E54C20611C8DABDF0047F291 /* ressources */,
 				E54C20551C8D9C2D0047F291 /* Assets.xcassets */,
-				E54C205A1C8D9C2D0047F291 /* Info.plist */,
+				E54C205A1C8D9C2D0047F291 /* Costa-Info.plist */,
+				E59FD3B81D04DC5400E9997A /* MSC-Info.plist */,
+				E5B0CD6F1D0633A400CF37A4 /* NCL-Info.plist */,
+				E5B0CDE71D0633B500CF37A4 /* RCCL-Info.plist */,
+				E5B0CE5F1D0633F300CF37A4 /* CDF-Info.plist */,
+				E5B0CED71D06340900CF37A4 /* CroisiEurop-Info.plist */,
 				E54C20491C8D9C2D0047F291 /* Supporting Files */,
 			);
 			path = "QCNS-Web-App";
@@ -2715,7 +2715,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/QCNS-Web-App/Costa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.costa;
@@ -2731,7 +2731,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "QCNS-Web-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/QCNS-Web-App/Costa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.costa;
@@ -2747,7 +2747,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "QCNS-Web-App copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MSC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.msc;
@@ -2763,7 +2763,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "QCNS-Web-App copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MSC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.msc;
@@ -2779,7 +2779,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "MSC copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.ncl;
@@ -2795,7 +2795,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "MSC copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.ncl;
@@ -2811,7 +2811,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "NCL copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/RCCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.rccl;
@@ -2827,7 +2827,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "NCL copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/RCCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.rccl;
@@ -2843,7 +2843,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "RCCL copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CDF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.cdf;
@@ -2859,7 +2859,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "RCCL copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CDF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.cdf;
@@ -2875,7 +2875,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "CDF copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CroisiEurop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.croisieurope;
@@ -2891,7 +2891,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
-				INFOPLIST_FILE = "CDF copy-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CroisiEurop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.croisierenet.croisieurope;
