@@ -67,6 +67,7 @@
 {
     // Insert new data
     [_data setObject:data forKey:locale];
+    _currentLocale = [locale copy];
     
     // Notify if necessary
     if ([locale isEqualToString:_currentLocale])
