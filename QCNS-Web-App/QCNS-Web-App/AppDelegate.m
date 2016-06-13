@@ -14,7 +14,7 @@
 
 #import "SplashViewController.h"
 #import "LeftMenuViewController.h"
-#import "QCNavigationBar.h"
+//#import "QCNavigationBar.h"
 
 @interface AppDelegate ()
 

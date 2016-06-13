@@ -88,25 +88,12 @@
 		E54C216C1C8DBE580047F291 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216B1C8DBE580047F291 /* MenuItem.m */; };
 		E54C21701C8DBE700047F291 /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C216E1C8DBE700047F291 /* MenuCell.m */; };
 		E54C21711C8DBE700047F291 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
-		E54C21751C8DCE6B0047F291 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
-		E54C21781C8DCFC20047F291 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
 		E54C217D1C8DD08C0047F291 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C217B1C8DD08C0047F291 /* SplashViewController.m */; };
 		E54C217E1C8DD08C0047F291 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E54C21811C8DDAB30047F291 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
 		E54C21831C8DDB540047F291 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
 		E54C21871C8DDE770047F291 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21851C8DDE770047F291 /* MainViewController.m */; };
 		E54C21881C8DDE770047F291 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
 		E54C218B1C8DEF290047F291 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
-		E54C21971C8E0C420047F291 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
-		E54C21981C8E0C420047F291 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
-		E54C21991C8E0C420047F291 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E54C219A1C8E0C420047F291 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
-		E54C219B1C8E0C420047F291 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
-		E54C219C1C8E0C420047F291 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
-		E54C219D1C8E0C420047F291 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
-		E54C219E1C8E0C420047F291 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E54C219F1C8E0C420047F291 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E54C21A01C8E0C420047F291 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E56EE76C1CFD016200D7ABCC /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E56EE76A1CFD016200D7ABCC /* ChildViewController.m */; };
 		E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
@@ -167,7 +154,6 @@
 		E59FD3761D04DC5400E9997A /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
 		E59FD3771D04DC5400E9997A /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
 		E59FD3781D04DC5400E9997A /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
-		E59FD3791D04DC5400E9997A /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
 		E59FD37A1D04DC5400E9997A /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
 		E59FD37B1D04DC5400E9997A /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E59FD37C1D04DC5400E9997A /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
@@ -197,30 +183,23 @@
 		E59FD3941D04DC5400E9997A /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
 		E59FD3951D04DC5400E9997A /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
 		E59FD3971D04DC5400E9997A /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
-		E59FD3991D04DC5400E9997A /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
 		E59FD39A1D04DC5400E9997A /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
 		E59FD39B1D04DC5400E9997A /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E59FD39C1D04DC5400E9997A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
-		E59FD39D1D04DC5400E9997A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
-		E59FD39E1D04DC5400E9997A /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
-		E59FD39F1D04DC5400E9997A /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
 		E59FD3A01D04DC5400E9997A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E59FD3A11D04DC5400E9997A /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E59FD3A21D04DC5400E9997A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
-		E59FD3A31D04DC5400E9997A /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
 		E59FD3A41D04DC5400E9997A /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
-		E59FD3A61D04DC5400E9997A /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
 		E59FD3A71D04DC5400E9997A /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
-		E59FD3A81D04DC5400E9997A /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E59FD3A91D04DC5400E9997A /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E59FD3AA1D04DC5400E9997A /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E59FD3AB1D04DC5400E9997A /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
 		E59FD3AC1D04DC5400E9997A /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E59FD3AD1D04DC5400E9997A /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
 		E59FD3AE1D04DC5400E9997A /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
 		E59FD3AF1D04DC5400E9997A /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
 		E59FD3B01D04DC5400E9997A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E59FD3B11D04DC5400E9997A /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
+		E5A7ADF21D0DA9DE005046B1 /* Assets-MSC.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A7ADF01D0DA9DE005046B1 /* Assets-MSC.xcassets */; };
+		E5A7ADF71D0DAA0B005046B1 /* Assets-Costa.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets-Costa.xcassets */; };
+		E5A7ADFB1D0DC345005046B1 /* Assets-NCL.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A7ADF81D0DC345005046B1 /* Assets-NCL.xcassets */; };
+		E5A7AE031D0DC35B005046B1 /* Assets-RCCL.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A7ADFF1D0DC35B005046B1 /* Assets-RCCL.xcassets */; };
+		E5A7AE0B1D0DC371005046B1 /* Assets-CDF.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5A7AE061D0DC371005046B1 /* Assets-CDF.xcassets */; };
 		E5B0CCFB1D0633A400CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
 		E5B0CCFC1D0633A400CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
 		E5B0CCFD1D0633A400CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
@@ -274,7 +253,6 @@
 		E5B0CD2D1D0633A400CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
 		E5B0CD2E1D0633A400CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
 		E5B0CD2F1D0633A400CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
-		E5B0CD301D0633A400CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
 		E5B0CD311D0633A400CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
 		E5B0CD321D0633A400CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E5B0CD331D0633A400CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
@@ -304,30 +282,18 @@
 		E5B0CD4B1D0633A400CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
 		E5B0CD4C1D0633A400CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
 		E5B0CD4E1D0633A400CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
-		E5B0CD501D0633A400CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
 		E5B0CD511D0633A400CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
 		E5B0CD521D0633A400CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E5B0CD531D0633A400CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
-		E5B0CD541D0633A400CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
-		E5B0CD551D0633A400CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
-		E5B0CD561D0633A400CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
 		E5B0CD571D0633A400CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E5B0CD581D0633A400CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E5B0CD591D0633A400CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
-		E5B0CD5A1D0633A400CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
 		E5B0CD5B1D0633A400CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
-		E5B0CD5C1D0633A400CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
 		E5B0CD5D1D0633A400CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
-		E5B0CD5E1D0633A400CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E5B0CD5F1D0633A400CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E5B0CD601D0633A400CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E5B0CD611D0633A400CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
 		E5B0CD621D0633A400CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E5B0CD631D0633A400CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
 		E5B0CD641D0633A400CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
 		E5B0CD651D0633A400CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
 		E5B0CD661D0633A400CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E5B0CD671D0633A400CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
 		E5B0CD731D0633B500CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
 		E5B0CD741D0633B500CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
 		E5B0CD751D0633B500CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
@@ -381,7 +347,6 @@
 		E5B0CDA51D0633B500CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
 		E5B0CDA61D0633B500CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
 		E5B0CDA71D0633B500CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
-		E5B0CDA81D0633B500CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
 		E5B0CDA91D0633B500CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
 		E5B0CDAA1D0633B500CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E5B0CDAB1D0633B500CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
@@ -411,30 +376,18 @@
 		E5B0CDC31D0633B500CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
 		E5B0CDC41D0633B500CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
 		E5B0CDC61D0633B500CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
-		E5B0CDC81D0633B500CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
 		E5B0CDC91D0633B500CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
 		E5B0CDCA1D0633B500CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E5B0CDCB1D0633B500CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
-		E5B0CDCC1D0633B500CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
-		E5B0CDCD1D0633B500CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
-		E5B0CDCE1D0633B500CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
 		E5B0CDCF1D0633B500CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E5B0CDD01D0633B500CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E5B0CDD11D0633B500CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
-		E5B0CDD21D0633B500CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
 		E5B0CDD31D0633B500CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
-		E5B0CDD41D0633B500CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
 		E5B0CDD51D0633B500CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
-		E5B0CDD61D0633B500CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E5B0CDD71D0633B500CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E5B0CDD81D0633B500CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E5B0CDD91D0633B500CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
 		E5B0CDDA1D0633B500CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E5B0CDDB1D0633B500CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
 		E5B0CDDC1D0633B500CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
 		E5B0CDDD1D0633B500CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
 		E5B0CDDE1D0633B500CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E5B0CDDF1D0633B500CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
 		E5B0CDEB1D0633F300CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
 		E5B0CDEC1D0633F300CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
 		E5B0CDED1D0633F300CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
@@ -488,7 +441,6 @@
 		E5B0CE1D1D0633F300CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
 		E5B0CE1E1D0633F300CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
 		E5B0CE1F1D0633F300CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
-		E5B0CE201D0633F300CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
 		E5B0CE211D0633F300CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
 		E5B0CE221D0633F300CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E5B0CE231D0633F300CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
@@ -518,30 +470,18 @@
 		E5B0CE3B1D0633F300CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
 		E5B0CE3C1D0633F300CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
 		E5B0CE3E1D0633F300CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
-		E5B0CE401D0633F300CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
 		E5B0CE411D0633F300CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
 		E5B0CE421D0633F300CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E5B0CE431D0633F300CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
-		E5B0CE441D0633F300CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
-		E5B0CE451D0633F300CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
-		E5B0CE461D0633F300CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
 		E5B0CE471D0633F300CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E5B0CE481D0633F300CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E5B0CE491D0633F300CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
-		E5B0CE4A1D0633F300CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
 		E5B0CE4B1D0633F300CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
-		E5B0CE4C1D0633F300CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
 		E5B0CE4D1D0633F300CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
-		E5B0CE4E1D0633F300CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E5B0CE4F1D0633F300CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E5B0CE501D0633F300CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E5B0CE511D0633F300CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
 		E5B0CE521D0633F300CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E5B0CE531D0633F300CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
 		E5B0CE541D0633F300CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
 		E5B0CE551D0633F300CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
 		E5B0CE561D0633F300CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E5B0CE571D0633F300CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
 		E5B0CE631D06340900CF37A4 /* SetupResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C215E1C8DB9440047F291 /* SetupResponse.m */; };
 		E5B0CE641D06340900CF37A4 /* NSNotificationCenter+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C208A1C8DACF10047F291 /* NSNotificationCenter+Additions.m */; };
 		E5B0CE651D06340900CF37A4 /* NXLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E81C8DACF10047F291 /* NXLocalizer.m */; };
@@ -595,7 +535,6 @@
 		E5B0CE951D06340900CF37A4 /* NSDictionary+JSONFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20861C8DACF10047F291 /* NSDictionary+JSONFile.m */; };
 		E5B0CE961D06340900CF37A4 /* NXHTTPAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20E11C8DACF10047F291 /* NXHTTPAction.m */; };
 		E5B0CE971D06340900CF37A4 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20A11C8DACF10047F291 /* NSString+URLEncode.m */; };
-		E5B0CE981D06340900CF37A4 /* QCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */; };
 		E5B0CE991D06340900CF37A4 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20B51C8DACF10047F291 /* UIImage+Color.m */; };
 		E5B0CE9A1D06340900CF37A4 /* MenuSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E58CF9F71CEFCD9A0091B676 /* MenuSection.m */; };
 		E5B0CE9B1D06340900CF37A4 /* NotificationPermissionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20F71C8DACF10047F291 /* NotificationPermissionHandler.m */; };
@@ -625,36 +564,19 @@
 		E5B0CEB31D06340900CF37A4 /* NSObject+RunTimeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20901C8DACF10047F291 /* NSObject+RunTimeDescription.m */; };
 		E5B0CEB41D06340900CF37A4 /* UIColor+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E54C20AF1C8DACF10047F291 /* UIColor+NavigationBar.m */; };
 		E5B0CEB61D06340900CF37A4 /* libPods-QCNS-Web-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4C29D7032B8F7E97B8A648 /* libPods-QCNS-Web-App.a */; };
-		E5B0CEB81D06340900CF37A4 /* icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21911C8E0C420047F291 /* icon-40@3x.png */; };
 		E5B0CEB91D06340900CF37A4 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C216F1C8DBE700047F291 /* MenuCell.xib */; };
 		E5B0CEBA1D06340900CF37A4 /* main-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21A11C8E107F0047F291 /* main-bg@2x.png */; };
 		E5B0CEBB1D06340900CF37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20571C8D9C2D0047F291 /* LaunchScreen.storyboard */; };
-		E5B0CEBC1D06340900CF37A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21801C8DDAB30047F291 /* Default@2x.png */; };
-		E5B0CEBD1D06340900CF37A4 /* costa-navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */; };
-		E5B0CEBE1D06340900CF37A4 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218D1C8E0C420047F291 /* icon-76@2x.png */; };
 		E5B0CEBF1D06340900CF37A4 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C217C1C8DD08C0047F291 /* SplashViewController.xib */; };
-		E5B0CEC01D06340900CF37A4 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21961C8E0C420047F291 /* icon-29.png */; };
 		E5B0CEC11D06340900CF37A4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21861C8DDE770047F291 /* MainViewController.xib */; };
-		E5B0CEC21D06340900CF37A4 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21901C8E0C420047F291 /* icon-60@2x.png */; };
 		E5B0CEC31D06340900CF37A4 /* fr_FR.json in Resources */ = {isa = PBXBuildFile; fileRef = E54C21821C8DDB540047F291 /* fr_FR.json */; };
-		E5B0CEC41D06340900CF37A4 /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21921C8E0C420047F291 /* icon-40@2x.png */; };
 		E5B0CEC51D06340900CF37A4 /* NXMediaPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C20F41C8DACF10047F291 /* NXMediaPickerCell.xib */; };
-		E5B0CEC61D06340900CF37A4 /* icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21941C8E0C420047F291 /* icon-29@3x.png */; };
-		E5B0CEC71D06340900CF37A4 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218F1C8E0C420047F291 /* icon-60@3x.png */; };
-		E5B0CEC81D06340900CF37A4 /* icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21951C8E0C420047F291 /* icon-29@2x.png */; };
-		E5B0CEC91D06340900CF37A4 /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C21931C8E0C420047F291 /* icon-40.png */; };
 		E5B0CECA1D06340900CF37A4 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E56EE76B1CFD016200D7ABCC /* ChildViewController.xib */; };
 		E5B0CECB1D06340900CF37A4 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */; };
 		E5B0CECC1D06340900CF37A4 /* en_US.json in Resources */ = {isa = PBXBuildFile; fileRef = E58CEA831D00ED670042300F /* en_US.json */; };
 		E5B0CECD1D06340900CF37A4 /* LeftMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E54C21641C8DBB780047F291 /* LeftMenuViewController.xib */; };
 		E5B0CECE1D06340900CF37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54C20521C8D9C2D0047F291 /* Main.storyboard */; };
-		E5B0CECF1D06340900CF37A4 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = E54C218E1C8E0C420047F291 /* icon-76.png */; };
-		E5B0CEDC1D06373A00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
-		E5B0CEDD1D06375500CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
-		E5B0CEDF1D06375C00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
-		E5B0CEE01D06375E00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
-		E5B0CEE11D06375F00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
-		E5B0CEE21D06375F00CF37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54C20551C8D9C2D0047F291 /* Assets.xcassets */; };
+		E5BE4DC81D0DC3C6002F3962 /* Assets-CroisiEurope.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5BE4DC21D0DC3C6002F3962 /* Assets-CroisiEurope.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -670,7 +592,7 @@
 		E54C204C1C8D9C2D0047F291 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E54C204D1C8D9C2D0047F291 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E54C20531C8D9C2D0047F291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E54C20551C8D9C2D0047F291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E54C20551C8D9C2D0047F291 /* Assets-Costa.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-Costa.xcassets"; sourceTree = "<group>"; };
 		E54C20581C8D9C2D0047F291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54C205A1C8D9C2D0047F291 /* Costa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Costa-Info.plist"; sourceTree = "<group>"; };
 		E54C207B1C8DACF10047F291 /* NSDate+DurationString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DurationString.h"; sourceTree = "<group>"; };
@@ -826,28 +748,14 @@
 		E54C216D1C8DBE700047F291 /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
 		E54C216E1C8DBE700047F291 /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
 		E54C216F1C8DBE700047F291 /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
-		E54C21731C8DCE6B0047F291 /* QCNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNavigationBar.h; sourceTree = "<group>"; };
-		E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationBar.m; sourceTree = "<group>"; };
-		E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "costa-navbar@2x.png"; sourceTree = "<group>"; };
 		E54C217A1C8DD08C0047F291 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		E54C217B1C8DD08C0047F291 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		E54C217C1C8DD08C0047F291 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		E54C21801C8DDAB30047F291 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E54C21821C8DDB540047F291 /* fr_FR.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fr_FR.json; sourceTree = "<group>"; };
 		E54C21841C8DDE770047F291 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		E54C21851C8DDE770047F291 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E54C21861C8DDE770047F291 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		E54C218A1C8DEF290047F291 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
-		E54C218D1C8E0C420047F291 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
-		E54C218E1C8E0C420047F291 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
-		E54C218F1C8E0C420047F291 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
-		E54C21901C8E0C420047F291 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = "<group>"; };
-		E54C21911C8E0C420047F291 /* icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@3x.png"; sourceTree = "<group>"; };
-		E54C21921C8E0C420047F291 /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
-		E54C21931C8E0C420047F291 /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
-		E54C21941C8E0C420047F291 /* icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@3x.png"; sourceTree = "<group>"; };
-		E54C21951C8E0C420047F291 /* icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29@2x.png"; sourceTree = "<group>"; };
-		E54C21961C8E0C420047F291 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = "<group>"; };
 		E54C21A11C8E107F0047F291 /* main-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main-bg@2x.png"; sourceTree = "<group>"; };
 		E56EE7691CFD016200D7ABCC /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
 		E56EE76A1CFD016200D7ABCC /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
@@ -862,6 +770,10 @@
 		E59AEBA51CF27B350007E567 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		E59FD3B71D04DC5400E9997A /* MSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59FD3B81D04DC5400E9997A /* MSC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MSC-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/MSC-Info.plist"; sourceTree = "<absolute>"; };
+		E5A7ADF01D0DA9DE005046B1 /* Assets-MSC.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-MSC.xcassets"; sourceTree = "<group>"; };
+		E5A7ADF81D0DC345005046B1 /* Assets-NCL.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-NCL.xcassets"; sourceTree = "<group>"; };
+		E5A7ADFF1D0DC35B005046B1 /* Assets-RCCL.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-RCCL.xcassets"; sourceTree = "<group>"; };
+		E5A7AE061D0DC371005046B1 /* Assets-CDF.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-CDF.xcassets"; sourceTree = "<group>"; };
 		E5B0CD6E1D0633A400CF37A4 /* NCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B0CD6F1D0633A400CF37A4 /* NCL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NCL-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/NCL-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CDE61D0633B500CF37A4 /* RCCL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCCL.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -870,6 +782,7 @@
 		E5B0CE5F1D0633F300CF37A4 /* CDF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CDF-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CDF-Info.plist"; sourceTree = "<absolute>"; };
 		E5B0CED61D06340900CF37A4 /* CroisiEurope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CroisiEurope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B0CED71D06340900CF37A4 /* CroisiEurop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CroisiEurop-Info.plist"; path = "/Users/polo/Work/QCNS/WebApp/dev/cside/ios/QCNS-Web-App/CroisiEurop-Info.plist"; sourceTree = "<absolute>"; };
+		E5BE4DC21D0DC3C6002F3962 /* Assets-CroisiEurope.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-CroisiEurope.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -988,7 +901,12 @@
 				E54C20601C8DAB1A0047F291 /* classes */,
 				E54C20621C8DAC600047F291 /* nyx */,
 				E54C20611C8DABDF0047F291 /* ressources */,
-				E54C20551C8D9C2D0047F291 /* Assets.xcassets */,
+				E54C20551C8D9C2D0047F291 /* Assets-Costa.xcassets */,
+				E5A7ADF01D0DA9DE005046B1 /* Assets-MSC.xcassets */,
+				E5A7ADF81D0DC345005046B1 /* Assets-NCL.xcassets */,
+				E5A7ADFF1D0DC35B005046B1 /* Assets-RCCL.xcassets */,
+				E5A7AE061D0DC371005046B1 /* Assets-CDF.xcassets */,
+				E5BE4DC21D0DC3C6002F3962 /* Assets-CroisiEurope.xcassets */,
 				E54C205A1C8D9C2D0047F291 /* Costa-Info.plist */,
 				E59FD3B81D04DC5400E9997A /* MSC-Info.plist */,
 				E5B0CD6F1D0633A400CF37A4 /* NCL-Info.plist */,
@@ -1341,8 +1259,6 @@
 		E54C21721C8DCE440047F291 /* navBar */ = {
 			isa = PBXGroup;
 			children = (
-				E54C21731C8DCE6B0047F291 /* QCNavigationBar.h */,
-				E54C21741C8DCE6B0047F291 /* QCNavigationBar.m */,
 			);
 			path = navBar;
 			sourceTree = "<group>";
@@ -1351,9 +1267,7 @@
 			isa = PBXGroup;
 			children = (
 				E54C218C1C8E0C350047F291 /* icons */,
-				E54C21801C8DDAB30047F291 /* Default@2x.png */,
 				E54C21A11C8E107F0047F291 /* main-bg@2x.png */,
-				E54C21771C8DCFC20047F291 /* costa-navbar@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1389,16 +1303,6 @@
 		E54C218C1C8E0C350047F291 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				E54C218D1C8E0C420047F291 /* icon-76@2x.png */,
-				E54C218E1C8E0C420047F291 /* icon-76.png */,
-				E54C218F1C8E0C420047F291 /* icon-60@3x.png */,
-				E54C21901C8E0C420047F291 /* icon-60@2x.png */,
-				E54C21911C8E0C420047F291 /* icon-40@3x.png */,
-				E54C21921C8E0C420047F291 /* icon-40@2x.png */,
-				E54C21931C8E0C420047F291 /* icon-40.png */,
-				E54C21941C8E0C420047F291 /* icon-29@3x.png */,
-				E54C21951C8E0C420047F291 /* icon-29@2x.png */,
-				E54C21961C8E0C420047F291 /* icon-29.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -1604,31 +1508,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54C219B1C8E0C420047F291 /* icon-40@3x.png in Resources */,
+				E5A7ADF71D0DAA0B005046B1 /* Assets-Costa.xcassets in Resources */,
 				E54C21711C8DBE700047F291 /* MenuCell.xib in Resources */,
 				E54C21A21C8E107F0047F291 /* main-bg@2x.png in Resources */,
 				E54C20591C8D9C2D0047F291 /* LaunchScreen.storyboard in Resources */,
-				E54C21811C8DDAB30047F291 /* Default@2x.png in Resources */,
-				E54C21781C8DCFC20047F291 /* costa-navbar@2x.png in Resources */,
-				E54C21971C8E0C420047F291 /* icon-76@2x.png in Resources */,
 				E54C217E1C8DD08C0047F291 /* SplashViewController.xib in Resources */,
-				E54C21A01C8E0C420047F291 /* icon-29.png in Resources */,
 				E54C21881C8DDE770047F291 /* MainViewController.xib in Resources */,
-				E54C219A1C8E0C420047F291 /* icon-60@2x.png in Resources */,
 				E54C21831C8DDB540047F291 /* fr_FR.json in Resources */,
-				E54C219C1C8E0C420047F291 /* icon-40@2x.png in Resources */,
 				E54C21351C8DACF10047F291 /* NXMediaPickerCell.xib in Resources */,
-				E54C219E1C8E0C420047F291 /* icon-29@3x.png in Resources */,
-				E54C21991C8E0C420047F291 /* icon-60@3x.png in Resources */,
-				E54C219F1C8E0C420047F291 /* icon-29@2x.png in Resources */,
-				E54C219D1C8E0C420047F291 /* icon-40.png in Resources */,
 				E56EE76D1CFD016200D7ABCC /* ChildViewController.xib in Resources */,
 				E54C218B1C8DEF290047F291 /* fontawesome-webfont.ttf in Resources */,
 				E58CEA841D00ED670042300F /* en_US.json in Resources */,
 				E54C21661C8DBB780047F291 /* LeftMenuViewController.xib in Resources */,
 				E54C20541C8D9C2D0047F291 /* Main.storyboard in Resources */,
-				E54C21981C8E0C420047F291 /* icon-76.png in Resources */,
-				E5B0CEE01D06375E00CF37A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1636,31 +1528,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59FD3991D04DC5400E9997A /* icon-40@3x.png in Resources */,
 				E59FD39A1D04DC5400E9997A /* MenuCell.xib in Resources */,
 				E59FD39B1D04DC5400E9997A /* main-bg@2x.png in Resources */,
 				E59FD39C1D04DC5400E9997A /* LaunchScreen.storyboard in Resources */,
-				E59FD39D1D04DC5400E9997A /* Default@2x.png in Resources */,
-				E59FD39E1D04DC5400E9997A /* costa-navbar@2x.png in Resources */,
-				E59FD39F1D04DC5400E9997A /* icon-76@2x.png in Resources */,
+				E5A7ADF21D0DA9DE005046B1 /* Assets-MSC.xcassets in Resources */,
 				E59FD3A01D04DC5400E9997A /* SplashViewController.xib in Resources */,
-				E59FD3A11D04DC5400E9997A /* icon-29.png in Resources */,
 				E59FD3A21D04DC5400E9997A /* MainViewController.xib in Resources */,
-				E59FD3A31D04DC5400E9997A /* icon-60@2x.png in Resources */,
-				E59FD3A41D04DC5400E9997A /* fr_FR.json in Resources */,
-				E59FD3A61D04DC5400E9997A /* icon-40@2x.png in Resources */,
 				E59FD3A71D04DC5400E9997A /* NXMediaPickerCell.xib in Resources */,
-				E59FD3A81D04DC5400E9997A /* icon-29@3x.png in Resources */,
-				E59FD3A91D04DC5400E9997A /* icon-60@3x.png in Resources */,
-				E59FD3AA1D04DC5400E9997A /* icon-29@2x.png in Resources */,
-				E59FD3AB1D04DC5400E9997A /* icon-40.png in Resources */,
 				E59FD3AC1D04DC5400E9997A /* ChildViewController.xib in Resources */,
-				E59FD3AD1D04DC5400E9997A /* fontawesome-webfont.ttf in Resources */,
-				E59FD3AE1D04DC5400E9997A /* en_US.json in Resources */,
 				E59FD3AF1D04DC5400E9997A /* LeftMenuViewController.xib in Resources */,
+				E59FD3A41D04DC5400E9997A /* fr_FR.json in Resources */,
+				E59FD3AE1D04DC5400E9997A /* en_US.json in Resources */,
+				E59FD3AD1D04DC5400E9997A /* fontawesome-webfont.ttf in Resources */,
 				E59FD3B01D04DC5400E9997A /* Main.storyboard in Resources */,
-				E59FD3B11D04DC5400E9997A /* icon-76.png in Resources */,
-				E5B0CEDF1D06375C00CF37A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,31 +1548,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B0CD501D0633A400CF37A4 /* icon-40@3x.png in Resources */,
 				E5B0CD511D0633A400CF37A4 /* MenuCell.xib in Resources */,
 				E5B0CD521D0633A400CF37A4 /* main-bg@2x.png in Resources */,
 				E5B0CD531D0633A400CF37A4 /* LaunchScreen.storyboard in Resources */,
-				E5B0CD541D0633A400CF37A4 /* Default@2x.png in Resources */,
-				E5B0CD551D0633A400CF37A4 /* costa-navbar@2x.png in Resources */,
-				E5B0CD561D0633A400CF37A4 /* icon-76@2x.png in Resources */,
 				E5B0CD571D0633A400CF37A4 /* SplashViewController.xib in Resources */,
-				E5B0CD581D0633A400CF37A4 /* icon-29.png in Resources */,
 				E5B0CD591D0633A400CF37A4 /* MainViewController.xib in Resources */,
-				E5B0CD5A1D0633A400CF37A4 /* icon-60@2x.png in Resources */,
 				E5B0CD5B1D0633A400CF37A4 /* fr_FR.json in Resources */,
-				E5B0CD5C1D0633A400CF37A4 /* icon-40@2x.png in Resources */,
 				E5B0CD5D1D0633A400CF37A4 /* NXMediaPickerCell.xib in Resources */,
-				E5B0CD5E1D0633A400CF37A4 /* icon-29@3x.png in Resources */,
-				E5B0CD5F1D0633A400CF37A4 /* icon-60@3x.png in Resources */,
-				E5B0CD601D0633A400CF37A4 /* icon-29@2x.png in Resources */,
-				E5B0CD611D0633A400CF37A4 /* icon-40.png in Resources */,
+				E5A7ADFB1D0DC345005046B1 /* Assets-NCL.xcassets in Resources */,
 				E5B0CD621D0633A400CF37A4 /* ChildViewController.xib in Resources */,
 				E5B0CD631D0633A400CF37A4 /* fontawesome-webfont.ttf in Resources */,
 				E5B0CD641D0633A400CF37A4 /* en_US.json in Resources */,
 				E5B0CD651D0633A400CF37A4 /* LeftMenuViewController.xib in Resources */,
 				E5B0CD661D0633A400CF37A4 /* Main.storyboard in Resources */,
-				E5B0CD671D0633A400CF37A4 /* icon-76.png in Resources */,
-				E5B0CEDD1D06375500CF37A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1700,31 +1568,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B0CDC81D0633B500CF37A4 /* icon-40@3x.png in Resources */,
 				E5B0CDC91D0633B500CF37A4 /* MenuCell.xib in Resources */,
 				E5B0CDCA1D0633B500CF37A4 /* main-bg@2x.png in Resources */,
 				E5B0CDCB1D0633B500CF37A4 /* LaunchScreen.storyboard in Resources */,
-				E5B0CDCC1D0633B500CF37A4 /* Default@2x.png in Resources */,
-				E5B0CDCD1D0633B500CF37A4 /* costa-navbar@2x.png in Resources */,
-				E5B0CDCE1D0633B500CF37A4 /* icon-76@2x.png in Resources */,
 				E5B0CDCF1D0633B500CF37A4 /* SplashViewController.xib in Resources */,
-				E5B0CDD01D0633B500CF37A4 /* icon-29.png in Resources */,
 				E5B0CDD11D0633B500CF37A4 /* MainViewController.xib in Resources */,
-				E5B0CDD21D0633B500CF37A4 /* icon-60@2x.png in Resources */,
 				E5B0CDD31D0633B500CF37A4 /* fr_FR.json in Resources */,
-				E5B0CDD41D0633B500CF37A4 /* icon-40@2x.png in Resources */,
 				E5B0CDD51D0633B500CF37A4 /* NXMediaPickerCell.xib in Resources */,
-				E5B0CDD61D0633B500CF37A4 /* icon-29@3x.png in Resources */,
-				E5B0CDD71D0633B500CF37A4 /* icon-60@3x.png in Resources */,
-				E5B0CDD81D0633B500CF37A4 /* icon-29@2x.png in Resources */,
-				E5B0CDD91D0633B500CF37A4 /* icon-40.png in Resources */,
+				E5A7AE031D0DC35B005046B1 /* Assets-RCCL.xcassets in Resources */,
 				E5B0CDDA1D0633B500CF37A4 /* ChildViewController.xib in Resources */,
 				E5B0CDDB1D0633B500CF37A4 /* fontawesome-webfont.ttf in Resources */,
 				E5B0CDDC1D0633B500CF37A4 /* en_US.json in Resources */,
 				E5B0CDDD1D0633B500CF37A4 /* LeftMenuViewController.xib in Resources */,
 				E5B0CDDE1D0633B500CF37A4 /* Main.storyboard in Resources */,
-				E5B0CDDF1D0633B500CF37A4 /* icon-76.png in Resources */,
-				E5B0CEDC1D06373A00CF37A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1732,31 +1588,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B0CE401D0633F300CF37A4 /* icon-40@3x.png in Resources */,
 				E5B0CE411D0633F300CF37A4 /* MenuCell.xib in Resources */,
 				E5B0CE421D0633F300CF37A4 /* main-bg@2x.png in Resources */,
 				E5B0CE431D0633F300CF37A4 /* LaunchScreen.storyboard in Resources */,
-				E5B0CE441D0633F300CF37A4 /* Default@2x.png in Resources */,
-				E5B0CE451D0633F300CF37A4 /* costa-navbar@2x.png in Resources */,
-				E5B0CE461D0633F300CF37A4 /* icon-76@2x.png in Resources */,
 				E5B0CE471D0633F300CF37A4 /* SplashViewController.xib in Resources */,
-				E5B0CE481D0633F300CF37A4 /* icon-29.png in Resources */,
 				E5B0CE491D0633F300CF37A4 /* MainViewController.xib in Resources */,
-				E5B0CE4A1D0633F300CF37A4 /* icon-60@2x.png in Resources */,
 				E5B0CE4B1D0633F300CF37A4 /* fr_FR.json in Resources */,
-				E5B0CE4C1D0633F300CF37A4 /* icon-40@2x.png in Resources */,
 				E5B0CE4D1D0633F300CF37A4 /* NXMediaPickerCell.xib in Resources */,
-				E5B0CE4E1D0633F300CF37A4 /* icon-29@3x.png in Resources */,
-				E5B0CE4F1D0633F300CF37A4 /* icon-60@3x.png in Resources */,
-				E5B0CE501D0633F300CF37A4 /* icon-29@2x.png in Resources */,
-				E5B0CE511D0633F300CF37A4 /* icon-40.png in Resources */,
 				E5B0CE521D0633F300CF37A4 /* ChildViewController.xib in Resources */,
 				E5B0CE531D0633F300CF37A4 /* fontawesome-webfont.ttf in Resources */,
 				E5B0CE541D0633F300CF37A4 /* en_US.json in Resources */,
 				E5B0CE551D0633F300CF37A4 /* LeftMenuViewController.xib in Resources */,
 				E5B0CE561D0633F300CF37A4 /* Main.storyboard in Resources */,
-				E5B0CE571D0633F300CF37A4 /* icon-76.png in Resources */,
-				E5B0CEE11D06375F00CF37A4 /* Assets.xcassets in Resources */,
+				E5A7AE0B1D0DC371005046B1 /* Assets-CDF.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1764,31 +1608,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5B0CEB81D06340900CF37A4 /* icon-40@3x.png in Resources */,
 				E5B0CEB91D06340900CF37A4 /* MenuCell.xib in Resources */,
 				E5B0CEBA1D06340900CF37A4 /* main-bg@2x.png in Resources */,
 				E5B0CEBB1D06340900CF37A4 /* LaunchScreen.storyboard in Resources */,
-				E5B0CEBC1D06340900CF37A4 /* Default@2x.png in Resources */,
-				E5B0CEBD1D06340900CF37A4 /* costa-navbar@2x.png in Resources */,
-				E5B0CEBE1D06340900CF37A4 /* icon-76@2x.png in Resources */,
 				E5B0CEBF1D06340900CF37A4 /* SplashViewController.xib in Resources */,
-				E5B0CEC01D06340900CF37A4 /* icon-29.png in Resources */,
 				E5B0CEC11D06340900CF37A4 /* MainViewController.xib in Resources */,
-				E5B0CEC21D06340900CF37A4 /* icon-60@2x.png in Resources */,
 				E5B0CEC31D06340900CF37A4 /* fr_FR.json in Resources */,
-				E5B0CEC41D06340900CF37A4 /* icon-40@2x.png in Resources */,
 				E5B0CEC51D06340900CF37A4 /* NXMediaPickerCell.xib in Resources */,
-				E5B0CEC61D06340900CF37A4 /* icon-29@3x.png in Resources */,
-				E5B0CEC71D06340900CF37A4 /* icon-60@3x.png in Resources */,
-				E5B0CEC81D06340900CF37A4 /* icon-29@2x.png in Resources */,
-				E5B0CEC91D06340900CF37A4 /* icon-40.png in Resources */,
 				E5B0CECA1D06340900CF37A4 /* ChildViewController.xib in Resources */,
 				E5B0CECB1D06340900CF37A4 /* fontawesome-webfont.ttf in Resources */,
 				E5B0CECC1D06340900CF37A4 /* en_US.json in Resources */,
 				E5B0CECD1D06340900CF37A4 /* LeftMenuViewController.xib in Resources */,
 				E5B0CECE1D06340900CF37A4 /* Main.storyboard in Resources */,
-				E5B0CECF1D06340900CF37A4 /* icon-76.png in Resources */,
-				E5B0CEE21D06375F00CF37A4 /* Assets.xcassets in Resources */,
+				E5BE4DC81D0DC3C6002F3962 /* Assets-CroisiEurope.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2125,7 +1957,6 @@
 				E54C21031C8DACF10047F291 /* NSDictionary+JSONFile.m in Sources */,
 				E54C212D1C8DACF10047F291 /* NXHTTPAction.m in Sources */,
 				E54C21101C8DACF10047F291 /* NSString+URLEncode.m in Sources */,
-				E54C21751C8DCE6B0047F291 /* QCNavigationBar.m in Sources */,
 				E54C211A1C8DACF10047F291 /* UIImage+Color.m in Sources */,
 				E58CF9F81CEFCD9A0091B676 /* MenuSection.m in Sources */,
 				E54C21361C8DACF10047F291 /* NotificationPermissionHandler.m in Sources */,
@@ -2214,7 +2045,6 @@
 				E59FD3761D04DC5400E9997A /* NSDictionary+JSONFile.m in Sources */,
 				E59FD3771D04DC5400E9997A /* NXHTTPAction.m in Sources */,
 				E59FD3781D04DC5400E9997A /* NSString+URLEncode.m in Sources */,
-				E59FD3791D04DC5400E9997A /* QCNavigationBar.m in Sources */,
 				E59FD37A1D04DC5400E9997A /* UIImage+Color.m in Sources */,
 				E59FD37B1D04DC5400E9997A /* MenuSection.m in Sources */,
 				E59FD37C1D04DC5400E9997A /* NotificationPermissionHandler.m in Sources */,
@@ -2303,7 +2133,6 @@
 				E5B0CD2D1D0633A400CF37A4 /* NSDictionary+JSONFile.m in Sources */,
 				E5B0CD2E1D0633A400CF37A4 /* NXHTTPAction.m in Sources */,
 				E5B0CD2F1D0633A400CF37A4 /* NSString+URLEncode.m in Sources */,
-				E5B0CD301D0633A400CF37A4 /* QCNavigationBar.m in Sources */,
 				E5B0CD311D0633A400CF37A4 /* UIImage+Color.m in Sources */,
 				E5B0CD321D0633A400CF37A4 /* MenuSection.m in Sources */,
 				E5B0CD331D0633A400CF37A4 /* NotificationPermissionHandler.m in Sources */,
@@ -2392,7 +2221,6 @@
 				E5B0CDA51D0633B500CF37A4 /* NSDictionary+JSONFile.m in Sources */,
 				E5B0CDA61D0633B500CF37A4 /* NXHTTPAction.m in Sources */,
 				E5B0CDA71D0633B500CF37A4 /* NSString+URLEncode.m in Sources */,
-				E5B0CDA81D0633B500CF37A4 /* QCNavigationBar.m in Sources */,
 				E5B0CDA91D0633B500CF37A4 /* UIImage+Color.m in Sources */,
 				E5B0CDAA1D0633B500CF37A4 /* MenuSection.m in Sources */,
 				E5B0CDAB1D0633B500CF37A4 /* NotificationPermissionHandler.m in Sources */,
@@ -2481,7 +2309,6 @@
 				E5B0CE1D1D0633F300CF37A4 /* NSDictionary+JSONFile.m in Sources */,
 				E5B0CE1E1D0633F300CF37A4 /* NXHTTPAction.m in Sources */,
 				E5B0CE1F1D0633F300CF37A4 /* NSString+URLEncode.m in Sources */,
-				E5B0CE201D0633F300CF37A4 /* QCNavigationBar.m in Sources */,
 				E5B0CE211D0633F300CF37A4 /* UIImage+Color.m in Sources */,
 				E5B0CE221D0633F300CF37A4 /* MenuSection.m in Sources */,
 				E5B0CE231D0633F300CF37A4 /* NotificationPermissionHandler.m in Sources */,
@@ -2570,7 +2397,6 @@
 				E5B0CE951D06340900CF37A4 /* NSDictionary+JSONFile.m in Sources */,
 				E5B0CE961D06340900CF37A4 /* NXHTTPAction.m in Sources */,
 				E5B0CE971D06340900CF37A4 /* NSString+URLEncode.m in Sources */,
-				E5B0CE981D06340900CF37A4 /* QCNavigationBar.m in Sources */,
 				E5B0CE991D06340900CF37A4 /* UIImage+Color.m in Sources */,
 				E5B0CE9A1D06340900CF37A4 /* MenuSection.m in Sources */,
 				E5B0CE9B1D06340900CF37A4 /* NotificationPermissionHandler.m in Sources */,
@@ -2711,10 +2537,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAD5DE410EDC0ACAD135E8D5 /* Pods-QCNS-Web-App.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Icon_costa;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_costa;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"COSTA=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QCNS-Web-App/Costa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2727,10 +2558,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C11472A143559CD8C7CBE220 /* Pods-QCNS-Web-App.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Icon_costa;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon_costa;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_costa;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"COSTA=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QCNS-Web-App/Costa-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2747,6 +2583,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MSC=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MSC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2763,6 +2604,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_msc;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"MSC=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/MSC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2779,6 +2625,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NCL=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/NCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2795,6 +2646,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_ncl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NCL=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/NCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2811,6 +2667,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"RCCL=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/RCCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2827,6 +2688,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_rccl;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"RCCL=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/RCCL-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2843,6 +2709,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"CDF=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CDF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2859,6 +2730,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_cdf;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"CDF=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CDF-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2875,6 +2751,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"CROISIEUROPE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CroisiEurop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2891,6 +2772,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = splash_croisieurope;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "QCNS-Web-App/QCNSWebApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"CROISIEUROPE=1",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CroisiEurop-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
