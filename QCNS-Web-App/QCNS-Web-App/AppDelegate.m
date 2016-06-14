@@ -30,7 +30,13 @@
     [AppModel sharedInstance];
     
     // Customize UI
+    
+#ifdef CROISIEUROPE
+    [application setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+#else
     [application setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+#endif
+    
     
     LeftMenuViewController *leftMenuVC = [[LeftMenuViewController alloc] initWithNibName:nil bundle:nil];
     
