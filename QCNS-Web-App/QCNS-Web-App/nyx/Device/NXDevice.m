@@ -151,6 +151,15 @@ int main (int argc, char *argv[]);
     }
 #endif
 }
++ (void)printAllPNGsInBundle
+{
+#if (APP_DEV)
+    NSArray *allPngImageNames = [[NSBundle mainBundle] pathsForResourcesOfType:@"png"
+                                                                   inDirectory:nil];
+    
+    NSLog(@"### ALL PNGs IN BUNDLE : %@", allPngImageNames);
+#endif
+}
 
 #pragma mark - Private Methods
 

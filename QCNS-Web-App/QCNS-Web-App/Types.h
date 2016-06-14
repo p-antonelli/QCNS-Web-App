@@ -15,8 +15,12 @@
 
 typedef NS_ENUM(NSInteger, QCNSBrandType)
 {
-    QCNSBrandTypeCosta = 2,
-    QCNSBrandTypeMSC = 5
+    QCNSBrandTypeCosta          = 2,
+    QCNSBrandTypeMSC            = 5,
+    QCNSBrandTypeNCL            = 11,
+    QCNSBrandTypeRCCL           = 7,
+    QCNSBrandTypeCDF            = 61,
+    QCNSBrandTypeCroisiEurope   = 28,
 };
 
 

@@ -156,12 +156,9 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     
-//    self.tableView.backgroundColor = COSTA_BLUE_COLOR;
     self.tableView.backgroundColor = [UIColor clearColor];
-//    self.tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorColor = [UIColor whiteColor];
-//    self.tableView.separatorInset = UIEdgeInsetsMake(5, 20, 0, 20);
     self.tableViewTrailingConstraint.constant = [[SlideNavigationController sharedInstance] portraitSlideOffset];
     
 //    self.tableViewBottomConstraint.constant = MAIN_SCREEN_HEIGHT - ([_menuSections count] * [self tableView:self.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] + self.tableView.contentInset.top + 5);

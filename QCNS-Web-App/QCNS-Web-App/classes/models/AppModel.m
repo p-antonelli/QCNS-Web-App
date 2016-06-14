@@ -39,6 +39,33 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 @implementation AppModel
 
+static NSDictionary *splashImageDict;
+static NSDictionary *navBarImageDict;
+
++ (void)initialize
+{
+    if (self == [AppModel class])
+    {
+        splashImageDict = @{
+                            @(QCNSBrandTypeCosta) :         @"splash_costa",
+                            @(QCNSBrandTypeMSC) :           @"splash_msc",
+                            @(QCNSBrandTypeNCL) :           @"splash_ncl",
+                            @(QCNSBrandTypeRCCL) :          @"splash_rccl",
+                            @(QCNSBrandTypeCDF) :           @"splash_cdf",
+                            @(QCNSBrandTypeCroisiEurope) :  @"splash_croisieurope",
+                            };
+        
+        navBarImageDict = @{
+                            @(QCNSBrandTypeCosta) :         @"navBar_costa",
+                            @(QCNSBrandTypeMSC) :           @"navBar_msc",
+                            @(QCNSBrandTypeNCL) :           @"navBar_ncl",
+                            @(QCNSBrandTypeRCCL) :          @"navBar_rccl",
+                            @(QCNSBrandTypeCDF) :           @"navBar_cdf",
+                            @(QCNSBrandTypeCroisiEurope) :  @"navBar_croisieurope",
+                            };
+    }
+}
+
 #pragma mark - Public
 
 + (instancetype)sharedInstance
@@ -52,7 +79,7 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 - (void)updateWithSetupAction:(SetupAction *)action
 {
-    DDLogInfo(@"setup response : %@", action.response);
+//    DDLogInfo(@"setup response : %@", action.response);
     
     _baseURL = [action.response.baseURL copy];
     _backgroundImageURL = [action.response.backgroundImageURL copy];
@@ -103,10 +130,10 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     {
         _locale = [NXDevice currentLocaleISO];
         _language = kDefaultLanguage;
-        
+
         [self setupCurrentBrand];
-        
-//        [self setupMenuItems];
+        [self setupSplashImage];
+
         
         [self loadLocalFile];
 
@@ -114,27 +141,59 @@ static NSString * const kDefaultLocale      = @"fr_FR";
     return self;
 }
 
-- (void)setupCurrentBrand
+- (void)setupSplashImage
 {
-    _currentBrand = QCNSBrandTypeCosta;
+    if ([NXDevice has3dot5InchScreen])
+    {
+        _splashImageName = [[splashImageDict objectForKey:@(_currentBrand)] stringByAppendingString:@"-700@2x.png"];
+    }
+    else if ([NXDevice has4InchScreen])
+    {
+        _splashImageName = [[splashImageDict objectForKey:@(_currentBrand)] stringByAppendingString:@"-700-568h@2x.png"];
+    }
+    else if ([NXDevice has4dot7InchScreen])
+    {
+        _splashImageName = [[splashImageDict objectForKey:@(_currentBrand)] stringByAppendingString:@"-800-667h@2x.png"];
+    }
+    else if ([NXDevice has5dot5InchScreen])
+    {
+        _splashImageName = [[splashImageDict objectForKey:@(_currentBrand)] stringByAppendingString:@"-800-Portrait-736h@3x.png"];
+    }
+    
+    NSLog(@"### SPLASH IMAGE NAME : %@", _splashImageName);
+    NSLog(@"### SPLASH IMAGE : %@", [UIImage imageNamed:_splashImageName]);
 }
 
-//- (void)setupMenuItems
-//{
-//    MenuItem *home = [[MenuItem alloc] initWithTitle:@"Accueil" imageName:@"menu-home"];
-//    home.pictoText = [NSString stringForFontAwesomeIcon:FAHome];
-//    MenuItem *promo = [[MenuItem alloc] initWithTitle:@"Promotions" imageName:@"menu-promo"];
-//    promo.pictoText = [NSString stringForFontAwesomeIcon:FAGift];
-//    MenuItem *dest = [[MenuItem alloc] initWithTitle:@"Destinations" imageName:@"menu-destinations"];
-//    dest.pictoText = [NSString stringForFontAwesomeIcon:FAMapMarker];
-//    MenuItem *harbor = [[MenuItem alloc] initWithTitle:@"Ports de départ" imageName:@"menu-harbors"];
-//    harbor.pictoText = [NSString stringForFontAwesomeIcon:FAAnchor];
-//    MenuItem *ships = [[MenuItem alloc] initWithTitle:@"Navires" imageName:@"menu-ships"];
-//    ships.pictoText = [NSString stringForFontAwesomeIcon:FALifeBouy];
-//    
-//    _menuItems = @[home, promo, dest, harbor, ships];
-//}
+- (void)setupCurrentBrand
+{
+    
+#ifdef COSTA
+    _currentBrand = QCNSBrandTypeCosta;
+#endif
+    
+#ifdef MSC
+    _currentBrand = QCNSBrandTypeMSC;
+#endif
 
+#ifdef NCL
+    _currentBrand = QCNSBrandTypeNCL;
+#endif
+
+#ifdef RCCL
+    _currentBrand = QCNSBrandTypeRCCL;
+#endif
+
+#ifdef CDF
+    _currentBrand = QCNSBrandTypeCDF;
+#endif
+    
+#ifdef CROISIEUROPE
+    _currentBrand = QCNSBrandTypeCroisiEurope;
+#endif
+
+    _navBarImageName = [navBarImageDict objectForKey:@(_currentBrand)];
+    NSLog(@"### NAVBAR IMAGE NAME : %@", _navBarImageName);
+}
 
 #pragma mark - Locale
 

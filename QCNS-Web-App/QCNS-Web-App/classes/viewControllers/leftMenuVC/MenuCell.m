@@ -27,8 +27,6 @@
 - (void)awakeFromNib
 {
     // Initialization code
-//    self.backgroundColor = COSTA_BLUE_COLOR;
-//    self.contentView.backgroundColor = COSTA_BLUE_COLOR;
     self.backgroundColor = [UIColor whiteColor];
     self.contentView.backgroundColor = [UIColor whiteColor];
     self.titleLabel.textColor = [UIColor darkTextColor];

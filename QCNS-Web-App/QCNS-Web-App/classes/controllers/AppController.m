@@ -138,7 +138,7 @@
 }
 
 - (void)showSplashImage
-{
+{ 
     DDLogInfo(@"");
     [self showSplashImageWithCompletion:nil];
 }
@@ -293,9 +293,6 @@
     if (self)
     {
         
-//        [self flushImageCaches];
-//        [self setupReachability];
-        
         [self setupNavigationBar];
         
 //        [[IQKeyboardManager sharedManager] setShouldResignOnTouchOutside:YES];
@@ -316,24 +313,7 @@
 - (void)setupSplashImage
 {
     DDLogDebug(@"");
-    NSString *imageName = @"Default";
-    if ([NXDevice has3dot5InchScreen])
-    {
-        imageName = @"Default-i4";
-    }
-    else if ([NXDevice has4InchScreen])
-    {
-        imageName = @"Default-i5";
-    }
-    else if ([NXDevice has4dot7InchScreen])
-    {
-        imageName = @"Default";
-    }
-    else if ([NXDevice has5dot5InchScreen])
-    {
-        imageName = @"Default-i6+";
-    }
-
+    NSString *imageName = [[AppModel sharedInstance] splashImageName];
     _splashImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
     _splashImageView.alpha = 0.0;
 }
@@ -377,19 +357,13 @@
 - (void)setupNavigationBar
 {
     DDLogDebug(@"");
-//    UIImage *backImg = [[UIImage imageNamed:@"back-img"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    [[UINavigationBar appearance] setBackIndicatorImage:backImg];
-//    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImg];
-//
     
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:COSTA_BLUE_COLOR];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
                                                            NSFontAttributeName: BOLD_FONT(19.0f)
                                                            }];
-
 }
 
 - (void)dealloc

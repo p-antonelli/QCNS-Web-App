@@ -36,6 +36,7 @@
 + (NSString *)documentsDirectory;
 
 + (void)printAllFontsAvailable;
++ (void)printAllPNGsInBundle;
 
 // UIDevice name helper, eg : iPhone de Bibi
 + (NSString *)name;

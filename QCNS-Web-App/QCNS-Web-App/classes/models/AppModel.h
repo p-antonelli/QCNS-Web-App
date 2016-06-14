@@ -16,6 +16,8 @@
 @interface AppModel : NSObject
 
 @property (nonatomic, readonly) QCNSBrandType currentBrand;
+@property (nonatomic, readonly) NSString *splashImageName;
+@property (nonatomic, readonly) NSString *navBarImageName;
 
 @property (nonatomic, readonly) NSString *locale;
 @property (nonatomic, readonly) NSString *language;

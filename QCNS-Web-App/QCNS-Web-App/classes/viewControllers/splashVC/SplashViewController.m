@@ -25,6 +25,8 @@
 
 @interface SplashViewController () <AppImageDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *splashImageView;
+
 @end
 
 @implementation SplashViewController
@@ -43,7 +45,7 @@
     [self buildUIElements];
     
     [[SlideNavigationController sharedInstance] prepareMenuForReveal:MenuLeft];
- }
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -51,7 +53,7 @@
     DDLogDebug(@"");
     [self addRequestsObservers];
     [[AppController sharedInstance] showSplashImage];
-   [[AppController sharedInstance] showWaitingView];
+    [[AppController sharedInstance] showWaitingView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -106,41 +108,44 @@
 
 - (void)buildUIElements
 {
-//    self.view.backgroundColor = RANDOM_COLOR;
+    self.splashImageView.image = [UIImage imageNamed:[[AppModel sharedInstance] splashImageName]];
+//    DDLogError(@"splash image : %@ %@",  [[AppModel sharedInstance] splashImageName], [UIImage imageNamed:[[AppModel sharedInstance] splashImageName]]);
 }
 
 - (void)pushHomeVC
 {
     DDLogInfo(@"");
-//    MeetingsViewController *mainVC = [[MeetingsViewController alloc] initWithNibName:nil bundle:nil];
-    [[AppController sharedInstance] hideWaitingView];
-    
-    LeftMenuViewController *leftMenuVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
-    [leftMenuVC selectFirstMenuRow];
-    
-    MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-    
-    [CATransaction begin];
-    [CATransaction setCompletionBlock:^{
+
+    [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
         
-        if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[SplashViewController class]]) {
+        LeftMenuViewController *leftMenuVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
+        [leftMenuVC selectFirstMenuRow];
+        
+        MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
             
-            NSMutableArray *mutArr = [NSMutableArray arrayWithCapacity:0];
-            [mutArr addObjectsFromArray:self.navigationController.viewControllers];
-            [mutArr removeObjectAtIndex:0];
-            [self.navigationController setViewControllers:mutArr];
+            if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[SplashViewController class]]) {
+                
+                NSMutableArray *mutArr = [NSMutableArray arrayWithCapacity:0];
+                [mutArr addObjectsFromArray:self.navigationController.viewControllers];
+                [mutArr removeObjectAtIndex:0];
+                [self.navigationController setViewControllers:mutArr];
+                
+                mainVC.urlToLoad = [NSURL URLWithString:[[AppModel sharedInstance] baseURL]];
+            }
             
-            mainVC.urlToLoad = [NSURL URLWithString:[[AppModel sharedInstance] baseURL]];
-        }
-
-        dispatch_after_delay_on_main_queue(1.0, ^{
-            [[AppController sharedInstance] hideSplashImage];
-        });
-
+            dispatch_after_delay_on_main_queue(1.5, ^{
+                [[AppController sharedInstance] hideSplashImage];
+            });
+            
+        }];
+        
+        [[self navigationController] pushViewController:mainVC animated:YES];
+        [CATransaction commit];
     }];
-//    [self.navigationController setViewControllers:@[mainVC] animated:YES];
-    [[self navigationController] pushViewController:mainVC animated:YES];
-    [CATransaction commit];
+    
 }
 
 #pragma mark - Request Notification

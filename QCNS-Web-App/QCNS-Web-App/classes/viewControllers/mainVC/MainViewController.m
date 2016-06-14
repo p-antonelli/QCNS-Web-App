@@ -116,7 +116,7 @@
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
-    [self.backgroundImageView setImage:[UIImage imageNamed:@"costa-navbar"]];
+    [self.backgroundImageView setImage:[UIImage imageNamed:[[AppModel sharedInstance] navBarImageName]]];
     
     self.rightMenuButton.titleLabel.font = AWESOME_FONT(30);
     self.rightMenuButton.titleLabel.textColor = [UIColor whiteColor];

@@ -18,19 +18,6 @@
 //#define FEEZLY_BLUE_BAR_COLOR       [UIColor colorWithRed:(11.0f/255.0f) - kDarkenCoeff green:(135.0f/255.0f) - kDarkenCoeff blue:(172.0f/255.0f) - kDarkenCoeff alpha:1.0f]
 
 
-//#define COSTA_BLUE_COLOR           RGBCOLOR(7, 73, 164)
-#define COSTA_BLUE_COLOR           RGBCOLOR(12, 97, 177)
-
-//#define FEEZLY_GREY_COLOR           RGBCOLOR(236, 233, 223)
-
-
-//#define FEEZLY_BLUE_BAR_COLOR       RGBCOLOR(0, 113, 157)
-//#define FEEZLY_BLUE_BAR_COLOR       RGBCOLOR(49, 154, 185)
-#define FEEZLY_BLUE_BAR_COLOR       [FEEZLY_BLUE_COLOR equivalentNonOpaqueColorWhenInterpolatedWithBackgroundColor:FEEZLY_BLUE_COLOR minimumAlpha:0.9]
-
-#define FACEBOOK_BLUE_COLOR         RGBCOLOR(59, 89, 152)
-#define INSTAGRAM_BLUE_COLOR        RGBCOLOR(63, 106, 149)
-
 
 
 //// Colors
