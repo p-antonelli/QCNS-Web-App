@@ -358,10 +358,19 @@
 {
     DDLogDebug(@"");
     
+    [[UINavigationBar appearance] setBarTintColor:[[AppModel sharedInstance] navBarBGColor]];
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+#ifdef CROISIEUROPE
+    UIColor *textColor = [UIColor blackColor];
+#else
+    UIColor *textColor = [UIColor whiteColor];
+#endif
+    
+
+    [[UINavigationBar appearance] setTintColor:textColor];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                           NSForegroundColorAttributeName: textColor,
                                                            NSFontAttributeName: BOLD_FONT(19.0f)
                                                            }];
 }

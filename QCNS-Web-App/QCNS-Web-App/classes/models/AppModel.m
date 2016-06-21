@@ -41,6 +41,7 @@ static NSString * const kDefaultLocale      = @"fr_FR";
 
 static NSDictionary *splashImageDict;
 static NSDictionary *navBarImageDict;
+static NSDictionary *navBarBgColorDict;
 
 + (void)initialize
 {
@@ -63,6 +64,15 @@ static NSDictionary *navBarImageDict;
                             @(QCNSBrandTypeCDF) :           @"navBar_cdf",
                             @(QCNSBrandTypeCroisiEurope) :  @"navBar_croisieurope",
                             };
+        
+        navBarBgColorDict = @{
+                              @(QCNSBrandTypeCosta) :         COSTA_BLUE_COLOR,
+                              @(QCNSBrandTypeMSC) :           MSC_BLUE_COLOR,
+                              @(QCNSBrandTypeNCL) :           NCL_BLUE_COLOR,
+                              @(QCNSBrandTypeRCCL) :          RCCL_BLUE_COLOR,
+                              @(QCNSBrandTypeCDF) :           CDF_BLUE_COLOR,
+                              @(QCNSBrandTypeCroisiEurope) :  CROSIEUROPE_BLUE_COLOR,
+                              };
     }
 }
 
@@ -192,6 +202,7 @@ static NSDictionary *navBarImageDict;
 #endif
 
     _navBarImageName = [navBarImageDict objectForKey:@(_currentBrand)];
+    _navBarBGColor = [navBarBgColorDict objectForKey:@(_currentBrand)];
     NSLog(@"### NAVBAR IMAGE NAME : %@", _navBarImageName);
 }
 

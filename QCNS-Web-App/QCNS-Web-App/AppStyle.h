@@ -17,7 +17,12 @@
 #define kDarkenCoeff                0.04f
 //#define FEEZLY_BLUE_BAR_COLOR       [UIColor colorWithRed:(11.0f/255.0f) - kDarkenCoeff green:(135.0f/255.0f) - kDarkenCoeff blue:(172.0f/255.0f) - kDarkenCoeff alpha:1.0f]
 
-
+#define COSTA_BLUE_COLOR            RGBCOLOR(0, 95, 180)
+#define MSC_BLUE_COLOR              RGBCOLOR(0, 0, 40)
+#define NCL_BLUE_COLOR              RGBCOLOR(0, 45, 82)
+#define RCCL_BLUE_COLOR             RGBCOLOR(4, 5, 71)
+#define CDF_BLUE_COLOR              RGBCOLOR(48, 43, 108)
+#define CROSIEUROPE_BLUE_COLOR      RGBCOLOR(235, 235, 235)
 
 
 //// Colors
