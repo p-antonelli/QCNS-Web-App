@@ -118,8 +118,8 @@
 
     [[AppController sharedInstance] hideWaitingViewWithCompletion:^{
         
-        LeftMenuViewController *leftMenuVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
-        [leftMenuVC selectFirstMenuRow];
+//        LeftMenuViewController *leftMenuVC = (LeftMenuViewController *)[[SlideNavigationController sharedInstance] leftMenu];
+//        [leftMenuVC selectFirstMenuRow];
         
         MainViewController *mainVC = [[MainViewController alloc] initWithNibName:nil bundle:nil];
         
